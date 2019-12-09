@@ -39,8 +39,8 @@ Route::any('listRole','admin\Roles@listRole');
 
 Route::any('addMenu','admin\Menus@index');
 Route::any('doAddMenu','admin\Menus@create');
-
-
+Route::any('addPower','admin\Menus@addPower');
+Route::any('doAddPower','admin\Menus@doAddPower');
 
 
 

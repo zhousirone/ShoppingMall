@@ -44,6 +44,26 @@ class Menus extends Controller
 
     }
 
+    public function addPower()
+    {
+        return view('admin.menu.addPower');
+    }
+    public function doAddPower(Request $request)
+    {
+        $powername = $request->post('powername');
+        $power = new Power();
+        $power->powername = $powername;
+        $res=$power->save();
+        if($res){
+            $arr['code'] = 0;
+            $arr['msg'] = "添加成功";
+            echo json_encode($arr);
+        }else{
+            $arr['code'] = 1;
+            $arr['msg'] = "添加失败";
+            echo json_encode($arr);
+        }
+    }
 
     public function store(Request $request)
     {
