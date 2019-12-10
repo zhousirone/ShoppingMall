@@ -4,6 +4,22 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Model\Menu
+ *
+ * @property int $id
+ * @property string|null $menuname
+ * @property string|null $url
+ * @property int|null $pid
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Menu newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Menu newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Menu query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Menu whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Menu whereMenuname($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Menu wherePid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Menu whereUrl($value)
+ * @mixin \Eloquent
+ */
 class Menu extends Model
 {
     protected $table = 'menus';

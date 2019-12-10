@@ -4,6 +4,22 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * App\Model\Attr_class
+ *
+ * @property int $id
+ * @property int|null $cid
+ * @property string|null $name
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Model\Attr_goods[] $attr_goods
+ * @property-read int|null $attr_goods_count
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_class newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_class newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_class query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_class whereCid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_class whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_class whereName($value)
+ * @mixin \Eloquent
+ */
 class Attr_class extends Model
 {
     //

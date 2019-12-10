@@ -29,8 +29,6 @@ class Index extends BaseController
         $data = Session::get('admin');
         return view('admin.welcome',['data'=> $data]);
     }
-
-
     public function login()
     {
         return view('admin.login');
