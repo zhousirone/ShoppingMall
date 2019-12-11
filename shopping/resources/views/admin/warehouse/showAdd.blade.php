@@ -98,8 +98,6 @@
                                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                             </div>
                         </div>
-
-
                     </form>
                 </div>
                 <hr>
@@ -108,6 +106,8 @@
     </div>
 </div>
 <script type="text/javascript" src="{{asset('ad/admin/js/xcity.js')}}"></script>
+
+
 <script>
     layui.use(['form','code'], function(){
         form = layui.form;

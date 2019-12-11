@@ -16,4 +16,5 @@ class Warehouse extends Model
         $this->service = $arr['service'];
         return $this->save();
     }
+
 }

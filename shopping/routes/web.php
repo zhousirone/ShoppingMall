@@ -43,6 +43,8 @@ Route::any('doAddPower','admin\Menus@doAddPower');
 Route::get('showAdd','admin\Warehouse@showAdd');
 Route::post('warehouseAdd','admin\Warehouse@warehouseAdd');
 Route::get('warehouseShow','admin\Warehouse@warehouseShow');
+Route::get('warehouseDel','admin\Warehouse@warehouseDel');
+Route::get('warehouseUpd','admin\Warehouse@warehouseUpd');
 
 
 

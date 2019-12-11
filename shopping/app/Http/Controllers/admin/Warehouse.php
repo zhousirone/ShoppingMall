@@ -35,7 +35,7 @@ class Warehouse extends Controller
        $warehouse = new Warehouses();
        $res = $warehouse->add($arr);
        if ($res){
-           return 1;
+           return redirect('warehouseShow');
        }else{
            return 2;
        }
@@ -44,8 +44,36 @@ class Warehouse extends Controller
     public function warehouseShow()
     {
         $data = Warehouses::all()->toArray();
-        $data[0]['location'] = json_decode($data[0]['location'],1);
-        $data[0]['service']=json_decode($data[0]['service'],1);
-        return view('admin/warehouse/warehouseShow', ['data' => $data]);
+        $arr = array();
+        foreach ($data as $k => $v){
+            $arr[$k]['id'] = $v['id'];
+            $arr[$k]['name'] = $v['name'];
+            $arr[$k]['code'] = $v['code'];
+            $arr[$k]['state'] = $v['state'];
+            $arr[$k]['location'] = json_decode($v['location'],1);
+            $arr[$k]['service'] = json_decode($v['service'],1);
+        }
+        return view('admin/warehouse/warehouseShow', ['data' => $arr]);
+    }
+    //删除
+    public function warehouseDel(Request $request)
+    {
+        $id = $request->get('id');
+        $warehouse = new Warehouses();
+        if ($warehouse->where('id','=',$id)->delete())
+        {
+            return 1;
+        }else{
+            return 2;
+        }
+    }
+    //修改
+    public function warehouseUpd(Request $request)
+    {
+        $id = $request->get('id');
+            echo $id;die;
+        $data = Warehouses::where()->get();
+        dump($data);
+
     }
 }
