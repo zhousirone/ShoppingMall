@@ -40,6 +40,11 @@ Route::any('addPower','admin\Menus@addPower');
 Route::any('doAddPower','admin\Menus@doAddPower');
 
 
+Route::get('showAdd','admin\Warehouse@showAdd');
+Route::post('warehouseAdd','admin\Warehouse@warehouseAdd');
+Route::get('warehouseShow','admin\Warehouse@warehouseShow');
+
+
 
 Route::any('index/login','index\Login@index');
 Route::any('index/regist','index\Login@regist');
