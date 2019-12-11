@@ -16,6 +16,11 @@
     <![endif]-->
 </head>
 <body>
+<?php
+//echo "<pre>";
+//print_r($data);die;
+
+?>
 <div class="x-nav">
           <span class="layui-breadcrumb">
             <a href="">首页</a>
@@ -43,45 +48,33 @@
                 </div>
                 <div class="layui-card-header">
                     {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
-                    <button class="layui-btn" onclick="xadmin.open('添加管理员','addAdmin',600,400)"><i class="layui-icon"></i>添加</button>
+                    <button class="layui-btn" onclick="xadmin.open('仓库添加','showAdd',800,500)"><i class="layui-icon"></i>添加</button>
                 </div>
                 <div class="layui-card-body layui-table-body layui-table-main">
                     <table class="layui-table layui-form">
                         <thead>
                         <tr>
-                            {{--                            <th>--}}
-                            {{--                                <input type="checkbox" lay-filter="checkall" name="" lay-skin="primary">--}}
-                            {{--                            </th>--}}
+
                             <th>仓库名称</th>
                             <th>仓库编码</th>
                             <th>是否启用</th>
                             <th>仓库所在地区</th>
                             <th>仓库服务地区</th>
-                            {{--                            <th>状态</th>--}}
                             <th>操作</th></tr>
                         </thead>
                         <tbody>
                         @foreach($data as $k => $v)
-
                             <tr>
                                 <td>{{$v['name']}}</td>
                                 <td>{{$v['code']}}</td>
                                 <td>{{$v['state']}}</td>
                                 <td>{{$v['location']['provinces'].'  '.$v['location']['citys'].'  '.$v['location']['areas']}}</td>
                                 <td>{{$v['service']['province'].'  '.$v['service']['city'].'  '.$v['service']['area']}}</td>
-                                {{--                                <td class="td-status">--}}
-                                {{--                                    <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>--}}
                                 <td class="td-manage">
-                                    {{--                                    <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">--}}
-                                    {{--                                        <i class="layui-icon">&#xe601;</i>--}}
-                                    {{--                                    </a>--}}
-                                    <a title="编辑"  onclick="xadmin.open('编辑','updAdmin?id={{$v['id']}}',600,400)" href="javascript:;">
+                                    <a title="编辑"  onclick="xadmin.open('编辑','warehouseUpd?id='{{$v['id']}},600,400)" href="javascript:;">
                                         <i class="layui-icon">&#xe642;</i>
                                     </a>
-                                    <a onclick="xadmin.open('修改角色','roleAdmin?id={{$v['id']}}',600,400)" title="修改角色" href="javascript:;">
-                                        <i class="layui-icon">&#xe631;</i>
-                                    </a>
-                                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                                    <a title="删除" onclick="member_del(this,{{$v['id']}})" href="javascript:;">
                                         <i class="layui-icon">&#xe640;</i>
                                     </a>
                                 </td>
@@ -141,9 +134,22 @@
     /*用户-删除*/
     function member_del(obj,id){
         layer.confirm('确认要删除吗？',function(index){
-            //发异步删除数据
-            $(obj).parents("tr").remove();
-            layer.msg('已删除!',{icon:1,time:1000});
+                $.ajax({
+                    url:'warehouseDel',
+                    data:{
+                        id:id
+                    },
+                    type:'GET',
+                    success:function (e) {
+                        if (e == 1) {
+                            //发异步删除数据
+                            $(obj).parents("tr").remove();
+                            layer.msg('已删除!',{icon:1,time:1000});
+                        }
+                    }
+                })
+
+
         });
     }
 
