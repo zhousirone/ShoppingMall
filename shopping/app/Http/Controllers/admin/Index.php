@@ -5,9 +5,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Model\Admin;
 use App\Model\Menu;
-use App\Model\Power;
-use App\Model\Role;
-use Illuminate\Foundation\Bus\DispatchesJobs;
+
 
 use Illuminate\Routing\Controller as BaseController;
 
@@ -38,7 +36,6 @@ class Index extends BaseController
         $username = $request->post('username');
         $password = $request->post('password');
         $res = Admin::where('username',$username)->get();
-
         foreach ($res as $k => $v){
             $res = $v;
         }

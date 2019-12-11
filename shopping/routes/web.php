@@ -46,8 +46,7 @@ Route::get('warehouseShow','admin\Warehouse@warehouseShow');
 
 
 
-Route::any('index/login','index\Login@index');
-Route::any('index/regist','index\Login@regist');
+
 
 
 
