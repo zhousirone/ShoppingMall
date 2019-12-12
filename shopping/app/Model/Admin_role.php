@@ -4,7 +4,6 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-<<<<<<< HEAD
 /**
  * App\Model\Admin_role
  *
@@ -19,8 +18,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Admin_role whereRoleId($value)
  * @mixin \Eloquent
  */
-=======
->>>>>>> dong
 class Admin_role extends Model
 {
    public $timestamps=false;

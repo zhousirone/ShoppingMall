@@ -2,11 +2,7 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
 
-<<<<<<< HEAD
 @extends('common.header')
-=======
-@extends('admin.common.header')
->>>>>>> dong
 <script src="/ad/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/ad/admin/js/xadmin.js"></script>
 <body>

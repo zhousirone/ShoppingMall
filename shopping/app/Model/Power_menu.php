@@ -4,7 +4,6 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-<<<<<<< HEAD
 /**
  * App\Model\Power_menu
  *
@@ -19,8 +18,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Power_menu wherePowerId($value)
  * @mixin \Eloquent
  */
-=======
->>>>>>> dong
 class Power_menu extends Model
 {
     public $timestamps=false;

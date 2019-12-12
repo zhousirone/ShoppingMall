@@ -4,7 +4,6 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-<<<<<<< HEAD
 /**
  * App\Model\Attr_attribute
  *
@@ -23,8 +22,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_attribute whereId($value)
  * @mixin \Eloquent
  */
-=======
->>>>>>> dong
 class Attr_attribute extends Model
 {
     protected $table='Attr_attribute';

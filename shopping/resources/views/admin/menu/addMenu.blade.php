@@ -46,11 +46,7 @@
                     <label for="url" class="layui-form-label">
                         <span class="x-red">*</span>菜单url</label>
                     <div class="layui-input-inline">
-<<<<<<< HEAD
                         <input type="text" id="url" name="url" value="" required="" lay-verify="" autocomplete="off" class="layui-input">
-=======
-                        <input type="text" id="url" name="url" value="" required="" lay-verify="url" autocomplete="off" class="layui-input">
->>>>>>> dong
                     </div>
                 </div>
 
@@ -64,11 +60,7 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> dong
                 <div class="layui-form-item">
                     <label for="L_repass" class="layui-form-label"></label>
                     <button class="layui-btn" lay-filter="update" lay-submit="">添加菜单</button>

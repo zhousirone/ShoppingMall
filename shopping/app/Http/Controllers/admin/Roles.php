@@ -7,11 +7,7 @@ use App\Model\Power_menu;
 use App\Model\Role;
 use App\Model\Role_power;
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 use App\Http\Controllers\Controller;
-=======
-use Illuminate\Routing\Controller;
->>>>>>> dong
 
 class Roles extends Controller
 {

@@ -9,11 +9,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
-<<<<<<< HEAD
         "barryvdh/laravel-ide-helper": "^2.6",
         "doctrine/dbal": " ~2.3",
-=======
->>>>>>> dong
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0"

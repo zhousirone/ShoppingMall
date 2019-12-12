@@ -4,7 +4,6 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-<<<<<<< HEAD
 /**
  * App\Model\Menu
  *
@@ -21,8 +20,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Menu whereUrl($value)
  * @mixin \Eloquent
  */
-=======
->>>>>>> dong
 class Menu extends Model
 {
     protected $table = 'menus';

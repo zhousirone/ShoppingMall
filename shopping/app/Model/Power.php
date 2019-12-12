@@ -4,7 +4,6 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-<<<<<<< HEAD
 /**
  * App\Model\Power
  *
@@ -19,8 +18,6 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Power wherePowername($value)
  * @mixin \Eloquent
  */
-=======
->>>>>>> dong
 class Power extends Model
 {
     public $timestamps=false;
