@@ -44,6 +44,7 @@ class Menus extends Controller
 
     }
 
+<<<<<<< HEAD
     public function addPower()
     {
         return view('admin.menu.addPower');
@@ -64,6 +65,8 @@ class Menus extends Controller
             echo json_encode($arr);
         }
     }
+=======
+>>>>>>> dong
 
     public function store(Request $request)
     {

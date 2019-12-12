@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 //use App\Model\Role;
+<<<<<<< HEAD
 /**
  * App\Model\Admin
  *
@@ -24,6 +25,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Admin whereUsername($value)
  * @mixin \Eloquent
  */
+=======
+>>>>>>> dong
 class Admin extends Model
 {
     public $timestamps=false;

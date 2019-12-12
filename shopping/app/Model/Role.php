@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< HEAD
 /**
  * App\Model\Role
  *
@@ -18,6 +19,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Role whereRolename($value)
  * @mixin \Eloquent
  */
+=======
+>>>>>>> dong
 class Role extends Model
 {
     public $timestamps=false;

@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
 
+<<<<<<< HEAD
 @extends('common.header')
+=======
+@extends('admin.common.header')
+>>>>>>> dong
 <script src="/ad/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/ad/admin/js/xadmin.js"></script>
 
 <body>
 <div class="layui-fluid">
     <div class="layui-row">
+<<<<<<< HEAD
         <form action="" method="post" class="layui-form layui-form-pane">
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
                     <span class="x-red">*</span>角色名
                 </label>
+=======
+        <form action="sku_add" method="post" class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                {{--                <label for="name" class="layui-form-label">--}}
+                {{--                    @foreach($list as $kye=>$value)--}}
+                <span class="x-red">*</span>添加商品
+                {{--                    @endforeach--}}
+                {{--                </label>--}}
+                {{--                <a class="layui-btn" title="修改" href="attr_value">属性值管理</a>--}}
+>>>>>>> dong
                 <div class="layui-input-inline">
                     <input type="text" id="name" name="name" required="" lay-verify="required"
                            autocomplete="off" class="layui-input">
@@ -20,7 +35,11 @@
             </div>
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">
+<<<<<<< HEAD
                     拥有权限
+=======
+                    拥有
+>>>>>>> dong
                 </label>
                 <table  class="layui-table layui-input-block">
                     <tbody>
@@ -31,8 +50,13 @@
                         <td>
                             <div class="layui-input-block">
                                 @foreach($data as $k=>$v)
+<<<<<<< HEAD
                                 <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['color_value']}}" title="{{$v['color']}}" >
                                @endforeach
+=======
+                                    <input name="id[]" id="color" lay-skin="primary" type="checkbox" value="{{$v['color']}}" title="{{$v['color']}}" >
+                                @endforeach
+>>>>>>> dong
 
                             </div>
                         </td>
@@ -45,8 +69,14 @@
                         <td>
                             <div class="layui-input-block">
                                 @foreach($data as $k=>$v)
+<<<<<<< HEAD
                                 <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['size_value']}}" title="{{$v['size']}}">
                                  @endforeach
+=======
+                                    <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['size']}}" title="{{$v['size']}}" >
+                                @endforeach
+
+>>>>>>> dong
                             </div>
                         </td>
                     </tr>
@@ -58,7 +88,11 @@
                         <td>
                             <div class="layui-input-block">
                                 @foreach($data as $k=>$v)
+<<<<<<< HEAD
                                     <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['price_value']}}" title="{{$v['price']}}">
+=======
+                                    <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['price']}}" title="{{$v['price']}}">
+>>>>>>> dong
                                 @endforeach
                             </div>
                         </td>
@@ -71,11 +105,20 @@
                     描述
                 </label>
                 <div class="layui-input-block">
+<<<<<<< HEAD
                     <textarea placeholder="请输入内容" id="desc" name="desc" class="layui-textarea"></textarea>
                 </div>
             </div>
             <div class="layui-form-item">
                 <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
+=======
+                    <textarea placeholder="请输入内容" id="desc" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                {{--                <button lay-submit="" lay-filter="add">增加</button>--}}
+                <input type="submit" value="提交" class="layui-btn">
+>>>>>>> dong
             </div>
         </form>
     </div>

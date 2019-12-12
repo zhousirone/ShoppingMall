@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "0ec98ea2f944a3d2299668fe242e4ba8",
     "packages": [
         {
@@ -668,12 +669,41 @@
             "autoload": {
                 "psr-4": {
                     "Doctrine\\Common\\": "lib/Doctrine/Common"
+=======
+    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "packages": [
+        {
+            "name": "dnoegel/php-xdg-base-dir",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dnoegel/php-xdg-base-dir.git",
+                "reference": "265b8593498b997dc2d31e75b89f053b5cc9621a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dnoegel/php-xdg-base-dir/zipball/265b8593498b997dc2d31e75b89f053b5cc9621a",
+                "reference": "265b8593498b997dc2d31e75b89f053b5cc9621a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "@stable"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "XdgBaseDir\\": "src/"
+>>>>>>> dong
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
+<<<<<<< HEAD
             "authors": [
                 {
                     "name": "Guilherme Blanco",
@@ -710,6 +740,10 @@
                 "events"
             ],
             "time": "2019-11-10T09:48:07+00:00"
+=======
+            "description": "implementation of xdg base directory specification for php",
+            "time": "2014-10-24T07:27:01+00:00"
+>>>>>>> dong
         },
         {
             "name": "doctrine/inflector",
@@ -1141,6 +1175,7 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "justinrainbow/json-schema",
             "version": "5.2.9",
             "source": {
@@ -1207,6 +1242,8 @@
             "time": "2019-09-25T14:49:45+00:00"
         },
         {
+=======
+>>>>>>> dong
             "name": "laravel/framework",
             "version": "v5.8.35",
             "source": {
@@ -2158,6 +2195,7 @@
             "time": "2018-07-19T23:38:55+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "seld/jsonlint",
             "version": "1.7.2",
             "source": {
@@ -2251,6 +2289,8 @@
             "time": "2015-10-13T18:44:15+00:00"
         },
         {
+=======
+>>>>>>> dong
             "name": "swiftmailer/swiftmailer",
             "version": "v6.2.3",
             "source": {
@@ -2682,6 +2722,7 @@
             "time": "2019-09-17T09:54:03+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "symfony/filesystem",
             "version": "v4.4.1",
             "source": {
@@ -2732,6 +2773,8 @@
             "time": "2019-11-26T23:16:41+00:00"
         },
         {
+=======
+>>>>>>> dong
             "name": "symfony/finder",
             "version": "v4.4.0",
             "source": {
