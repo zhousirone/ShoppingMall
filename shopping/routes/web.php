@@ -52,12 +52,15 @@ Route::get('warehouseUpd','admin\Warehouse@warehouseUpd');
 
 
 
+<<<<<<< HEAD
 Route::any('updata','admin\Warehouse@updata');
 
 
 
 Route::any('index/login','index\Login@index');
 Route::any('index/regist','index\Login@regist');
+=======
+>>>>>>> f39a2a0dcdf93392d8cbff9571999482d667357d
 
 
 
