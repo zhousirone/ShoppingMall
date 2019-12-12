@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< HEAD
 /**
  * App\Model\Attr_goods
  *
@@ -30,6 +31,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_goods whereStatus($value)
  * @mixin \Eloquent
  */
+=======
+>>>>>>> dong
 class Attr_goods extends Model
 {
     protected $table='attr_goods';

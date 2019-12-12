@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< HEAD
 /**
  * App\Model\Attr_class
  *
@@ -20,6 +21,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Model\Attr_class whereName($value)
  * @mixin \Eloquent
  */
+=======
+>>>>>>> dong
 class Attr_class extends Model
 {
     //

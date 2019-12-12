@@ -5,7 +5,13 @@ namespace App\Http\Controllers\admin;
 
 use App\Model\Admin;
 use App\Model\Menu;
+<<<<<<< HEAD
 
+=======
+use App\Model\Power;
+use App\Model\Role;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+>>>>>>> dong
 
 use Illuminate\Routing\Controller as BaseController;
 
@@ -27,6 +33,11 @@ class Index extends BaseController
         $data = Session::get('admin');
         return view('admin.welcome',['data'=> $data]);
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> dong
     public function login()
     {
         return view('admin.login');
@@ -36,6 +47,10 @@ class Index extends BaseController
         $username = $request->post('username');
         $password = $request->post('password');
         $res = Admin::where('username',$username)->get();
+<<<<<<< HEAD
+=======
+
+>>>>>>> dong
         foreach ($res as $k => $v){
             $res = $v;
         }

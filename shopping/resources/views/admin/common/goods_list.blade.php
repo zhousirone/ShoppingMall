@@ -1,7 +1,11 @@
 
 <!DOCTYPE html>
 <html class="x-admin-sm">
+<<<<<<< HEAD
 @extends('common.header')
+=======
+@extends('admin.common.header')
+>>>>>>> dong
 <script src="/ad/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/ad/admin/js/xadmin.js"></script>
 <body>
@@ -22,7 +26,11 @@
 
 
                 <div class="layui-card-header">
+<<<<<<< HEAD
 {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
+=======
+                    {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
+>>>>>>> dong
                     <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/attr_add',600,400)"><i class="layui-icon"></i>添加</button>
 
                     <a class="layui-btn" title="修改" href="attr_value">属性值管理</a>
@@ -37,7 +45,11 @@
                             </th>
                             <th>ID</th>
                             <th>属性展示名称</th>
+<<<<<<< HEAD
                             <th>属性所属分类</th>
+=======
+
+>>>>>>> dong
                             <th>前台是否展示该属性</th>
                             <th></th>
                             <th>操作</th>
@@ -47,6 +59,7 @@
                         </thead>
                         <tbody>
                         @foreach($data as $k=>$v)
+<<<<<<< HEAD
                         <tr>
                             <td>
                                 <input type="checkbox" lay-skin="primary">
@@ -77,6 +90,38 @@
                                 </a>
                             </td>
                         </tr>
+=======
+                            <tr>
+                                <td>
+                                    <input type="checkbox" lay-skin="primary">
+                                </td>
+                                <td>{{$v['id']}}</td>
+                                <td>{{$v['name']}}</td>
+
+                                <td>{{$v['status']}}</td>
+
+
+                                <td class="td-status">
+                                    <span class="layui-btn layui-btn-normal layui-btn-mini">{{$v['status']}}</span></td>
+                                <td class="td-manage">
+                                    <a onclick="member_stop(this,'{{$v['id']}}')" href="javascript:;"  title="启用">
+                                        <i class="layui-icon">&#xe601;</i>
+                                    </a>
+                                    {{--                                <a title="编辑属性"  onclick="xadmin.open('编辑','member-edit.html',600,400)" href="javascript:;">--}}
+                                    {{--                                    <i class="layui-icon">&#xe642;</i>--}}
+                                    {{--                                </a>--}}
+                                    <a title="编辑属性" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="attr_upd?id={{$v['id']}}">
+                                        <i class="layui-icon">&#xe631;</i>
+                                    </a>
+                                    <a title="分类" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="update_id?id={{$v['id']}}"  title="22">
+                                        <i class="layui-icon">&#xe699;</i>
+                                    </a>
+                                    <a title="删除" onclick="member_del(this,'{{$v['id']}}')" href="javascript:;">
+                                        <i class="layui-icon">&#xe640;</i>
+                                    </a>
+                                </td>
+                            </tr>
+>>>>>>> dong
                         @endforeach
                         </tbody>
                     </table>
@@ -131,6 +176,7 @@
     function member_id(obj,id){
         alert(id);
 
+<<<<<<< HEAD
             $.ajax({
                 url:'update_id',
                 dataType:'json',
@@ -143,6 +189,20 @@
                     console.log($data);
 
                 }
+=======
+        $.ajax({
+            url:'update_id',
+            dataType:'json',
+            type:'post',
+            data:{
+                id:id,
+                token:'{{csrf_token()}}',
+            },
+            success:function ($data) {
+                console.log($data);
+
+            }
+>>>>>>> dong
         });
     }
 

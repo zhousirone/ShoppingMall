@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+<<<<<<< HEAD
 /**
  * App\User
  *
@@ -24,6 +25,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRoId($value)
  * @mixin \Eloquent
  */
+=======
+>>>>>>> dong
 class User extends Authenticatable
 {
     use Notifiable;
