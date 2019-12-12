@@ -32,6 +32,7 @@
 
     <title>尤洪</title>
 </head>
+<<<<<<< HEAD
 <body>
 <!--Begin Header Begin-->
 <div class="soubg">
@@ -84,6 +85,31 @@
                         <td><input type="submit" value="登录" class="log_btn" /></td>
                     </tr>
                 </table>
+=======
+
+<body style="height:100%; overflow:hidden;background: #f1f1f1;">
+
+<div class="qing juzhong lobg" style="position: absolute;top: 50%;margin-top: -290px; left:50%; margin-left:-600px;">
+    <div class="log-lf"></div>
+    <div class="log-rf">
+        <div class="logk">
+            <form id="loginform" action="" method="post">
+                <div class="loto"><img src="/web/images/login-t.png" width="145" height="145" class="login-t"><img src="/web/images/login-bg.png" width="221" height="247" class="login-bg"></div>
+                <div class="lo-dl">
+                    <div class="lf">账号：</div>
+                    <input type="text" placeholder="请输入注册时的手机号" name="name" id="name">
+                </div>
+                <div class="lo-dl">
+                    <div class="lf">密码：</div>
+                    <input type="password" placeholder="请输入密码" name="pwd" id="pwd">
+                </div>
+                <div>
+                    <input type="button" value="立即登录" class="dlan">
+                </div>
+                <div class="lo-zc">
+                    还没有帐号？　　<a href="register" class="lo-zc1">免费注册</a>　　|　　<a href="#" class="lo-zc2">忘记密码？</a>
+                </div>
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </form>
         </div>
     </div>
@@ -101,7 +127,40 @@
 </body>
 
 
+<<<<<<< HEAD
 <!--[if IE 6]>
 <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
 <![endif]-->
 </html>
+=======
+<script>
+    $(':button').click(function(){
+        var name = $('#name').val();
+        var pwd = $('#pwd').val();
+        // alert(pwd);
+        $.ajax({
+            url:'login_add',
+            type:'post',
+            dataType:'json',
+            data:{
+                name:name,
+                pwd:pwd,
+                _token:'{{csrf_token()}}'
+            },
+
+            success:function (data) {
+                // alert(data.msg);
+                if(data.code == 0){
+                    alert(data.msg);
+                    location.href='marketdisplay';
+                }else if(data.code == 1){
+                    alert(data.msg);
+                }else{
+                    alert(data.msg);
+                }
+            }
+        })
+
+    })
+</script>
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929

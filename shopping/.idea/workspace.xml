@@ -2,12 +2,143 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="8245a8a2-793c-41f0-b7e5-28dc1e3fdb49" name="默认" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/Menus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/Menus.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Model/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/menu/listMenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/menu/listMenu.blade.php" afterDir="false" />
+=======
+    <list default="true" id="b3868cf7-8c99-43b8-adc8-e9a7421277c4" name="默认" comment="sys 的上传">
+      <change afterPath="$PROJECT_DIR$/resources/views/index/login/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.styleci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttributeValue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GoodsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GoodsManage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/aa.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/AttributeValue.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/AttributeValue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/GoodsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/GoodsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/GoodsManage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/GoodsManage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/Roles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/Roles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Attr_attribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Attr_attribute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Attr_class.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Attr_class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Attr_goods.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Attr_goods.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Attr_total.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Attribute_key.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Attribute_key.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Attribute_value.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Sku.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Sku.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/a.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/admin-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/admin-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/admin-cate.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/admin-cate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/admin-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/admin-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/admin-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/admin-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/admin-role.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/admin-role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/admin-rule.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/admin-rule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/cate.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/cate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/city.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/city.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/css/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/css/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/css/theme1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/css/theme1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/css/theme2.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/css/theme2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/css/theme3.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/css/theme3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/css/theme4.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/css/theme4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/css/theme5.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/css/theme5.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/css/xadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/css/xadmin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/echarts1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/echarts1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/echarts2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/echarts2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/echarts3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/echarts3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/echarts4.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/echarts4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/echarts5.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/echarts5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/echarts6.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/echarts6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/echarts7.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/echarts7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/echarts8.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/echarts8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/fonts/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/fonts/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/js/xadmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/js/xadmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/js/xcity.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/js/xcity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/layui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/layui.mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/layui.mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/modules/code.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/modules/code.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/modules/laydate/default/laydate.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/css/modules/layer/default/layer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/colorpicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/colorpicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/element.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/element.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/flow.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/flow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/laydate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/laydate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/layedit.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/layedit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/laypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/laypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/laytpl.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/laytpl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/rate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/rate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/lay/modules/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/layui.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/layui.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/lib/layui/layui.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/lib/layui/layui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/member-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/member-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/member-del.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/member-del.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/member-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/member-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/member-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/member-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/member-list1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/member-list1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/member-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/member-password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/order-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/order-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/order-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/order-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/order-list1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/order-list1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/role-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/role-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/unicode.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/unicode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/user.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ad/admin/welcome1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/ad/admin/welcome1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/attribute/attr_replace.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/attribute/attr_replace.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/attribute/attr_value.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/attribute/attr_value.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/attribute/value_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/attribute/value_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/common/attr_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/common/attr_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/common/goods_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/common/goods_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/common/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/common/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/common/top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/common/top.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/goodsmanage/attribute_class.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/goodsmanage/attribute_class.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_li.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_li.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_sku.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_sku.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/attribute/attr_replace.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/attribute/attr_value.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/attribute/value_add.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/common/attr_add.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/common/goods_list.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/common/header.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/common/index.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/common/top.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/goodsmanage/attribute_class.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/goodsmanage/goods_show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/goodsmanage/goods_sku.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper/" />
@@ -137,6 +268,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -154,6 +286,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="213">
               <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/market.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
                 <element signature="e#307#1095#0#PHP" />
@@ -169,6 +307,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/resources/views/admin/warehouse/warehouseUpd.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="434">
@@ -179,40 +318,78 @@
                 <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/app/Model/Attribute_key.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/resources/views/admin/addAdmin.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1862">
               <caret line="101" column="53" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="53" />
+=======
+        <entry file="file://$PROJECT_DIR$/resources/views/index/common/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="229" column="49" lean-forward="true" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="49" />
+              <folding>
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#2;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" />
+              </folding>
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/Model/Warehouse.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="456">
               <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+=======
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="542">
+              <caret line="74" column="26" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="26" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/resources/views/admin/warehouse/showAdd.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1440">
               <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
+=======
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/proscenium.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="47" column="28" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="28" />
+              <folding>
+                <element signature="e#46#65#0#PHP" expanded="true" />
+              </folding>
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </state>
           </provider>
         </entry>
       </file>
 <<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/Menus.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
@@ -262,29 +439,50 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
               <caret line="85" column="41" lean-forward="true" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/Model/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/resources/views/admin/addAdmin.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="98" column="46" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
+=======
+        <entry file="file://E:/学习文件/学习文件/常用自己归总/ajax一套/Lian.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="81" column="42" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="81" selection-end-column="42" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/resources/views/admin/menu/addMenu.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="574">
               <caret line="125" column="34" selection-start-line="125" selection-start-column="34" selection-end-line="125" selection-end-column="34" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/Index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-124">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/resources/views/admin/listRole.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -296,6 +494,21 @@
             <state relative-caret-position="427">
               <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
+=======
+        <entry file="file://$PROJECT_DIR$/resources/views/index/login/register.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/index/login/login.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="118" column="36" lean-forward="true" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </state>
           </provider>
         </entry>
@@ -319,6 +532,7 @@
     <option name="CHANGED_PATHS">
       <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$USER_HOME$/Desktop/workspace.xml" />
@@ -336,6 +550,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/Admin.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/listAdmin.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/list.Admin.blade.php" />
+=======
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
         <option value="$PROJECT_DIR$/app/Model/updAdmin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/addAdmin.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/Admin_role.php" />
@@ -361,6 +577,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/updAdmin.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/Power_menu.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/menu/addMenu.blade.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/Menus.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/menu/addPower.blade.php" />
         <option value="$USER_HOME$/Desktop/尤洪Web/Member.html" />
@@ -383,6 +600,35 @@
         <option value="$PROJECT_DIR$/app/Model/Warehouse.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/warehouse/warehouseShow.blade.php" />
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
+=======
+        <option value="$PROJECT_DIR$/app/Http/Controllers/GoodsManage.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/AttributeValue.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/GoodsManage.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/Controller.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/Roles.php" />
+        <option value="$PROJECT_DIR$/../../../hh/shopping/resources/views/admin/common/goods_list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/common/goods_list.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/common/attr_add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/attribute/attr_replace.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/attribute/attr_value.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/attribute/value_add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/goodsmanage/attribute_class.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_li.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_sku.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/index/login/login.balde.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/Model/User.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/GoodsController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Model/Attribute_key.php" />
+        <option value="E:/学习/框架/框架admin/新建文件夹/_index.html" />
+        <option value="$PROJECT_DIR$/resources/views/index/login/register.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/index/proscenium.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/index/market.php" />
+        <option value="$PROJECT_DIR$/resources/views/index/common/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/index/login/login.blade.php" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
       </list>
     </option>
   </component>
@@ -482,6 +728,7 @@
     </include_path>
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="352" />
     <option name="y" value="117" />
@@ -492,6 +739,13 @@
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
     <option name="width" value="1715" />
     <option name="height" value="628" />
+=======
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1750" />
+    <option name="height" value="958" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -537,20 +791,37 @@
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -558,15 +829,20 @@
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shopping" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="warehouse" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
             </path>
             <path>
               <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
@@ -586,8 +862,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/admin" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -606,6 +886,13 @@
       <recent name="D:\phpstudy\PHPTutorial\WWW\shopingmall\ShoppingMall\shopping\resources\views\admin" />
       <recent name="D:\phpstudy\PHPTutorial\WWW\shopingmall\ShoppingMall\shopping\app\Http\Controllers\admin" />
     </key>
+<<<<<<< HEAD
+=======
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\phpstudy\PHPTutorial\WWW\goodsattribute\ShoppingMall\shopping\app\Http\Controllers\admin" />
+      <recent name="E:\phpstudy\PHPTutorial\WWW\goodsattribute\ShoppingMall\shopping\public" />
+    </key>
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -647,11 +934,17 @@
       <workItem from="1575505678104" duration="13319000" />
       <workItem from="1575595611457" duration="7025000" />
       <workItem from="1575678351018" duration="6682000" />
+<<<<<<< HEAD
       <workItem from="1575850641116" duration="19892000" />
       <workItem from="1575939087967" duration="9742000" />
       <workItem from="1575974055092" duration="9045000" />
       <workItem from="1576024354420" duration="23367000" />
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
+=======
+      <workItem from="1575850641116" duration="18284000" />
+      <workItem from="1576024398829" duration="24720000" />
+      <workItem from="1576110845659" duration="15767000" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
     </task>
     <task id="LOCAL-00001" summary="sys 的上传">
       <created>1575679116077</created>
@@ -672,6 +965,7 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="20039000" />
   </component>
   <component name="ToolWindowManager">
@@ -681,15 +975,23 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2" />
 =======
     <option name="totallyTimeSpent" value="179916000" />
+=======
+    <option name="totallyTimeSpent" value="192973000" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21380697" />
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19369973" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -715,9 +1017,16 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16676737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19369973" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="npm" order="3" side_tool="true" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -728,7 +1037,11 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.329718" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3253796" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.21104816" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -743,7 +1056,19 @@
     <MESSAGE value="sys 的上传" />
     <option name="LAST_COMMIT_MESSAGE" value="sys 的上传" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/index/common/index.blade.php</url>
+          <line>226</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Desktop/X-admin/login.html" />
     <entry file="file://$USER_HOME$/Desktop/X-admin/cate.html" />
     <entry file="file://$USER_HOME$/Desktop/董浩项目/web.php" />
@@ -923,10 +1248,163 @@
           <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="73" selection-end-column="34" />
           <folding>
             <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
+=======
+    <entry file="file://$PROJECT_DIR$/public/ad/admin/welcome1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-798" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ad/admin/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/common/goods_list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="100" selection-start-line="100" selection-end-line="100" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Attr_attribute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Attr_goods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Attr_class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/ad/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../hh/shopping/app/Http/Controllers/admin/GoodsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/Roles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/AttributeValue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/Admins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/menu/addMenu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/roleAdmin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/updAdmin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-798" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/updPower.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/listRole.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="78" column="28" lean-forward="true" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/listAdmin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1539" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/addAdmin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1083" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/menu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-607">
+          <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/Menus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="e#46#65#0#PHP" expanded="true" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Desktop/layui/examples/form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -970,12 +1448,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2280">
           <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
+=======
+    <entry file="file://$PROJECT_DIR$/../../../hh/shopping/resources/views/admin/goodsmanage/goods_sku.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../shopping/resources/views/admin/goodsmanage/goods_li.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../shopping/resources/views/admin/goodsmanage/goods_addsku.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="20" column="66" lean-forward="true" selection-start-line="20" selection-start-column="66" selection-end-line="20" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Power.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/addRole.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../shopping/resources/views/admin/goodsmanage/goods_sku.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/HZ$D.133.3606/admin-add.html">
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-1482">
           <caret selection-end-line="147" />
         </state>
@@ -985,12 +1501,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+=======
+        <state relative-caret-position="-152">
+          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/goodsmanage/goods_sku.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1653" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Power_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/GoodsManage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
           <folding>
             <element signature="e#47#67#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/admin/listRole.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1072,6 +1612,67 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1440">
           <caret line="106" column="26" selection-start-line="106" selection-start-column="26" selection-end-line="106" selection-end-column="26" />
+=======
+    <entry file="file://E:/学习/框架/框架admin/新建文件夹/_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="1264" column="64" selection-start-line="1264" selection-start-column="57" selection-end-line="1264" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/web/_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/GoodsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="105" column="34" lean-forward="true" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+          <folding>
+            <element signature="e#46#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习文件/学习文件/常用自己归总/tp+模型+分页+删除回到当前页/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习文件/学习文件/常用自己归总/tp+模型+分页+删除回到当前页/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习文件/学习文件/常用自己归总/批删AJAX/Photo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-669" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Attribute_key.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/学习文件/学习文件/常用自己归总/ajax一套/view/Lian/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66" />
+      </provider>
+    </entry>
+    <entry file="file://E:/学习文件/学习文件/常用自己归总/ajax一套/Lian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="81" column="42" lean-forward="true" selection-start-line="80" selection-start-column="12" selection-end-line="81" selection-end-column="42" />
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
         </state>
       </provider>
     </entry>
@@ -1082,6 +1683,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/admin/addAdmin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1862">
@@ -1119,6 +1721,67 @@
         <state relative-caret-position="427">
           <caret line="63" column="40" lean-forward="true" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
 >>>>>>> 0a1e02394de924bac1dd9b73d2c0f924cef40357
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/index/common/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="229" column="49" lean-forward="true" selection-start-line="229" selection-start-column="49" selection-end-line="229" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#a#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#a#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index/login/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/proscenium.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="28" />
+          <folding>
+            <element signature="e#46#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/index/market.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#46#65#0#PHP" expanded="true" />
+          </folding>
+>>>>>>> 8aadc2338d77cfdc1df3ca60a8060dd18c328929
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="74" column="26" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index/login/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="118" column="36" lean-forward="true" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
         </state>
       </provider>
     </entry>
