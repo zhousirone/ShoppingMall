@@ -67,6 +67,9 @@ Route::any( 'bland','admin\GoodsManage@bland');//sku添加方法
 Route::any( 'class_list','admin\GoodsManage@class_list');//sku  列表展示
 Route::any( 'goods_li','admin\GoodsManage@goods_li');//sku  商品列表展示
 //前台
-Route::any( 'indexlogin','index\proscenium@index');//前台列表
+Route::any( 'indexlogin','index\proscenium@login');//登录列表
 Route::any( 'login_add','index\proscenium@login_add');//登录方法
-Route::any( 'register','index\proscenium@register');//register 注册
+Route::any( 'register','index\proscenium@register');//register 注册列表
+Route::any( 'register_add','index\proscenium@register_add');//注册方法
+
+Route::any( 'marketdisplay','index\market@marketdisplay');//商场展示

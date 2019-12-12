@@ -84,7 +84,7 @@
                     <input type="button" value="立即登录" class="dlan">
                 </div>
                 <div class="lo-zc">
-                    还没有帐号？　　<a href="#" class="lo-zc1">免费注册</a>　　|　　<a href="#" class="lo-zc2">忘记密码？</a>
+                    还没有帐号？　　<a href="register" class="lo-zc1">免费注册</a>　　|　　<a href="#" class="lo-zc2">忘记密码？</a>
                 </div>
             </form>
         </div>
@@ -111,8 +111,15 @@
             },
 
             success:function (data) {
-                alert(data.msg);
-
+                // alert(data.msg);
+                if(data.code == 0){
+                    alert(data.msg);
+                    location.href='marketdisplay';
+                }else if(data.code == 1){
+                    alert(data.msg);
+                }else{
+                    alert(data.msg);
+                }
             }
         })
 

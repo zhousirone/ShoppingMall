@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Session;
 class proscenium extends BaseController
 {
     //
-    public function index()
+    public function login()
     {
         return view('index.login.login');
     }
@@ -48,5 +48,36 @@ class proscenium extends BaseController
     public function register()
     {
         return view('index.login.register');
+    }
+    public function register_add(Request $request)
+    {
+        $name=$request->post('name');
+        $email = $request->post('email');
+        $pwd = $request->post('pwd');
+        $nickname = $request->post('nickname');
+        $img = $request->file('headimg');
+        $headimg=$request->headimg;
+        $gender = $request->post('gender');
+        $birthdate = $request->post('birthdate');
+//        var_dump($headimg);die;
+        $user=new User();
+        $user->name=$name;
+        $user->email=$email;
+        $user->pwd=$pwd;
+        $user->nickname=$nickname;
+        $user->headimg=$headimg;
+        $user->gender=$gender;
+        $user->birthdate=$birthdate;
+        $list=$user->save();
+        if($list){
+            $res['code'] = 0;
+            $res['msg'] = "注册成功";
+            echo json_encode($res);
+        }else{
+            $res['code'] = 1;
+            $res['msg'] = "注册失败";
+            echo json_encode($res);
+        }
+
     }
 }
