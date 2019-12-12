@@ -69,166 +69,89 @@
 <div class="qing juzhong lobg" style="position: absolute;top: 50%;margin-top: -290px; left:50%; margin-left:-600px; overflow:inherit">
 
     <div class="log-rf" style="float:none; margin:0 auto; height:auto;">
+        <form action="register_add" method="post" enctype="multipart/form-data">
         <div class="logk zcok" style="padding-bottom:40px; margin-bottom:30px;">
-            <div class="loto"><img src="images/login-t.png" width="145" height="145" class="login-t"><img src="images/login-bg.png" width="221" height="247" class="login-bg"></div>
+            <div class="loto"><img src="/web/images/login-t.png" width="145" height="145" class="login-t"><img src="/web/images/login-bg.png" width="221" height="247" class="login-bg"></div>
             <div class="lo-dl">
-                <div class="lf">手 机 号：</div>
-                <input type="text" placeholder="请输入手机号" name="mobile" id="mobile">
+                <div class="lf">邮箱：</div>
+                <input type="text" placeholder="请输入邮箱" name="email" id="email">
+            </div>
+            <div class="lo-dl">
+                <div class="lf">账号：</div>
+                <input type="text" placeholder="请输入邮箱" name="name" id="name">
             </div>
 
             <div class="lo-dl">
                 <div class="lf">密　　码：</div>
-                <input type="password" placeholder="请输入密码" name="password" id="password">
+                <input type="password" placeholder="请输入密码" name="pwd" id="pwd">
             </div>
             <div class="lo-dl">
                 <div class="lf">确认密码：</div>
                 <input type="password" placeholder="请确认密码" name="repassword" id="repassword">
             </div>
-
             <div class="lo-dl">
-                <div class="lf" style="width: 84px;">推荐人号码：</div>
-                <input type="password" placeholder="请确认推荐人推荐人号码" name="repassword" id="repassword">
+                <div class="lf" style="width: 84px;">昵称：</div>
+                <input type="text" placeholder="请确认昵称" name="nickname" id="nickname">
             </div>
             <div class="lo-dl">
-                <div class="lf">二级密码：</div>
-                <input type="password" placeholder="请确认二级密码" name="repassword" id="repassword">
-            </div>
-
-            <div class="lo-dl">
-                <div class="lf">确认密码：</div>
-                <input type="password" placeholder="请确认二级密码" name="repassword" id="repassword">
+                <div class="lf">头像：</div>
+                <input type="file" name="headimg" id="headimg">
             </div>
 
-            <div class="lo-dl">
-                <div class="lf">身 份 证：</div>
-                <input type="password" placeholder="请输入身份证" name="password" id="password">
-            </div>
-            <div class="lo-dl">
-                <div class="lf">开户银行：</div>
-                <input type="password" placeholder="请确认开户银行" name="repassword" id="repassword">
+            <div class="lo-dl" >
+                <div class="lf">性别：</div>
+                <div style="float: left;"><input type="radio" placeholder="请输入性别" name="gender" id="gender" style="width: 20px; height: 20px" value="0">男</div>
+                <div>女 <input type="radio" placeholder="请输入性别" name="gender" id="gender" style="width: 20px; height: 20px" value="1"></div>
+
             </div>
 
             <div class="lo-dl">
-                <div class="lf">银行卡号：</div>
-                <input type="password" placeholder="请确认银行卡号" name="repassword" id="repassword">
+                <div class="lf">出生年月：</div>
+                <input type="datetime-local" placeholder="请输入出生年月" name="birthdate" id="birthdate">
             </div>
-            <div class="lo-dl">
-                <div class="lf">地　　址：</div>
-                <div class="lf diq" style="overflow:inherit; margin-left:0;">
-                    <style type="text/css">
-                        .clearfix:after{
-
-                            content:".";
-
-                            display:block;
-
-                            height:0;
-
-                            clear:both;
-
-                            visibility:hidden;
-
-
-
-                        }
-
-                        .clearfix{*zoom:1}
-
-
-
-                        /* m_zlxg */
-
-                        .m_zlxg{ width:129px; height:34px; line-height:34px;cursor:pointer;float:left;margin:0 10px 0 0;display:inline;background:url(images/zlxg2.jpg) no-repeat;}
-
-                        .m_zlxg p{ width:71px; padding-left:10px; overflow:hidden; line-height:34px; color:#333333; font-size:14px; font-family:"微软雅黑";text-overflow:ellipsis; white-space:nowrap;}
-
-                        .m_zlxg2{ position:absolute; top:29px; border:1px solid #ded3c1;background:#fff; width:129px; display:none; max-height:224px;-height:224px; overflow-x:hidden; overflow-y:auto !important;white-space:nowrap;}
-
-                        .m_zlxg2 li{line-height:28px;white-space:nowrap; padding-left:10px;font-family:"微软雅黑";color:#333333; font-size:12px;}
-
-                        .m_zlxg2 li:hover{ color:#7a5a21;}
-
-                    </style>
-                    <div id="sjld" style="width:418px;margin:0px auto;position:relative;">
-
-                        <div class="m_zlxg" id="shenfen" style="width:95px; border-right:1px solid #d5d5d5;">
-
-                            <p title="">选择省份</p>
-
-                            <div class="m_zlxg2" style="width:95px;">
-
-                                <ul></ul>
-
-                            </div>
-
-                        </div>
-
-                        <div class="m_zlxg" id="chengshi" style="width:95px; border-right:1px solid #d5d5d5;">
-
-                            <p title="">选择城市</p>
-
-                            <div class="m_zlxg2" style="width:95px !important;">
-
-                                <ul></ul>
-
-                            </div>
-
-                        </div>
-
-                        <div class="m_zlxg" id="quyu" style="width:95px; border-right:1px solid #d5d5d5;">
-
-                            <p title="">选择区域</p>
-
-                            <div class="m_zlxg2" style="width:95px;">
-
-                                <ul></ul>
-
-                            </div>
-
-                        </div>
-
-                        <input id="sfdq_num" type="hidden" value="" />
-
-                        <input id="csdq_num" type="hidden" value="" />
-
-                        <input id="sfdq_tj" type="hidden" value="" />
-
-                        <input id="csdq_tj" type="hidden" value="" />
-
-                        <input id="qydq_tj" type="hidden" value="" />
-
-                    </div>
-
-
-
-                    <script type="text/javascript" src="js/address.js"></script>
-
-                    <script type="text/javascript">
-
-                        $(function(){
-
-
-
-                            $("#sjld").sjld("#shenfen","#chengshi","#quyu");
-
-
-
-                        });
-
-                    </script>
-                </div>
-            </div>
-
-
             <div>
-                <input type="submit" value="注册" class="dlan">
+                <input type="button" value="注册" class="dlan">
             </div>
             <div class="lo-zc">
-                已经注册账号？　　<a href="#" class="lo-zc1">立即登录</a>
+                已经注册账号？　　<a href="indexlogin" class="lo-zc1">立即登录</a>
             </div>
         </div>
+        </form>
     </div>
 </div>
-
+<script type="text/javascript" src="/web/js/address.js"></script>
 </body>
 </html>
+<script>
+    $(':button').click(function(){
+        var email=$('#email').val();
+        var name=$('#name').val();
+        var pwd=$('#pwd').val();
+        var nickname=$('#nickname').val();
+        var headimg=$('#headimg').val();
+        var birthdate=$('#birthdate').val();
+        var gender=$('#gender').val();
+        // alert(gender);
+       $.ajax({
+           url:'register_add',
+           dataType:'json',
+           data:{
+               name:name,
+               email:email,
+               pwd:pwd,
+               nickname:nickname,
+               headimg:headimg,
+               birthdate:birthdate,
+               gender:gender,
+           },
+           success:function(res){
+               // alert($data);
+               if(res.code == 0){
+                   alert(res.msg);
+               }else{
+                   alert(res.msg);
+               }
+           }
+       })
+    })
+</script>
