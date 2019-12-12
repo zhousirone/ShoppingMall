@@ -12,49 +12,47 @@
     <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{asset('ad/admin/lib/layui/layui.js')}}" charset="utf-8"></script>
     <script type="text/javascript" src="{{asset('ad/admin/js/xadmin.js')}}./"></script>
-    <!--[if lt IE 9]>
+{{--    <!--[if lt IE 9]>--}}
     <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
-
 <body>
-<div class="x-nav">
-    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
-        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
-    </a>
-</div>
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
                 <div class="layui-card-body ">
-                    <form class="layui-form layui-col-md12  layui-form-pane" action="warehouseAdd" method="post">
+                    <form class="layui-form layui-col-md12  layui-form-pane">
                         @csrf
                         <div class="layui-form-item">
                             <label class="layui-form-label">仓库名称</label>
                             <div class="layui-input-block">
-                                <input type="text" name="name" lay-verify="required|title" lay-reqText="标题不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
+                                <input type="text" name="name" lay-verify="required|title" value="{{$data[0]['name']}}" lay-reqText="标题不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">仓库编码</label>
                             <div class="layui-input-block">
-                                <input type="text" name="code" lay-verify="required|title" lay-reqText="标题不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
+                                <input type="text" name="code" lay-verify="required|title" value="{{$data[0]['code']}}" lay-reqText="标题不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
                             </div>
                         </div>
                         <div class="layui-form-item" pane>
                             <label class="layui-form-label">是否启用</label>
                             <div class="layui-input-block">
+                                @if($data[0]['state'] == 1)
+                                <input type="radio" name="state" value="1" title="启用" checked>
+                                <input type="radio" name="state" value="2" title="不启用">
+                                @else
                                 <input type="radio" name="state" value="1" title="启用">
                                 <input type="radio" name="state" value="2" title="不启用" checked>
+                                @endif
                             </div>
                         </div>
                         <div class="layui-form-item x-city" id="start">
                             <label class="layui-form-label">仓库所在地区</label>
                             <div class="layui-input-inline">
                                 <select name="provinces" lay-filter="province">
-                                    <option value="">请选择省</option>
+                                    <option value=""></option>
                                 </select>
                             </div>
                             <div class="layui-input-inline">
@@ -88,7 +86,8 @@
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+                                <input type="hidden" value="{{$data[0]['id']}}" name="id">
+                                <button class="layui-btn" lay-filter="add" lay-submit="">修改</button>
                                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                             </div>
                         </div>
@@ -100,25 +99,70 @@
     </div>
 </div>
 <script type="text/javascript" src="{{asset('ad/admin/js/xcity.js')}}"></script>
-
-
 <script>
     layui.use(['form','code'], function(){
         form = layui.form;
-
         layui.code();
-
-        $('#start').xcity();
-
-        $('#end').xcity('广东','广州市','东山区');
-
+        $('#start').xcity("{{$data[0]['location']['provinces']}}","{{$data[0]['location']['citys']}}","{{$data[0]['location']['areas']}}");
+        $('#end').xcity("{{$data[0]['service']['province']}}","{{$data[0]['service']['city']}}","{{$data[0]['service']['area']}}");
     });
 </script>
-<script>var _hmt = _hmt || []; (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();</script>
+{{--<script>var _hmt = _hmt || []; (function() {--}}
+{{--        var hm = document.createElement("script");--}}
+{{--        hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";--}}
+{{--        var s = document.getElementsByTagName("script")[0];--}}
+{{--        s.parentNode.insertBefore(hm, s);--}}
+{{--    })();--}}
+{{--</script>--}}
+
+<script>
+
+    layui.use(['form', 'layer'],
+        function() {
+            $ = layui.jquery;
+            var form = layui.form,
+                layer = layui.layer;
+            //自定义验证规则
+            form.verify({
+                nikename: function (value) {
+                    if (value.length < 5) {
+                        return '昵称至少得5个字符啊';
+                    }
+                },
+            });
+            form.on('submit(add)',
+                function(data) {
+                    console.log(data.field);
+                    $.ajax({
+                        url:'updata',
+                        data:{
+                            data:data.field,
+                            _token:'{{csrf_token()}}'
+                        },
+                        type:'POST',
+                        success:function (e) {
+                            if (e == 1){
+                                // 发异步，把数据提交给php
+                                layer.alert("增加成功", {
+                                        icon: 6
+                                    },
+                                    function() {
+                                        //关闭当前frame
+                                        xadmin.close();
+
+                                        // 可以对父窗口进行刷新
+                                        xadmin.father_reload();
+                                    });
+                            }
+
+                        }
+                    })
+
+                    return false;
+                });
+        })
+</script>
 </body>
+
 </html>
+

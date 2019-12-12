@@ -71,9 +71,40 @@ class Warehouse extends Controller
     public function warehouseUpd(Request $request)
     {
         $id = $request->get('id');
-            echo $id;die;
-        $data = Warehouses::where()->get();
-        dump($data);
+        $data = Warehouses::where('id','=',$id)->get()->toArray();
+        $data[0]['location'] = json_decode($data[0]['location'],1);
+        $data[0]['service'] = json_decode($data[0]['service'],1);
+//        dump($data);die;
+        return view('admin/warehouse/warehouseUpd', ['data'=>$data]);
+    }
+    public function updata(Request $request)
+    {
+        $data = $request->post();
+//        dump($data);
+//        echo $data['data']['id'];
+        $id = $data['data']['id'];
+        unset($data['data']['id']);
+        $arr = array(
+            'name'=>$data['data']['name'],
+            'code'=>$data['data']['code'],
+            'state'=>$data['data']['state'],
+            'location'=>json_encode(array(
+                'provinces'=>$data['data']['provinces'],
+                'citys'=>$data['data']['citys'],
+                'areas'=>$data['data']['areas'])),
+            'service'=>json_encode(array(
+                'province'=>$data['data']['province'],
+                'city'=>$data['data']['city'],
+                'area'=>$data['data']['area']))
+        );
+        $warehouse = new Warehouses();
+        $res = $warehouse->upd($arr,$id);
+        if ($res){
+            echo 1;
+        }else{
+            echo 2;
+        }
+
 
     }
 }

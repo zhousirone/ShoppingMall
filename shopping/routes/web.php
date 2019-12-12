@@ -48,11 +48,20 @@ Route::get('showAdd','admin\Warehouse@showAdd');
 Route::post('warehouseAdd','admin\Warehouse@warehouseAdd');
 Route::get('warehouseShow','admin\Warehouse@warehouseShow');
 Route::get('warehouseDel','admin\Warehouse@warehouseDel');
+
+
+
 Route::get('warehouseUpd','admin\Warehouse@warehouseUpd');
 
 
 
 
+Route::any('updata','admin\Warehouse@updata');
+
+
+
+Route::any('index/login','index\Login@index');
+Route::any('index/regist','index\Login@regist');
 
 
 

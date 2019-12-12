@@ -35,21 +35,6 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
-                <div class="layui-card-body ">
-                    <form class="layui-form layui-col-space5">
-
-                        <div class="layui-inline layui-show-xs-block">
-                            <input type="text" name="username"  placeholder="请输入用户名" autocomplete="off" class="layui-input">
-                        </div>
-                        <div class="layui-inline layui-show-xs-block">
-                            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
-                        </div>
-                    </form>
-                </div>
-                <div class="layui-card-header">
-                    {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
-                    <button class="layui-btn" onclick="xadmin.open('仓库添加','showAdd',800,500)"><i class="layui-icon"></i>添加</button>
-                </div>
                 <div class="layui-card-body layui-table-body layui-table-main">
                     <table class="layui-table layui-form">
                         <thead>
@@ -71,7 +56,7 @@
                                 <td>{{$v['location']['provinces'].'  '.$v['location']['citys'].'  '.$v['location']['areas']}}</td>
                                 <td>{{$v['service']['province'].'  '.$v['service']['city'].'  '.$v['service']['area']}}</td>
                                 <td class="td-manage">
-                                    <a title="编辑"  onclick="xadmin.open('编辑','warehouseUpd?id='{{$v['id']}},600,400)" href="javascript:;">
+                                    <a title="编辑"  onclick="xadmin.open('编辑','warehouseUpd?id={{$v['id']}}',800,450)" href="javascript:;">
                                         <i class="layui-icon">&#xe642;</i>
                                     </a>
                                     <a title="删除" onclick="member_del(this,{{$v['id']}})" href="javascript:;">

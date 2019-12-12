@@ -54,8 +54,7 @@
             </div>
             <div class="layui-form-item">
                 <label for="L_repass" class="layui-form-label"></label>
-                <button class="layui-btn" lay-filter="upd
-                zzate" lay-submit="">修改</button>
+                <button class="layui-btn" lay-filter="update" lay-submit="">修改</button>
             </div>
         </form>
     </div>
