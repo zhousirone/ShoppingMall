@@ -16,5 +16,14 @@ class Warehouse extends Model
         $this->service = $arr['service'];
         return $this->save();
     }
+    public function upd($data,$id)
+    {
+        if ($this->find($id))
+        {
+            return $this->where('id',$id)->update($data);
+        }else{
+            return false;
+        }
 
+    }
 }
