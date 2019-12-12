@@ -38,6 +38,10 @@ Route::any('addMenu','admin\Menus@index');
 Route::any('doAddMenu','admin\Menus@create');
 Route::any('addPower','admin\Menus@addPower');
 Route::any('doAddPower','admin\Menus@doAddPower');
+Route::any('listMenu','admin\Menus@listMenu');
+Route::any('delMenu','admin\Menus@delMenu');
+
+
 
 
 Route::get('showAdd','admin\Warehouse@showAdd');

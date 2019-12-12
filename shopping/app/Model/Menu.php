@@ -36,15 +36,21 @@ class Menu extends Model
         }
         return $a;
     }
-    public function  getTree($data,$pid=0)
+
+    public function p_m()
     {
-        $tree=[];
-        foreach ($data as $k=>$v){
-            if ($v['pid']==$pid){
-                $v['son']=$this->gettree($data,$v['id']);
-                $tree[]=$v;
-            }
-        }
-        return $tree;
+        return $this->belongsTo("App\Model\Power","pid","id");
     }
+
+//    public function  getTree($data,$pid=0)
+//    {
+//        $tree=[];
+//        foreach ($data as $k=>$v){
+//            if ($v['pid']==$pid){
+//                $v['son']=$this->gettree($data,$v['id']);
+//                $tree[]=$v;
+//            }
+//        }
+//        return $tree;
+//    }
 }
