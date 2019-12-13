@@ -75,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/order/update.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+            <state relative-caret-position="34">
+              <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -258,9 +258,9 @@
       <path value="$PROJECT_DIR$/vendor/seld/phar-utils" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="287" />
-    <option name="y" value="298" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="348" />
+    <option name="y" value="15" />
     <option name="width" value="1213" />
     <option name="height" value="1049" />
   </component>
@@ -412,7 +412,7 @@
       <workItem from="1575974055092" duration="9045000" />
       <workItem from="1576024354420" duration="23367000" />
       <workItem from="1576131256595" duration="11327000" />
-      <workItem from="1576197149281" duration="21490000" />
+      <workItem from="1576197149281" duration="21881000" />
     </task>
     <task id="LOCAL-00001" summary="sys 的上传">
       <created>1575679116077</created>
@@ -432,10 +432,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212733000" />
+    <option name="totallyTimeSpent" value="213124000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24463807" />
@@ -820,8 +820,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/order/update.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+        <state relative-caret-position="34">
+          <caret line="68" column="32" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
         </state>
       </provider>
     </entry>
