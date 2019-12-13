@@ -26,40 +26,18 @@
 </div>
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
-
-        <div class="layui-card">
+        <div class="layui-card ">
         <div class="layui-card-body ">
             <form class="layui-form">
 
                 <div class="layui-form-item">
-                    <label for="role" class="layui-form-label">
-                        <span class="x-red">*</span>选择父级菜单
-                    </label>
-                    <div class="layui-input-inline layui-show-xs-block">
-                        <select name="power_id" id="power_id">
-                            @foreach($power as $k => $v)
-                                <option value = "{{$v['id']}}">{{$v['powername']}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-
-
-
-                <div class="layui-form-item">
-                    <label for="menuname" class="layui-form-label">
-                        <span class="x-red">*</span>菜单名称</label>
+                    <label for="powername" class="layui-form-label">
+                        <span class="x-red">*</span>权限名称</label>
                     <div class="layui-input-inline">
-                        <input type="text" id="menuname" name="menuname" value="" required="" lay-verify="menuname" autocomplete="off" class="layui-input">
+                        <input type="text" id="powername" name="powername" value="" required="" lay-verify="powername" autocomplete="off" class="layui-input">
                     </div>
                 </div>
-                <div class="layui-form-item">
-                    <label for="url" class="layui-form-label">
-                        <span class="x-red">*</span>菜单url</label>
-                    <div class="layui-input-inline">
-                        <input type="text" id="url" name="url" value="" required="" lay-verify="" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
+
 
                 <div class="layui-form-item">
                     <label for="L_nickname" class="layui-form-label">
@@ -74,12 +52,12 @@
 
                 <div class="layui-form-item">
                     <label for="L_repass" class="layui-form-label"></label>
-                    <button class="layui-btn" lay-filter="update" lay-submit="">添加菜单</button>
+                    <button class="layui-btn" lay-filter="update" lay-submit="">添加权限</button>
                 </div>
             </form>
 
         </div>
-    </div>
+        </div>
 
     </div>
 </div>
@@ -94,19 +72,16 @@
 
             form.on('submit(update)',
                 function(data) {
-                    var menuname = $('#menuname').val();
-                    var power_id = $('#power_id').val();
-                    var url = $('#url').val();
-                    console.log(power_id);
+                    var powername = $('#powername').val();
+
 
                     $.ajax({
-                        url:'doAddMenu',
+                        url:'doAddPower',
                         type:'post',
                         dataType:"json",
                         data:{
-                            menuname:menuname,
-                            power_id:power_id,
-                            url:url,
+                            powername:powername,
+
                             _token:'{{csrf_token()}}'
                         },
                         success:function (e) {

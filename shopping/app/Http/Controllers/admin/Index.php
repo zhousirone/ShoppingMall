@@ -22,18 +22,16 @@ class Index extends BaseController
         $id=$data['id'];
         $menu = new Menu();
         $res=$menu->test($id);
-        return view('admin.menu',['data'=> $data,'res'=>$res]);
+        return view('admin.login.menu',['data'=> $data,'res'=>$res]);
     }
     public function show()
     {
         $data = Session::get('admin');
-        return view('admin.welcome',['data'=> $data]);
+        return view('admin.login.welcome',['data'=> $data]);
     }
-
-
     public function login()
     {
-        return view('admin.login');
+        return view('admin.login.login');
     }
     public function doLogin( Request $request)
     {

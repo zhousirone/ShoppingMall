@@ -7,12 +7,6 @@ use Illuminate\Http\Request;
 use App\Model\Attr_goods;
 use App\Model\Attr_class;
 use App\Model\Sku;
-use App\Model\Attr_attribute;
-use App\Model\Attr_total;
-use App\Model\Attribute_key;
-use App\Model\Attribute_value;
-
-use PHPUnit\Framework\Constraint\Attribute;
 
 class GoodsManage extends Controller
 {
@@ -20,11 +14,15 @@ class GoodsManage extends Controller
     {
         $data=Attr_class::all()->toArray();
 //        var_dump($data);die;
+<<<<<<< HEAD
         $list=Brand::all()->toArray();
 //        var_dump($list);die;
         $res=Attr_goods::all('worehouse')->toArray();
 //        var_dump($res);die;
         return view('admin.goodsmanage/attribute_class',['data'=>$data,'list'=>$list,'res'=>$res]);
+=======
+        return view('admin.goodsmanage.attribute_class',['data'=>$data]);
+>>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
     }
     public function list_class(Request $request)
     {
@@ -46,12 +44,13 @@ class GoodsManage extends Controller
     {
         $arr = Attr_class::with('Attr_goods')->get()->toArray();
 
-        return view('admin.goodsmanage/goods_show',['data'=>$arr]);
+        return view('admin.goodsmanage.goods_show',['data'=>$arr]);
     }
     public function goods_sku()
     {
         $data=Sku::all()->toArray();
 //        var_dump($data);die;
+<<<<<<< HEAD
         return view('admin.goodsmanage/goods_sku',['data'=>$data]);
     }
     public function sku_add(Request $request)
@@ -100,6 +99,9 @@ class GoodsManage extends Controller
     public function class()
     {
         return view('admin.goodsmanage/class');
+=======
+        return view('admin.goodsmanage.goods_sku',['data'=>$data]);
+>>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
     }
     public function class_display(Request $request)
     {

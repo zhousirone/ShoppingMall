@@ -8,7 +8,7 @@ use App\Model\User;
 use App\Model\Attr_goods;
 use App\Model\Attr_class;
 use App\Model\Attr_attribute;
-use App\Model\Attr_total;
+
 // use think\facade\Request;
 // use think\Request;
 class GoodsController extends Controller
@@ -16,7 +16,7 @@ class GoodsController extends Controller
     //
     public function index()
     {
-        return view('admin.common/index');
+        return view('admin.common.index');
     }
     public function goods_list()
     {
@@ -30,9 +30,14 @@ class GoodsController extends Controller
     }
     public function attr_add()
     {
+<<<<<<< HEAD
         $data=Attr_attribute::all()->toArray();
 //        var_dump($data);die;
         return view('admin.common/attr_add',['data'=>$data]);
+=======
+        $data=Attr_goods::all()->toArray();
+        return view('admin.common.attr_add',['data'=>$data]);
+>>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
     }
     public function add_list(Request $request)
     {
@@ -43,10 +48,14 @@ class GoodsController extends Controller
         $rs=$flight->save();
 
         if($rs){
+<<<<<<< HEAD
 //           return $this->redirect('Attribute/attr_value');
 //            return redirect()->action('admin.Attribute/attr_value');
             return redirect('goods_list');
 
+=======
+            echo "<script>alert('成功');</script> ";
+>>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
         }
 
     }
@@ -56,6 +65,8 @@ class GoodsController extends Controller
 //        $info = Attr_goods::with('Attr_class')->get()->toArray();
 //        $pid=$info[0]['id'];
 //        var_dump($pid);die;
+
+
     }
     public function status_upd(Request $request)
     {
@@ -89,8 +100,9 @@ class GoodsController extends Controller
         $res=Attr_goods::where('pid',$id)->get();
 //        var_dump($res);die;
         if($res){
-            return view('admin.attribute/attr_value',['data'=>$res]);
+            return view('admin.attribute.attr_value',['data'=>$res]);
         }
+
     }
     public function value_id(Request $request)
     {
@@ -102,11 +114,4 @@ class GoodsController extends Controller
             echo 0;
         }
     }
-//    public function class_list()
-//    {
-////        $arr = Attr_class::with('sku_goods')->get()->toArray();
-////        var_dump($arr);die;
-//        $arr = Attr_goods::with('total')->get()->toArray();
-//        var_dump($arr);die;
-//    }
 }

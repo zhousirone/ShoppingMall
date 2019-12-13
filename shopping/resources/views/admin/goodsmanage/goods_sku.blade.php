@@ -8,14 +8,11 @@
 <body>
 <div class="layui-fluid">
     <div class="layui-row">
-        <form action="sku_add" method="post" class="layui-form layui-form-pane">
+        <form action="" method="post" class="layui-form layui-form-pane">
             <div class="layui-form-item">
-                {{--                <label for="name" class="layui-form-label">--}}
-                {{--                    @foreach($list as $kye=>$value)--}}
-                <span class="x-red">*</span>添加商品
-                {{--                    @endforeach--}}
-                {{--                </label>--}}
-                {{--                <a class="layui-btn" title="修改" href="attr_value">属性值管理</a>--}}
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>角色名
+                </label>
                 <div class="layui-input-inline">
                     <input type="text" id="name" name="name" required="" lay-verify="required"
                            autocomplete="off" class="layui-input">
@@ -23,7 +20,7 @@
             </div>
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">
-                    拥有
+                    拥有权限
                 </label>
                 <table  class="layui-table layui-input-block">
                     <tbody>
@@ -34,8 +31,8 @@
                         <td>
                             <div class="layui-input-block">
                                 @foreach($data as $k=>$v)
-                                    <input name="id[]" id="color" lay-skin="primary" type="checkbox" value="{{$v['color']}}" title="{{$v['color']}}" >
-                                @endforeach
+                                <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['color_value']}}" title="{{$v['color']}}" >
+                               @endforeach
 
                             </div>
                         </td>
@@ -48,9 +45,8 @@
                         <td>
                             <div class="layui-input-block">
                                 @foreach($data as $k=>$v)
-                                    <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['size']}}" title="{{$v['size']}}" >
-                                @endforeach
-
+                                <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['size_value']}}" title="{{$v['size']}}">
+                                 @endforeach
                             </div>
                         </td>
                     </tr>
@@ -62,7 +58,7 @@
                         <td>
                             <div class="layui-input-block">
                                 @foreach($data as $k=>$v)
-                                    <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['price']}}" title="{{$v['price']}}">
+                                    <input name="id[]" lay-skin="primary" type="checkbox" value="{{$v['price_value']}}" title="{{$v['price']}}">
                                 @endforeach
                             </div>
                         </td>
@@ -75,12 +71,11 @@
                     描述
                 </label>
                 <div class="layui-input-block">
-                    <textarea placeholder="请输入内容" id="desc" class="layui-textarea"></textarea>
+                    <textarea placeholder="请输入内容" id="desc" name="desc" class="layui-textarea"></textarea>
                 </div>
             </div>
             <div class="layui-form-item">
-                {{--                <button lay-submit="" lay-filter="add">增加</button>--}}
-                <input type="submit" value="提交" class="layui-btn">
+                <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
             </div>
         </form>
     </div>

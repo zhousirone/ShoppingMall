@@ -11,7 +11,7 @@ class AttributeValue extends Controller
     public function attr_value()
     {
         $data=Attr_goods::all();
-        return view('admin.attribute/attr_value',['data'=>$data]);
+        return view('admin.attribute.attr_value',['data'=>$data]);
     }
     public function attr_upd(Request $request)
     {
@@ -21,7 +21,7 @@ class AttributeValue extends Controller
 
         $data=Attr_goods::where("id",$id)->first();
 //        var_dump($data);die;
-        return view('admin.attribute/attr_replace',['data'=>$data]);
+        return view('admin.attribute.attr_replace',['data'=>$data]);
     }
     public function upd(Request $request){
         $name=$request->post('name');
@@ -42,7 +42,7 @@ class AttributeValue extends Controller
 //        var_dump($data);die;
 ////        $res=Attr_goods::create(['name'=>$name]);
 ////       var_dump($res);die;
-        return view('admin.attribute/value_add');
+        return view('admin.attribute.value_add');
     }
     public function value_list(Request $request)
     {
@@ -53,7 +53,7 @@ class AttributeValue extends Controller
         $res=$user->save();
 //        var_dump($res);die;
         if($res){
-            return view('admin.attr_value');
+            return view('admin.attribute.attr_value');
         }
     }
     public function value_upd(Request $request)
@@ -64,6 +64,6 @@ class AttributeValue extends Controller
 
         $data=Attr_goods::where("id",$id)->first();
 //        var_dump($data);die;
-        return view('admin.attribute/attr_replace',['data'=>$data]);
+        return view('admin.attribute.attr_replace',['data'=>$data]);
     }
 }
