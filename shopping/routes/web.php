@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//孙
 Route::any('index','admin\Index@index');
 Route::any('show','admin\Index@show');
 
@@ -28,47 +31,42 @@ Route::any('updAdmin','admin\Admins@updAdmin');
 Route::any('doUpdAdmin','admin\Admins@doUpdAdmin');
 Route::any('roleAdmin','admin\Admins@roleAdmin');
 Route::any('doRoleAdmin','admin\Admins@doRoleAdmin');
+Route::any('delAdmin','admin\Admins@delAdmin');
 
 Route::any('updPower','admin\Roles@updPower');
 Route::any('addRole','admin\Roles@addRole');
 Route::any('doAddRole','admin\Roles@doAddRole');
 Route::any('listRole','admin\Roles@listRole');
+Route::any('delRole','admin\Roles@delRole');
 
 Route::any('addMenu','admin\Menus@index');
 Route::any('doAddMenu','admin\Menus@create');
-Route::any('addPower','admin\Menus@addPower');
-Route::any('doAddPower','admin\Menus@doAddPower');
 Route::any('listMenu','admin\Menus@listMenu');
 Route::any('delMenu','admin\Menus@delMenu');
+Route::any('addPower','admin\Menus@addPower');
+Route::any('doAddPower','admin\Menus@doAddPower');
+Route::any('listPower','admin\Menus@listPower');
+Route::any('delPower','admin\Menus@delPower');
 
 
 
 
+//周
 Route::get('showAdd','admin\Warehouse@showAdd');
 Route::post('warehouseAdd','admin\Warehouse@warehouseAdd');
 Route::get('warehouseShow','admin\Warehouse@warehouseShow');
 Route::get('warehouseDel','admin\Warehouse@warehouseDel');
-
-
-
 Route::get('warehouseUpd','admin\Warehouse@warehouseUpd');
-
-
-
-
 Route::any('updata','admin\Warehouse@updata');
 
 
 
+
+
+
+//董
 Route::any('index/login','index\Login@index');
 Route::any('index/regist','index\Login@regist');
-
-
-
-
-
-
-
 
 Route::any('goods_add', 'GoodsController@goods_list');//列表
 Route::any('attr_add', 'GoodsController@attr_add');

@@ -30,57 +30,45 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
-                <div class="layui-card-body ">
-                    <form class="layui-form layui-col-space5">
+                {{--                <div class="layui-card-body ">--}}
+                {{--                    <form class="layui-form layui-col-space5">--}}
 
-                        <div class="layui-inline layui-show-xs-block">
-                            <input type="text" name="username"  placeholder="请输入用户名" autocomplete="off" class="layui-input">
-                        </div>
-                        <div class="layui-inline layui-show-xs-block">
-                            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
-                        </div>
-                    </form>
-                </div>
-                <div class="layui-card-header">
-{{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
-                    <button class="layui-btn" onclick="xadmin.open('添加管理员','addAdmin',600,400)"><i class="layui-icon"></i>添加</button>
-                </div>
+                {{--                        <div class="layui-inline layui-show-xs-block">--}}
+                {{--                            <input type="text" name="username"  placeholder="请输入用户名" autocomplete="off" class="layui-input">--}}
+                {{--                        </div>--}}
+                {{--                        <div class="layui-inline layui-show-xs-block">--}}
+                {{--                            <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>--}}
+                {{--                        </div>--}}
+                {{--                    </form>--}}
+                {{--                </div>--}}
+                {{--                <div class="layui-card-header">--}}
+                {{--                    --}}{{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
+                {{--                    <button class="layui-btn" onclick="xadmin.open('添加管理员','addAdmin',600,400)"><i class="layui-icon"></i>添加</button>--}}
+                {{--                </div>--}}
                 <div class="layui-card-body layui-table-body layui-table-main">
                     <table class="layui-table layui-form">
                         <thead>
                         <tr>
-{{--                            <th>--}}
-{{--                                <input type="checkbox" lay-filter="checkall" name="" lay-skin="primary">--}}
-{{--                            </th>--}}
-                            <th>ID</th>
-                            <th>用户名</th>
-                            <th>昵称</th>
-                            <th>密码</th>
-                            <th>角色</th>
-{{--                            <th>状态</th>--}}
-                            <th>操作</th></tr>
+                            <th>权限ID</th>
+                            <th>权限名称</th>
+                            <th>权限下菜单数量</th>
+                            <th>菜单是否展示</th>
+                            <th>操作</th>
+                        </tr>
                         </thead>
                         <tbody>
                         @foreach($data as $k => $v)
                             <tr>
                                 <td>{{$v['id']}}</td>
-                                <td>{{$v['username']}}</td>
-                                <td>{{$v['nickname']}}</td>
-                                <td>{{$v['password']}}</td>
-                                <td>{{$v['roles'][0]['rolename']}}</td>
-{{--                                <td class="td-status">--}}
-{{--                                    <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>--}}
+                                <td>{{$v['powername']}}</td>
+                                <td>{{$v['num']}}</td>
+                                <td></td>
                                 <td class="td-manage">
-{{--                                    <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">--}}
-{{--                                        <i class="layui-icon">&#xe601;</i>--}}
-{{--                                    </a>--}}
-                                    <a title="编辑"  onclick="xadmin.open('编辑','updAdmin?id={{$v['id']}}',600,400)" href="javascript:;">
-                                        <i class="layui-icon">&#xe642;</i>
-                                    </a>
-                                    <a onclick="xadmin.open('修改角色','roleAdmin?id={{$v['id']}}',600,400)" title="修改角色" href="javascript:;">
+
+                                    <a onclick="xadmin.open('修改','updPower?id={{$v['id']}}',600,400)" title="修改" href="javascript:;">
                                         <i class="layui-icon">&#xe631;</i>
                                     </a>
-                                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                                    <a title="删除" onclick="member_del(this,{{$v['id']}})" href="javascript:;">
                                         <i class="layui-icon">&#xe640;</i>
                                     </a>
                                 </td>
@@ -96,7 +84,6 @@
                             <a class="num" href="">1</a>
                             <span class="current">2</span>
                             <a class="num" href="">3</a>
-                            <a class="num" href="">489</a>
                             <a class="next" href="">&gt;&gt;</a>
                         </div>
                     </div>
@@ -140,28 +127,35 @@
     function member_del(obj,id){
         layer.confirm('确认要删除吗？',function(index){
             //发异步删除数据
-            $(obj).parents("tr").remove();
-            layer.msg('已删除!',{icon:1,time:1000});
+            $.ajax({
+                url:'delPower',
+                type:'post',
+                dataType:"json",
+                data:{
+                    id:id,
+                    _token:'{{csrf_token()}}'
+                },
+                success:function (e) {
+                    console.log(e);
+                    if (e.code == 0) {
+
+                        $(obj).parents("tr").remove();
+                        layer.msg(e.msg,{icon:1,time:1000});
+                    }else if(e.code == 1){
+                        $(obj).parents("tr").remove();
+                        layer.msg(e.msg,{icon:6,time:1000});
+                    }else{
+
+                        layer.msg(e.msg,{icon:7,time:1000});
+                    }
+                }
+            })
+
         });
     }
 
 
 
-    // function delAll (argument) {
-    //     var ids = [];
-    //
-    //     // 获取选中的id
-    //     $('tbody input').each(function(index, el) {
-    //         if($(this).prop('checked')){
-    //             ids.push($(this).val())
-    //         }
-    //     });
-    //
-    //     layer.confirm('确认要删除吗？'+ids.toString(),function(index){
-    //         //捉到所有被选中的，发异步进行删除
-    //         layer.msg('删除成功', {icon: 1});
-    //         $(".layui-form-checked").not('.header').parents('tr').remove();
-    //     });
-    // }
+
 </script>
 </html>

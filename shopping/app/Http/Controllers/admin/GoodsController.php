@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,7 +16,7 @@ class GoodsController extends Controller
     //
     public function index()
     {
-        return view('common/index');
+        return view('admin.common.index');
     }
     public function goods_list()
     {
@@ -26,12 +26,12 @@ class GoodsController extends Controller
 //       var_dump($info);die;
         $data=Attr_goods::all()->toArray();
 
-        return view('common/goods_list',['data'=>$data]);
+        return view('admin.common.goods_list',['data'=>$data]);
     }
     public function attr_add()
     {
         $data=Attr_goods::all()->toArray();
-        return view('common/attr_add',['data'=>$data]);
+        return view('admin.common.attr_add',['data'=>$data]);
     }
     public function add_list(Request $request)
     {
@@ -90,11 +90,11 @@ class GoodsController extends Controller
         $res=Attr_goods::where('pid',$id)->get();
 //        var_dump($res);die;
         if($res){
-            return view('attribute/attr_value',['data'=>$res]);
+            return view('admin.attribute.attr_value',['data'=>$res]);
         }
 
     }
-    public function value_id()
+    public function value_id(Request $request)
     {
         $id=$request->get('id');
 

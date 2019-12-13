@@ -15,7 +15,7 @@ class Admins extends BaseController
     public function addAdmin()
     {
         $role = Role::get();
-        return view('admin.addAdmin',['role'=> $role]);
+        return view('admin.admin.addAdmin',['role'=> $role]);
     }
 
     public function doAddAdmin(Request $request)
@@ -49,14 +49,14 @@ class Admins extends BaseController
                 $data[$i]['roles'][0]['rolename']="暂无角色";
             }
         }
-        return view('admin.listAdmin',['data'=> $data]);
+        return view('admin.admin.listAdmin',['data'=> $data]);
     }
 
     public function updAdmin(Request $request)
     {
         $id=$request->get('id');
         $data=Admin::find($id)->toArray();
-        return view ('admin.updAdmin',['data'=>$data]);
+        return view ('admin.admin.updAdmin',['data'=>$data]);
     }
     public function doUpdAdmin(Request $request)
     {
@@ -100,7 +100,7 @@ class Admins extends BaseController
         }
 //        var_dump($data);die;
         $role = Role::all();
-        return view('admin.roleAdmin',['data'=>$data,'role'=> $role]);
+        return view('admin.admin.roleAdmin',['data'=>$data,'role'=> $role]);
     }
 
     public function doRoleAdmin(Request $request)
@@ -120,6 +120,20 @@ class Admins extends BaseController
         }else{
             $arr['code'] = 1;
             $arr['msg'] = "角色修改失败";
+            echo json_encode($arr);
+        }
+    }
+    public function delAdmin(Request $request)
+    {
+        $id=$request->post('id');
+        $res=Admin::find($id)->delete();
+        if($res){
+            $arr['code'] = 0;
+            $arr['msg'] = "删除成功";
+            echo json_encode($arr);
+        }else{
+            $arr['code'] = 1;
+            $arr['msg'] = "删除失败";
             echo json_encode($arr);
         }
     }

@@ -99,14 +99,37 @@ class Menus extends Controller
     }
 
 
-    public function show($id)
+    public function listPower()
     {
-        //
+        $data=Power::with('menus')->get()->toArray();
+        $aa=count($data);
+        for($i=0;$i<$aa;$i++){
+            $data[$i]['num']=count($data[$i]['menus']);
+        }
+        return view('admin.menu.listPower',['data'=>$data]);
     }
 
-    public function edit($id)
+    public function delPower(Request $request)
     {
-        //
+        $id=$request->post('id');
+        $res=count(Power_menu::where('power_id', '=', $id)->get());
+        if($res==0){
+            $arr=Power::find($id)->delete();
+            if($arr){
+                $arr['code'] = 0;
+                $arr['msg'] = "删除成功";
+                echo json_encode($arr);
+            }else{
+                $arr['code'] = 1;
+                $arr['msg'] = "删除失败";
+                echo json_encode($arr);
+            }
+        }else{
+            $arr['code'] = 2;
+            $arr['msg'] = "权限下存有菜单，请删除菜单，再次删除";
+            echo json_encode($arr);
+        }
+
     }
 
     public function update(Request $request, $id)

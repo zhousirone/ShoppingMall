@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html class="x-admin-sm">
-@extends('common.header')
+@extends('admin.common.header')
 <script src="/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/admin/js/xadmin.js"></script>
 <body>

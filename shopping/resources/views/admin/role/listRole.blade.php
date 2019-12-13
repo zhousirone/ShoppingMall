@@ -69,7 +69,7 @@
                                     <a onclick="xadmin.open('修改权限','updPower?id={{$v['id']}}',600,400)" title="修改权限" href="javascript:;">
                                         <i class="layui-icon">&#xe631;</i>
                                     </a>
-                                    <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                                    <a title="删除" onclick="member_del(this,{{$v['id']}})" href="javascript:;">
                                         <i class="layui-icon">&#xe640;</i>
                                     </a>
                                 </td>
@@ -129,8 +129,24 @@
     function member_del(obj,id){
         layer.confirm('确认要删除吗？',function(index){
             //发异步删除数据
-            $(obj).parents("tr").remove();
-            layer.msg('已删除!',{icon:1,time:1000});
+            $.ajax({
+                url:'delRole',
+                type:'post',
+                dataType:"json",
+                data:{
+                    id:id,
+                    _token:'{{csrf_token()}}'
+                },
+                success:function (e) {
+                    console.log(e);
+                    if (e.code == 0) {
+                        $(obj).parents("tr").remove();
+                        layer.msg(e.msg,{icon:1,time:1000});
+                    }else{
+                        layer.msg(e.msg,{icon:6,time:1000});
+                    }
+                }
+            })
         });
     }
 
