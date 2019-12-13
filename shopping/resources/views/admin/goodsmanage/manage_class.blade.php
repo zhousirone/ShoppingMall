@@ -23,7 +23,7 @@
 
                 <div class="layui-card-header">
                     {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
-                    <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/attr_add',600,400)"><i class="layui-icon"></i>添加</button>
+                    {{--                    <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/attr_add',600,400)"><i class="layui-icon"></i>添加</button>--}}
 
                     <a class="layui-btn" title="修改" href="attr_value">属性值管理</a>
 
@@ -38,7 +38,7 @@
                             <th>ID</th>
                             <th>属性展示名称</th>
 
-{{--                            <th>前台是否展示该属性</th>--}}
+                            <th>前台是否展示该属性</th>
                             <th></th>
                             <th>操作</th>
 
@@ -52,24 +52,26 @@
                                     <input type="checkbox" lay-skin="primary">
                                 </td>
                                 <td>{{$v['id']}}</td>
-                                <td>{{$v['attr_name']}}</td>
-{{--                                <td>{{$v['status']}}</td>--}}
+                                <td>{{$v['attribute_name']}}</td>
+
+
+
                                 <td class="td-status">
                                     <span class="layui-btn layui-btn-normal layui-btn-mini"></span></td>
                                 <td class="td-manage">
-                                    <a onclick="member_stop(this,'{{$v['id']}}')" href="javascript:;"  title="启用">
+                                    <a onclick="member_stop(this,'')" href="javascript:;"  title="启用">
                                         <i class="layui-icon">&#xe601;</i>
                                     </a>
                                     {{--                                <a title="编辑属性"  onclick="xadmin.open('编辑','member-edit.html',600,400)" href="javascript:;">--}}
                                     {{--                                    <i class="layui-icon">&#xe642;</i>--}}
                                     {{--                                </a>--}}
-                                    <a title="编辑属性" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="attr_upd?id={{$v['id']}}">
+                                    <a title="编辑属性" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="attr_upd?id=">
                                         <i class="layui-icon">&#xe631;</i>
                                     </a>
-                                    <a title="分类" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="update_id?id={{$v['id']}}"  title="22">
+                                    <a title="分类" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="update_id?id="  title="22">
                                         <i class="layui-icon">&#xe699;</i>
                                     </a>
-                                    <a title="删除" onclick="member_del(this,'{{$v['id']}}')" href="javascript:;">
+                                    <a title="删除" onclick="member_del(this,'')" href="javascript:;">
                                         <i class="layui-icon">&#xe640;</i>
                                     </a>
                                 </td>

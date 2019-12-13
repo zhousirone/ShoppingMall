@@ -17,8 +17,12 @@ class market extends BaseController
         $data=Attribute_key::all()->toArray();
         $res=new Attribute_key();
         $list=$res->getTree($data);
-        $user=User::find(21);
+        $user=User::find();
 
         return view('index.common.index',['list'=>$list,'user'=>$user]);
+    }
+    public function class_list()
+    {
+        return view('index.common.index');
     }
 }

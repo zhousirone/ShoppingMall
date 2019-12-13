@@ -14,13 +14,7 @@ class Attr_goods extends Model
 
         return $this->belongsToMany(Attr_attribute::class,'t_a','type_id','attr_id');
     }
-    public function add($data)
-    {
-//        var_dump($data);die;
-      $this->name = $data['name'];
 
-        return $this->save();
-    }
     //商品关联分类
     public function Attr_class()
     {

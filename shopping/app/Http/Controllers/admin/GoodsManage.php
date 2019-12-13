@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\model\Brand;
 use Illuminate\Http\Request;
 use App\Model\Attr_goods;
 use App\Model\Attr_class;
@@ -19,7 +20,11 @@ class GoodsManage extends Controller
     {
         $data=Attr_class::all()->toArray();
 //        var_dump($data);die;
-        return view('admin.goodsmanage/attribute_class',['data'=>$data]);
+        $list=Brand::all()->toArray();
+//        var_dump($list);die;
+        $res=Attr_goods::all('worehouse')->toArray();
+//        var_dump($res);die;
+        return view('admin.goodsmanage/attribute_class',['data'=>$data,'list'=>$list,'res'=>$res]);
     }
     public function list_class(Request $request)
     {
@@ -89,6 +94,22 @@ class GoodsManage extends Controller
     {
         $data=Attr_goods::all()->toArray();
 //        var_dump($list);die;
-        return view('admin.goodsmanage/goods_li',['data'=>$data]);
+
+        return view('admin.goodsmanage/goods_li',['data'=>$data,'list'=>$list]);
     }
+    public function class()
+    {
+        return view('admin.goodsmanage/class');
+    }
+    public function class_display(Request $request)
+    {
+        $data=Attribute_key::where('class_id',0)->get()->toArray();
+//        $user=new Attribute_key();
+//        $request->attribute_name=$data;
+//        $res=$user->save();
+//        var_dump($data);die;
+        return  view('admin.goodsmanage.class_display',['data'=>$data]);
+    }
+
+
 }
