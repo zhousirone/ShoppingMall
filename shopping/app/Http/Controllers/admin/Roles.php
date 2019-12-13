@@ -29,7 +29,6 @@ class Roles extends Controller
     public function addRole()
     {
         $data=Power::with('menus')->get()->toArray();
-//        var_dump($data);die;
         return view('admin.role.addRole',['data'=>$data]);
     }
 

@@ -17,7 +17,6 @@ class Menus extends Controller
         return view('admin.menu.addMenu',['power'=> $power]);
     }
 
-
     public function create(Request $request)
     {
         $menuname=$request->post('menuname');
@@ -35,7 +34,7 @@ class Menus extends Controller
             $menu->url=$url;
             $menu->save();
             $menu_id = $menu->id;
-            $power_menu=new Power_menu();
+            $power_menu = new Power_menu();
             $power_menu->power_id=$power_id;
             $power_menu->menu_id=$menu_id;
             $res=$power_menu->save();
@@ -76,7 +75,6 @@ class Menus extends Controller
     public function listMenu()
     {
         $data=Menu::with('p_m')->orderBy('pid', 'asc')->get()->toArray();
-//        var_dump($data);die;
         return view('admin.menu.listMenu',['data'=>$data]);
     }
 
@@ -84,9 +82,9 @@ class Menus extends Controller
 
     public function delMenu(Request $request)
     {
-        $id=$request->post('id');
+        $id = $request->post('id');
         Menu::find($id)->delete();
-        $res=Power_menu::where('menu_id', '=', $id)->delete();
+        $res = Power_menu::where('menu_id', '=', $id)->delete();
         if($res){
             $arr['code'] = 0;
             $arr['msg'] = "删除成功";
