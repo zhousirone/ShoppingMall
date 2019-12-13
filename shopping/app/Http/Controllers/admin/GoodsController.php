@@ -24,32 +24,31 @@ class GoodsController extends Controller
 //       $info=Attr_goods::all()->toArray();
         $info = Attr_goods::with('Attr_attribute')->get()->toArray();
 //       var_dump($info);die;
-        $data=Attr_goods::all()->toArray();
-
+        $data=Attr_attribute::all()->toArray();
+//        var_dump($data);die;
         return view('admin.common.goods_list',['data'=>$data]);
     }
     public function attr_add()
     {
-        $data=Attr_goods::all()->toArray();
+        $data=Attr_attribute::all()->toArray();
 //        var_dump($data);die;
         return view('admin.common/attr_add',['data'=>$data]);
     }
     public function add_list(Request $request)
     {
         $data = $request->post();  //获取所有
-//        $params=$request->get('name');
-//        $par=$request->get('attr_num');
-//        var_dump($data);die;
-        $flight=new Attr_goods();
-//        $result = $this->create($request->all());
-//        $rs=Attr_goods::create(['name'=>$params,'attr_num'=>$par]);
-        $rs=$flight->add($data);
+
+        $flight=new Attr_attribute();
+        $flight->attr_name=$data['attr_name'];
+        $rs=$flight->save();
+
         if($rs){
 //           return $this->redirect('Attribute/attr_value');
-            return redirect()->action('admin.Attribute/attr_value');
+//            return redirect()->action('admin.Attribute/attr_value');
+            return redirect('goods_list');
+
         }
-//        var_dump($rs);die;
-//
+
     }
     //分类
     public function classification()

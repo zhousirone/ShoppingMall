@@ -66,6 +66,20 @@ Route::any( 'sku_add','admin\GoodsManage@sku_add');//sku添加方法
 Route::any( 'bland','admin\GoodsManage@bland');//sku添加方法
 Route::any( 'class_list','admin\GoodsManage@class_list');//sku  列表展示
 Route::any( 'goods_li','admin\GoodsManage@goods_li');//sku  商品列表展示
+Route::any( 'class','admin\GoodsManage@class');//分类
+Route::any( 'class_display','admin\GoodsManage@class_display');//
+Route::any( 'manage_class','admin\GoodsManage@manage_class');//
+
+Route::any( 'brand_add','admin\BrandController@brand_add');//所属品牌
+Route::any( 'add','admin\BrandController@add');//所属品牌添加方法
+Route::any( 'list','admin\BrandController@list');//所属品牌别表
+Route::any( 'del','admin\BrandController@del');//所属品牌别表
+Route::any( 'order_list','admin\BrandController@order_list');//所属品牌别表
+Route::any( 'brand_upd','admin\BrandController@brand_upd');//品牌修改
+Route::any( 'brand_replace','admin\BrandController@brand_replace');//品牌修改替换页
+Route::any( 'brand_update','admin\BrandController@brand_update');//品牌方法修改
+Route::any( 'brand_update','admin\BrandController@s');
+
 //前台
 Route::any( 'indexlogin','index\proscenium@login');//登录列表
 Route::any( 'login_add','index\proscenium@login_add');//登录方法

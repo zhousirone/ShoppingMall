@@ -32,14 +32,12 @@
                     <table class="layui-table layui-form">
                         <thead>
                         <tr>
-                            <th>
-                                <input type="checkbox" lay-filter="checkall" name="" lay-skin="primary">
-                            </th>
+
                             <th>ID</th>
-                            <th>属性展示名称</th>
+                            <th>商品</th>
 
                             <th>前台是否展示该属性</th>
-                            <th></th>
+
                             <th>操作</th>
 
                         </tr>
@@ -48,13 +46,11 @@
                         <tbody>
                         @foreach($data as $k=>$v)
                             <tr>
-                                <td>
-                                    <input type="checkbox" lay-skin="primary">
-                                </td>
+
                                 <td>{{$v['id']}}</td>
                                 <td>{{$v['name']}}</td>
 
-                                <td>{{$v['status']}}</td>
+
 
 
                                 <td class="td-status">

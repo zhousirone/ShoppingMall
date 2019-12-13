@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
+
 @extends('admin.common.header')
-<script src="/ad/admin/lib/layui/layui.js" charset="utf-8"></script>
-<script type="text/javascript" src="/ad/admin/js/xadmin.js"></script>
+<script src="/admin/lib/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="/admin/js/xadmin.js"></script>
 <body>
 <div class="layui-fluid">
     <div class="layui-row">
@@ -10,11 +11,24 @@
             @csrf
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
-                    <span class="x-red">*</span>添加属性
+                    <span class="x-red">*</span>分类添加
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="attr_name" name="attr_name" required="" lay-verify="required"
+                    <input type="text" id="name" name="name" required="" lay-verify="required"
                            autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>将会成为您唯一的登入名
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label for="phone" class="layui-form-label">
+                    <span class="x-red">*</span>分类是否前台展示
+                </label>
+                <div class="layui-input-inline">
+                    <input type="radio" name="status" value="0">是
+                    <input type="radio" name="status" value="1">否
                 </div>
                 <div class="layui-form-mid layui-word-aux">
                     <span class="x-red">*</span>将会成为您唯一的登入名
@@ -25,26 +39,14 @@
                     <span class="x-red">*</span>分类
                 </label>
                 <div class="layui-input-inline">
-                    <select name="" id="">--}}
-                            @foreach($data as $k=>$v)
-                                <option value="">{{$v['attr_name']}}</option>
-                            @endforeach
-                    </select>
+{{--                                        <select name="" id="">--}}
+{{--                                            @foreach($data as $k=>$v)--}}
+{{--                                                <option value="">{{$v['name']}}</option>--}}
+{{--                                            @endforeach--}}
+{{--                                        </select>--}}
                 </div>
                 <div class="layui-form-mid layui-word-aux">
                     <span class="x-red">*</span>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label for="phone" class="layui-form-label">
-                    <span class="x-red">*</span>前台是否展示属性
-                </label>
-                <div class="layui-input-inline">
-                    <input type="radio" name="status" value="0">是
-                    <input type="radio" name="status" value="1">否
-                </div>
-                <div class="layui-form-mid layui-word-aux">
-                    <span class="x-red">*</span>将会成为您唯一的登入名
                 </div>
             </div>
             <div class="layui-form-item">
@@ -56,7 +58,6 @@
         </form>
     </div>
 </div>
-<script type="text/javascript" src="../../../jquery-3.3.1.min.js"></script>
 <script>layui.use(['form', 'layer'],
         function() {
             $ = layui.jquery;
