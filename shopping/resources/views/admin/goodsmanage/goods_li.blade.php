@@ -1,27 +1,7 @@
 
 <!DOCTYPE html>
 <html class="x-admin-sm">
-<head>
-    <meta charset="UTF-8">
-    <title>后台登录-X-admin2.2</title>
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="stylesheet" href="/ad/admin/css/font.css">
-    <link rel="stylesheet" href="/ad/admin/css/xadmin.css">
-    <!-- <link rel="stylesheet" href="/admin/css/theme5.css"> -->
-
-    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
-    <!--[if lt IE 9]>
-    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script>
-        // 是否开启刷新记忆tab功能
-        // var is_remember = false;
-    </script>
-</head>
+@extends('admin.common.header')
 <script src="/ad/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/ad/admin/js/xadmin.js"></script>
 <body>
@@ -42,29 +22,22 @@
 
 
                 <div class="layui-card-header">
-{{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
-                    <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/attr_add',600,400)"><i class="layui-icon"></i>添加</button>
+                    {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
+{{--                    <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/attr_add',600,400)"><i class="layui-icon"></i>添加</button>--}}
 
-                    <a class="layui-btn" title="属性值管理" href="attr_value">属性值管理</a>
+                    <a class="layui-btn" title="修改" href="attr_value">属性值管理</a>
 
                 </div>
                 <div class="layui-card-body layui-table-body layui-table-main">
                     <table class="layui-table layui-form">
                         <thead>
                         <tr>
-                            <th>
-                                <input type="checkbox" lay-filter="checkall" name="" lay-skin="primary">
-                            </th>
-                            <th>ID</th>
-                            <th>属性展示名称</th>
-<<<<<<< HEAD
 
-{{--                            <th>前台是否展示该属性</th>--}}
-=======
-                            <th>属性所属分类</th>
+                            <th>ID</th>
+                            <th>商品</th>
+
                             <th>前台是否展示该属性</th>
->>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
-                            <th></th>
+
                             <th>操作</th>
 
                         </tr>
@@ -72,16 +45,16 @@
                         </thead>
                         <tbody>
                         @foreach($data as $k=>$v)
-<<<<<<< HEAD
                             <tr>
-                                <td>
-                                    <input type="checkbox" lay-skin="primary">
-                                </td>
+
                                 <td>{{$v['id']}}</td>
-                                <td>{{$v['attr_name']}}</td>
-{{--                                <td>{{$v['status']}}</td>--}}
+                                <td>{{$v['name']}}</td>
+
+
+
+
                                 <td class="td-status">
-                                    <span class="layui-btn layui-btn-normal layui-btn-mini"></span></td>
+                                    <span class="layui-btn layui-btn-normal layui-btn-mini">{{$v['status']}}</span></td>
                                 <td class="td-manage">
                                     <a onclick="member_stop(this,'{{$v['id']}}')" href="javascript:;"  title="启用">
                                         <i class="layui-icon">&#xe601;</i>
@@ -100,38 +73,6 @@
                                     </a>
                                 </td>
                             </tr>
-=======
-                        <tr>
-                            <td>
-                                <input type="checkbox" lay-skin="primary">
-                            </td>
-                            <td>{{$v['id']}}</td>
-                            <td>{{$v['name']}}</td>
-                            <td>{{$v['class']}}</td>
-                            <td>{{$v['status']}}</td>
-
-
-                            <td class="td-status">
-                                <span class="layui-btn layui-btn-normal layui-btn-mini">{{$v['status']}}</span></td>
-                            <td class="td-manage">
-                                <a onclick="member_stop(this,'{{$v['id']}}')" href="javascript:;"  title="启用">
-                                    <i class="layui-icon">&#xe601;</i>
-                                </a>
-{{--                                <a title="编辑属性"  onclick="xadmin.open('编辑','member-edit.html',600,400)" href="javascript:;">--}}
-{{--                                    <i class="layui-icon">&#xe642;</i>--}}
-{{--                                </a>--}}
-                                <a title="编辑属性" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="attr_upd?id={{$v['id']}}">
-                                    <i class="layui-icon">&#xe631;</i>
-                                </a>
-                               <a title="分类" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="update_id?id={{$v['id']}}"  title="22">
-                                    <i class="layui-icon">&#xe699;</i>
-                                </a>
-                                <a title="删除" onclick="member_del(this,'{{$v['id']}}')" href="javascript:;">
-                                    <i class="layui-icon">&#xe640;</i>
-                                </a>
-                            </td>
-                        </tr>
->>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
                         @endforeach
                         </tbody>
                     </table>
@@ -153,7 +94,7 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../../jquery-3.3.1.min.js"></script>
 <script>
     layui.use(['laydate','form'], function(){
         var laydate = layui.laydate;
@@ -186,18 +127,18 @@
     function member_id(obj,id){
         alert(id);
 
-            $.ajax({
-                url:'update_id',
-                dataType:'json',
-                type:'post',
-                data:{
-                    id:id,
-                    token:'{{csrf_token()}}',
-                },
-                success:function ($data) {
-                    console.log($data);
+        $.ajax({
+            url:'update_id',
+            dataType:'json',
+            type:'post',
+            data:{
+                id:id,
+                token:'{{csrf_token()}}',
+            },
+            success:function ($data) {
+                console.log($data);
 
-                }
+            }
         });
     }
 

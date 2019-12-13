@@ -23,14 +23,14 @@ class Roles extends Controller
                 $data[$i]['powers'][0]['powername']="暂无菜单权限";
             }
         }
-        return view('admin.listRole',['data'=>$data]);
+        return view('admin.role.listRole',['data'=>$data]);
     }
 
     public function addRole()
     {
         $data=Power::with('menus')->get()->toArray();
 //        var_dump($data);die;
-        return view('admin.addRole',['data'=>$data]);
+        return view('admin.role.addRole',['data'=>$data]);
     }
 
 
@@ -63,12 +63,22 @@ class Roles extends Controller
     {
         $id=$request->id;
 
-        return view('admin.updPower',['data'=>$id]);
+        return view('admin.role.updPower',['data'=>$id]);
     }
 
-    public function store(Request $request)
+    public function delRole(Request $request)
     {
-        //
+        $id=$request->post('id');
+        $res=Role::find($id)->delete();
+        if($res){
+            $arr['code'] = 0;
+            $arr['msg'] = "删除成功";
+            echo json_encode($arr);
+        }else{
+            $arr['code'] = 1;
+            $arr['msg'] = "删除失败";
+            echo json_encode($arr);
+        }
     }
 
 

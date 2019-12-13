@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
-
-@extends('common.header')
-<script src="/admin/lib/layui/layui.js" charset="utf-8"></script>
-<script type="text/javascript" src="/admin/js/xadmin.js"></script>
+@extends('admin.common.header')
+<script src="/ad/admin/lib/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="/ad/admin/js/xadmin.js"></script>
 <body>
 <div class="layui-fluid">
     <div class="layui-row">
@@ -14,7 +13,7 @@
                     <span class="x-red">*</span>添加属性
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="name" name="name" required="" lay-verify="required"
+                    <input type="text" id="attr_name" name="attr_name" required="" lay-verify="required"
                            autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">
@@ -28,7 +27,7 @@
                 <div class="layui-input-inline">
                     <select name="" id="">--}}
                             @foreach($data as $k=>$v)
-                                <option value="">{{$v['name']}}</option>
+                                <option value="">{{$v['attr_name']}}</option>
                             @endforeach
                     </select>
                 </div>
@@ -57,6 +56,7 @@
         </form>
     </div>
 </div>
+<script type="text/javascript" src="../../../jquery-3.3.1.min.js"></script>
 <script>layui.use(['form', 'layer'],
         function() {
             $ = layui.jquery;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -16,7 +16,7 @@ class GoodsController extends Controller
     //
     public function index()
     {
-        return view('common/index');
+        return view('admin.common.index');
     }
     public function goods_list()
     {
@@ -24,30 +24,40 @@ class GoodsController extends Controller
 //       $info=Attr_goods::all()->toArray();
         $info = Attr_goods::with('Attr_attribute')->get()->toArray();
 //       var_dump($info);die;
-        $data=Attr_goods::all()->toArray();
-
-        return view('common/goods_list',['data'=>$data]);
+        $data=Attr_attribute::all()->toArray();
+//        var_dump($data);die;
+        return view('admin.common.goods_list',['data'=>$data]);
     }
     public function attr_add()
     {
+<<<<<<< HEAD
+        $data=Attr_attribute::all()->toArray();
+//        var_dump($data);die;
+        return view('admin.common/attr_add',['data'=>$data]);
+=======
         $data=Attr_goods::all()->toArray();
-        return view('common/attr_add',['data'=>$data]);
+        return view('admin.common.attr_add',['data'=>$data]);
+>>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
     }
     public function add_list(Request $request)
     {
         $data = $request->post();  //获取所有
-//        $params=$request->get('name');
-//        $par=$request->get('attr_num');
-//        var_dump($data);die;
-        $flight=new Attr_goods();
-//        $result = $this->create($request->all());
-//        $rs=Attr_goods::create(['name'=>$params,'attr_num'=>$par]);
-        $rs=$flight->add($data);
+
+        $flight=new Attr_attribute();
+        $flight->attr_name=$data['attr_name'];
+        $rs=$flight->save();
+
         if($rs){
+<<<<<<< HEAD
+//           return $this->redirect('Attribute/attr_value');
+//            return redirect()->action('admin.Attribute/attr_value');
+            return redirect('goods_list');
+
+=======
             echo "<script>alert('成功');</script> ";
+>>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
         }
-//        var_dump($rs);die;
-//
+
     }
     //分类
     public function classification()
@@ -90,11 +100,11 @@ class GoodsController extends Controller
         $res=Attr_goods::where('pid',$id)->get();
 //        var_dump($res);die;
         if($res){
-            return view('attribute/attr_value',['data'=>$res]);
+            return view('admin.attribute.attr_value',['data'=>$res]);
         }
 
     }
-    public function value_id()
+    public function value_id(Request $request)
     {
         $id=$request->get('id');
 

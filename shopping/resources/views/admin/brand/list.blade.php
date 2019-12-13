@@ -23,58 +23,54 @@
 
                 <div class="layui-card-header">
                     {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
-                    <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/value_add',600,400)"><i class="layui-icon"></i>添加</button>
-{{--                    <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/attr_value',600,400)"><i class="layui-icon"></i>属性管理</button>--}}
-{{--                    <a title="修改" class="layui-btn" data-toggle="modal" data-target="#myModal" href="attr_value.blade.php"></a>--}}
+                    <a title="添加" class="layui-btn" data-toggle="modal" data-target="#myModal" href="brand_add">添加</a>
+                    <a title="排序" class="layui-btn" data-toggle="modal" data-target="#myModal" href="order_list">排序</a>
+                    {{--                    <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/attr_value',600,400)"><i class="layui-icon"></i>属性管理</button>--}}
+                    {{--                    <a title="修改" class="layui-btn" data-toggle="modal" data-target="#myModal" href="attr_value.blade.php"></a>--}}
 
                 </div>
                 <div class="layui-card-body layui-table-body layui-table-main">
                     <table class="layui-table layui-form">
                         <thead>
                         <tr>
-                            <th>
-                                <input type="checkbox" lay-filter="checkall" name="" lay-skin="primary">
-                            </th>
+
                             <th>ID</th>
                             <th>属性展示名称</th>
                             <th>属性所属分类</th>
                             <th>前台是否展示该属性</th>
-
                             <th>操作</th>
 
                         </tr>
 
                         </thead>
                         <tbody>
-                            @foreach($data as $k=>$v)
+                        @foreach($data as $k=>$v)
                             <tr>
-                                <td>
-                                    <input type="checkbox" lay-skin="primary">
-                                </td>
+
                                 <td>{{$v['id']}}</td>
                                 <td>{{$v['name']}}</td>
-                                <td>{{$v['class']}}</td>
-
-
-
+                                <td>{{$v['status']}}</td>
                                 <td class="td-status">
-                                    <span class="layui-btn layui-btn-normal layui-btn-mini"></span></td>
+                                    <span class="layui-btn layui-btn-normal layui-btn-mini">{{$v['status']}}</span></td>
                                 <td class="td-manage">
-{{--                                    <a onclick="member_stop(this,'')" href="javascript:;"  title="启用">--}}
-{{--                                        <i class="layui-icon">&#xe601;</i>--}}
-{{--                                    </a>--}}
-                                    <a title="编辑属性值" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="value_upd?id={{$v['id']}}">
+                                    {{--                                    <a onclick="member_stop(this,'')" href="javascript:;"  title="启用">--}}
+                                    {{--                                        <i class="layui-icon">&#xe601;</i>--}}
+                                    {{--                                    </a>--}}
+                                    <a title="品牌编辑" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="brand_upd?id={{$v['id']}}">
                                         <i class="layui-icon">&#xe631;</i>
+                                    </a>
+                                    <a title="排序" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="order_list?id={{$v['id']}}">
+                                        <i class="layui-icon">&#xe638;</i>
                                     </a>
                                     {{--                                <a onclick="xadmin.open('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">--}}
                                     {{--                                    <i class="layui-icon">&#xe631;</i>--}}
                                     {{--                                </a>--}}
-                                    <a title="删除" onclick="member_del(this,'{{$v['id']}}')" href="javascript:;">
+                                    <a title="品牌删除" onclick="member_del(this,'{{$v['id']}}')" href="javascript:;">
                                         <i class="layui-icon">&#xe640;</i>
                                     </a>
                                 </td>
                             </tr>
-                            @endforeach
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

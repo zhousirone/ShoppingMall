@@ -21,12 +21,12 @@
 
 
 
-    <form class="layui-form" action="upd" method="post">
+    <form class="layui-form" action="brand_update" method="post">
         @csrf
 
         <div class="layui-form-item">
             <label for="L_pass" class="layui-form-label">
-                <span class="x-red">*</span>属性修改
+                <span class="x-red">*</span>编辑品牌
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="L_pass" name="name" value="{{$data['name']}}" required="" lay-verify="pass"

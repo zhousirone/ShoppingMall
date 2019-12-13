@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
 
-@extends('common.header')
+@extends('admin.common.header')
 <script src="/ad/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/ad/admin/js/xadmin.js"></script>
 <body>
@@ -23,6 +23,19 @@
                 </div>
             </div>
             <div class="layui-form-item">
+                <label for="name" class="layui-form-label">
+                    <span class="x-red">*</span>所属品牌
+                </label>
+                <div class="layui-input-inline">
+                    <select name="cid" id="cid">--}}
+                        @foreach($list as $k=>$v)
+
+                            <option value="">{{$v['name']}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
                 <label for="L_email" class="layui-form-label">
                     <span class="x-red">*</span>分类
                 </label>
@@ -31,6 +44,22 @@
                         @foreach($data as $k=>$v)
 
                             <option value="{{$v['id']}}">{{$v['name']}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="layui-form-mid layui-word-aux">
+                    <span class="x-red">*</span>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label for="L_email" class="layui-form-label">
+                    <span class="x-red">*</span>所属仓库
+                </label>
+                <div class="layui-input-inline">
+                    <select name="cid" id="cid">--}}
+                        @foreach($res as $k=>$v)
+
+                            <option value="">{{$v['worehouse']}}</option>
                         @endforeach
                     </select>
                 </div>
