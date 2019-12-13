@@ -40,19 +40,34 @@ Route::any('addPower','admin\Menus@addPower');
 Route::any('doAddPower','admin\Menus@doAddPower');
 
 
+
+
+
+
 Route::get('showAdd','admin\Warehouse@showAdd');
 Route::post('warehouseAdd','admin\Warehouse@warehouseAdd');
 Route::get('warehouseShow','admin\Warehouse@warehouseShow');
 Route::get('warehouseDel','admin\Warehouse@warehouseDel');
-
-
-
 Route::get('warehouseUpd','admin\Warehouse@warehouseUpd');
-
-
-
-
 Route::any('updata','admin\Warehouse@updata');
+Route::get('comment','admin\Comment@index');
+Route::post('state','admin\Comment@state');
+Route::get('commentShow','admin\Comment@commentShow');
+Route::get('reply','admin\Comment@reply');
+Route::post('replyAdd','admin\Comment@replyAdd');
+Route::get('feedback','admin\Feedback@index');
+Route::get('feedbackReply','admin\Feedback@feedbackReply');
+Route::any('add','admin\Feedback@replyAdd');
+Route::get('order','admin\Order@index');
+Route::get('administer','admin\Order@administer');
+Route::get('order_update','admin\Order@update');
+Route::any('order_update_do','admin\Order@update_do');
+
+
+
+
+
+
 
 
 
