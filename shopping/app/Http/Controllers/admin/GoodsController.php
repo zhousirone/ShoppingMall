@@ -30,14 +30,14 @@ class GoodsController extends Controller
     }
     public function attr_add()
     {
-<<<<<<< HEAD
+
         $data=Attr_attribute::all()->toArray();
 //        var_dump($data);die;
         return view('admin.common/attr_add',['data'=>$data]);
-=======
+
         $data=Attr_goods::all()->toArray();
         return view('admin.common.attr_add',['data'=>$data]);
->>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
+
     }
     public function add_list(Request $request)
     {
@@ -48,14 +48,14 @@ class GoodsController extends Controller
         $rs=$flight->save();
 
         if($rs){
-<<<<<<< HEAD
+
 //           return $this->redirect('Attribute/attr_value');
 //            return redirect()->action('admin.Attribute/attr_value');
             return redirect('goods_list');
 
-=======
+
             echo "<script>alert('成功');</script> ";
->>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
+
         }
 
     }

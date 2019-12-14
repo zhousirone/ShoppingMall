@@ -51,20 +51,19 @@ Route::any('delPower','admin\Menus@delPower');
 
 
 
-<<<<<<< HEAD
 
 
 
-=======
+
 //周
->>>>>>> 439c7f8cacca1f719631237a050d9cb6ec6dfa0a
+
 Route::get('showAdd','admin\Warehouse@showAdd');
 Route::post('warehouseAdd','admin\Warehouse@warehouseAdd');
 Route::get('warehouseShow','admin\Warehouse@warehouseShow');
 Route::get('warehouseDel','admin\Warehouse@warehouseDel');
 Route::get('warehouseUpd','admin\Warehouse@warehouseUpd');
 Route::any('updata','admin\Warehouse@updata');
-<<<<<<< HEAD
+
 Route::get('comment','admin\Comment@index');
 Route::post('state','admin\Comment@state');
 Route::get('commentShow','admin\Comment@commentShow');
@@ -79,16 +78,14 @@ Route::get('order_update','admin\Order@update');
 Route::any('order_update_do','admin\Order@update_do');
 
 
-=======
->>>>>>> 439c7f8cacca1f719631237a050d9cb6ec6dfa0a
 
 
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 439c7f8cacca1f719631237a050d9cb6ec6dfa0a
+
+
+
 
 
 //董
