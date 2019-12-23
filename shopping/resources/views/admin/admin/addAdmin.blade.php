@@ -53,7 +53,8 @@
                 <label for="L_password" class="layui-form-label">
                     <span class="x-red">*</span>确认密码</label>
                 <div class="layui-input-inline">
-                    <input type="password" id="L_password" name="L_password" required="" lay-verify="repass" autocomplete="off" class="layui-input"></div>
+                    <input type="password" id="L_password" name="L_password" required="" lay-verify="repass" autocomplete="off" class="layui-input">
+                </div>
             </div>
             <div class="layui-form-item">
                 <label for="L_nickname" class="layui-form-label">
@@ -144,7 +145,6 @@
                         }
                     })
                     //发异步，把数据提交给php
-
                     return false;
                 });
 

@@ -44,7 +44,7 @@
                             <th>总金额</th>
                             <th>订单创建时间</th>
                             <th>订单修改时间</th>
-                            <th>操作</th></tr>
+                           </tr>
                         </thead>
                         <tbody>
                         @foreach($arr as $k => $v)
@@ -78,14 +78,7 @@
                                 <td>{{$v['money']}}</td>
                                 <td>{{$v['created_at']}}</td>
                                 <td>{{$v['updated_at']}}</td>
-                                <td class="td-manage">
-                                    <a title="编辑"  onclick="xadmin.open('编辑','warehouseUpd?id={{$v['id']}}',800,450)" href="javascript:;">
-                                        <i class="layui-icon">&#xe642;</i>
-                                    </a>
-                                    <a title="删除" onclick="member_del(this,{{$v['id']}})" href="javascript:;">
-                                        <i class="layui-icon">&#xe640;</i>
-                                    </a>
-                                </td>
+
                             </tr>
 
                         @endforeach

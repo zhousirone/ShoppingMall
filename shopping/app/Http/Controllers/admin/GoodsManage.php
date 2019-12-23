@@ -7,22 +7,21 @@ use Illuminate\Http\Request;
 use App\Model\Attr_goods;
 use App\Model\Attr_class;
 use App\Model\Sku;
+use App\Model\Warehouse;
 
 class GoodsManage extends Controller
 {
     public function attribute_class()
     {
         $data=Attr_class::all()->toArray();
-//        var_dump($data);die;
-<<<<<<< HEAD
+
+
         $list=Brand::all()->toArray();
-//        var_dump($list);die;
-        $res=Attr_goods::all('worehouse')->toArray();
-//        var_dump($res);die;
+
+        $res=Warehouse::all()->toArray();
+
         return view('admin.goodsmanage/attribute_class',['data'=>$data,'list'=>$list,'res'=>$res]);
-=======
-        return view('admin.goodsmanage.attribute_class',['data'=>$data]);
->>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
+
     }
     public function list_class(Request $request)
     {
@@ -39,7 +38,7 @@ class GoodsManage extends Controller
 //        $info = Attr_goods::with('Attr_class')->where(['cid'=>$cid])->get()->toArray();
 //        var_dump($info);die;
 
-    }
+     }
     public function goods_show()
     {
         $arr = Attr_class::with('Attr_goods')->get()->toArray();
@@ -50,7 +49,7 @@ class GoodsManage extends Controller
     {
         $data=Sku::all()->toArray();
 //        var_dump($data);die;
-<<<<<<< HEAD
+
         return view('admin.goodsmanage/goods_sku',['data'=>$data]);
     }
     public function sku_add(Request $request)
@@ -79,7 +78,7 @@ class GoodsManage extends Controller
     {
 //        $arr = Attr_class::with('sku_goods')->get()->toArray();
         $data=Attribute_key::all()->toArray();
-       $color= $data[0]['attribute_name'];
+        $color= $data[0]['attribute_name'];
         $size= $data[1]['attribute_name'];
 //
 //        $list=Attribute_value::all()->toArray();
@@ -94,15 +93,15 @@ class GoodsManage extends Controller
         $data=Attr_goods::all()->toArray();
 //        var_dump($list);die;
 
-        return view('admin.goodsmanage/goods_li',['data'=>$data,'list'=>$list]);
+        return view('admin.goodsmanage/goods_li',['data'=>$data]);
     }
-    public function class()
-    {
-        return view('admin.goodsmanage/class');
-=======
-        return view('admin.goodsmanage.goods_sku',['data'=>$data]);
->>>>>>> 5f39c0efe39fcf3746c00d80609eeb7cea08db54
-    }
+//    public function class()
+//    {
+//        return view('admin.goodsmanage/class');
+//
+//        return view('admin.goodsmanage.goods_sku',['data'=>$data]);
+//
+//    }
     public function class_display(Request $request)
     {
         $data=Attribute_key::where('class_id',0)->get()->toArray();

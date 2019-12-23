@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\Model;
 class Attr_class extends Model
 {
     //
-    protected $table='attr_class';
+    protected $table='class';
     public function attr_goods()
     {
         return $this->hasMany('App\Model\Attr_goods','cid','id');

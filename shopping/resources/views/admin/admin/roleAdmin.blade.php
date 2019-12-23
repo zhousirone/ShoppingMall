@@ -69,8 +69,6 @@
                                             <option value="{{$v['id']}}">{{$v['rolename']}}</option>
                                         @endforeach
                                     </select>
-
-
                             </div>
                         </div>
 

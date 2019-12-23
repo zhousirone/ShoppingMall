@@ -22,8 +22,6 @@ class proscenium extends BaseController
         foreach ($res as $k => $v){
             $res = $v;
         }
-
-//        var_dump($res);die;
         if($res){
             if($res['pwd']==$pwd){
                 Session::put('user',$res);

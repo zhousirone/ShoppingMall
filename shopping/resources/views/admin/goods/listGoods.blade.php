@@ -43,30 +43,53 @@
                 </div>
                 <div class="layui-card-header">
                     {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
-                    <button class="layui-btn" onclick="xadmin.open('添加角色','addRole',1000,800)"><i class="layui-icon"></i>添加</button>
+                    <button class="layui-btn" onclick="xadmin.open('添加管理员','addAdmin',600,400)"><i class="layui-icon"></i>添加</button>
                 </div>
                 <div class="layui-card-body layui-table-body layui-table-main">
                     <table class="layui-table layui-form">
                         <thead>
                         <tr>
-                            <th>角色ID</th>
-                            <th>角色名称</th>
-                            <th>角色对应菜单权限</th>
+                            <th>ID</th>
+                            <th>商品名称</th>
+                            <th>所属分类</th>
+                            <th>所属品牌</th>
+                            <th>所属仓库</th>
+                            <th>商品描述</th>
+                            <th>商品价格</th>
+                            <th>划线价格</th>
+                            <th>商品图片</th>
+                            <th>是否上架</th>
+                            <th>库存数量</th>
+                            <th>是否是礼物</th>
+                            <th>sku</th>
                             <th>操作</th></tr>
                         </thead>
                         <tbody>
                         @foreach($data as $k => $v)
                             <tr>
                                 <td>{{$v['id']}}</td>
-                                <td>{{$v['rolename']}}</td>
-                                <td>
-                                    @foreach($v['powers'] as $kk => $vv)
-                                        {{$vv['powername']}}&nbsp;&nbsp;
-                                    @endforeach
-                                </td>
+                                <td>{{$v['name']}}</td>
+                                <td>{{$v['class'][0]['name']}}</td>
+                                <td>{{$v['brand'][0]['name']}}</td>
+                                <td>{{$v['warehouse'][0]['name']}}</td>
+                                <td>{{$v['goods_content']}}</td>
+                                <td>{{$v['price']}}</td>
+                                <td>{{$v['price_hua']}}</td>
+                                <td><img src="{{$v['image']}}" alt=""> </td>
+                                <td>{{$v['status']}}</td>
+                                <td>{{$v['kucun']}}</td>
+                                <td>{{$v['is_gift']}}</td>
+                                <td>{{$v['sku']}}</td>
+                                {{--                                <td class="td-status">--}}
+                                {{--                                    <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>--}}
                                 <td class="td-manage">
-
-                                    <a onclick="xadmin.open('修改权限','updPower?id={{$v['id']}}',600,400)" title="修改权限" href="javascript:;">
+                                    {{--                                    <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">--}}
+                                    {{--                                        <i class="layui-icon">&#xe601;</i>--}}
+                                    {{--                                    </a>--}}
+                                    <a title="编辑"  onclick="xadmin.open('编辑','updAdmin?id={{$v['id']}}',600,400)" href="javascript:;">
+                                        <i class="layui-icon">&#xe642;</i>
+                                    </a>
+                                    <a onclick="xadmin.open('修改角色','roleAdmin?id={{$v['id']}}',600,400)" title="修改角色" href="javascript:;">
                                         <i class="layui-icon">&#xe631;</i>
                                     </a>
                                     <a title="删除" onclick="member_del(this,{{$v['id']}})" href="javascript:;">
@@ -128,9 +151,8 @@
     /*用户-删除*/
     function member_del(obj,id){
         layer.confirm('确认要删除吗？',function(index){
-            //发异步删除数据
             $.ajax({
-                url:'delRole',
+                url:'delGoods',
                 type:'post',
                 dataType:"json",
                 data:{
@@ -143,7 +165,7 @@
                         $(obj).parents("tr").remove();
                         layer.msg(e.msg,{icon:1,time:1000});
                     }else{
-                        layer.msg(e.msg,{icon:6,time:1000});
+                        layer.msg(e.msg,{icon:5,time:1000});
                     }
                 }
             })
@@ -152,6 +174,21 @@
 
 
 
-
+    // function delAll (argument) {
+    //     var ids = [];
+    //
+    //     // 获取选中的id
+    //     $('tbody input').each(function(index, el) {
+    //         if($(this).prop('checked')){
+    //             ids.push($(this).val())
+    //         }
+    //     });
+    //
+    //     layer.confirm('确认要删除吗？'+ids.toString(),function(index){
+    //         //捉到所有被选中的，发异步进行删除
+    //         layer.msg('删除成功', {icon: 1});
+    //         $(".layui-form-checked").not('.header').parents('tr').remove();
+    //     });
+    // }
 </script>
 </html>

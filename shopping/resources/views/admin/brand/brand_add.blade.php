@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html class="x-admin-sm">
-@extends('admin.common.header')
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="./x-admin/css/font.css">
+    <link rel="stylesheet" href="./x-admin/css/xadmin.css">
+    <script src="./x-admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./x-admin/js/xadmin.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 <script src="/ad/admin/lib/layui/layui.js" charset="utf-8"></script>
 <script type="text/javascript" src="/ad/admin/js/xadmin.js"></script>
 <body>
 <div class="layui-fluid">
     <div class="layui-row">
-        <form action="add" method="post">
+        <form>
             @csrf
             <div class="layui-form-item">
                 <label for="name" class="layui-form-label">
@@ -17,7 +31,7 @@
                            autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-mid layui-word-aux">
-                    <span class="x-red">*</span>将会成为您唯一的登入名
+                    <span class="x-red">*</span>这是品牌名
                 </div>
             </div>
 
@@ -26,23 +40,20 @@
                     <span class="x-red">*</span>是否前台展示
                 </label>
                 <div class="layui-input-inline">
-                    <input type="radio" name="status" value="0">是
-                    <input type="radio" name="status" value="1">否
-                </div>
-                <div class="layui-form-mid layui-word-aux">
-                    <span class="x-red">*</span>将会成为您唯一的登入名
+                    <input type="radio"  id="status" value="是"> 是
+                    <input type="radio" id="status" value="否"> 否
                 </div>
             </div>
             <div class="layui-form-item">
                 <label for="L_repass" class="layui-form-label">
                 </label>
+                <button class="layui-btn" lay-filter="add" lay-submit="">提交</button>
 
-                <input type="submit" class="layui-btn" value="提交">
             </div>
         </form>
     </div>
 </div>
-<script type="text/javascript" src="../../../jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 <script>layui.use(['form', 'layer'],
         function() {
             $ = layui.jquery;
@@ -67,18 +78,48 @@
             //监听提交
             form.on('submit(add)',
                 function(data) {
-                    console.log(data);
+                    var name = $('#name').val();
+                    var status = $('#status').val();
                     //发异步，把数据提交给php
-                    layer.alert("增加成功", {
-                            icon: 6
-                        },
-                        function() {
-                            //关闭当前frame
-                            xadmin.close();
+                    // alert(status);
+                    $.ajax({
+                        url:'add',
+                        type:'post',
+                        dataType:"json",
 
-                            // 可以对父窗口进行刷新
-                            xadmin.father_reload();
-                        });
+                        data:{
+                            name:name,
+                            status:status,
+                            _token:'{{csrf_token()}}'
+                        },
+                        success:function (e) {
+                            console.log(e);
+                            if (e.code==0) {
+                                layer.alert(e.msg, {
+                                        icon: 6
+                                    },
+                                    function () {
+                                        //关闭当前frame
+                                        xadmin.close();
+
+                                        // 可以对父窗口进行刷新
+                                        xadmin.father_reload();
+                                    });
+
+                            }else{
+                                layer.alert(e.msg, {
+                                        icon: 5
+                                    },
+                                    function() {
+                                        //关闭当前frame
+                                        xadmin.close();
+
+                                        // 可以对父窗口进行刷新
+                                        xadmin.father_reload();
+                                    });
+                            }
+                        }
+                    })
                     return false;
                 });
 

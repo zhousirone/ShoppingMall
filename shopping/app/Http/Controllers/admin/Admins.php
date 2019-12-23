@@ -12,9 +12,21 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Admins extends BaseController
 {
+    public function aaa()
+    {
+        return view('admin.admin.aaa');
+    }
+    public function bbb()
+    {
+        $arr=array(array('id'=>1,'name'=>'抱枕','img'=>8,'number'=>9,'text'=>"123",'price'=>10));
+//        var_dump($arr);die;
+        return view('admin.admin.bbb',['data'=>$arr]);
+    }
+
     public function addAdmin()
     {
-        $role = Role::get();
+        $role = Role::get()->toArray();
+//        var_dump($role);die;
         return view('admin.admin.addAdmin',['role'=> $role]);
     }
 

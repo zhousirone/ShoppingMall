@@ -72,7 +72,7 @@
         </div>
         <div class="rf toa">
             <ul id="sddm">
-                <li style="padding-left:10px; background:url(images/wei.png) no-repeat left center; background-size:18px;"><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">关注我们</a></a>
+                <li style="padding-left:10px; background:url(/web/images/wei.png) no-repeat left center; background-size:18px;"><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">关注我们</a></a>
                     <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
                         <img src="/web/images/108430aeb.jpg" width="166" height="166">
                     </div>
@@ -202,9 +202,9 @@
                     <span>网店分红</span><span>网店分红</span>
                 </div>
                 <b></b></a>
-            <a href="#">
+            <a href="personalCenter">
                 <div>
-                    <span>会员中心</span><span>会员中心</span>
+                    <span>个人中心</span><span>个人中心</span>
                 </div>
                 <b></b></a>
 
@@ -220,7 +220,7 @@
 <!--banner -->
 <div style="width:100%; overflow:hidden;">
     <div class="qing bank" style="width:1200px; margin:0 auto; overflow:hidden; background:#fff;">
-        <div class="kuai">
+        <div class="kuai" >
             <div class="J_user user">
                 <div class="user_info user_info_level0 user_info_plusNaN" clstag="h|keycount|2016|09a">
                     <div class="J_user_info_avatar user_info_avatar">
@@ -306,10 +306,10 @@
     </div>
 </div>
 
-<div class="box_hd clearfix">
+<div class="box_hd clearfix" >
     <div class="boxhdcol1">
-        <p class="box_hd_dec" style="background-image: url(images/1x.png);background-position: -190px -48px;-moz-background-size: 218px 188px;background-size: 218px 188px;background-repeat: no-repeat;width: 28px;height: 28px; float:left"></p>
-        <p class="box_hd_icon" style="margin-top: 8px;margin-right: 8px;background-image: url(images/1x.png);background-position: 0 -40px;-moz-background-size: 218px 188px;background-size: 218px 188px;background-repeat: no-repeat;width: 34px;height: 40px; float:left"></p>
+        <p class="box_hd_dec" style="background-image: url(/web/images/1x.png);background-position: -190px -48px;-moz-background-size: 218px 188px;background-size: 218px 188px;background-repeat: no-repeat;width: 28px;height: 28px; float:left"></p>
+        <p class="box_hd_icon" style="margin-top: 8px;margin-right: 8px;background-image: url(/web/images/1x.png);background-position: 0 -40px;-moz-background-size: 218px 188px;background-size: 218px 188px;background-repeat: no-repeat;width: 34px;height: 40px; float:left"></p>
         <h3 class="box_tit" style="font-size: 26px;font-weight: 400;padding-top:0px; color:#fff; float:left;line-height: 48px;float: left;">热销推荐</h3>
         <a href="#" target="_blank" class="box_subtit" style="color:#fff; float:left; line-height:48px; margin-left:10px;">总有你想不到的低价<i class="box_subtit_arrow"></i></a>
     </div>
@@ -340,152 +340,53 @@
     <div class="panesz1" style=" background:#fff;overflow: hidden;">
         <div data-am-widget="slider" class="am-slider am-slider-b1" data-am-slider='{&quot;controlNav&quot;:false}' >
             <ul class="am-slides">
+
                 <li>
                     <div class="panez1" style="display:block;">
                         <div class="qing bai">
                             <div class="lf zgk1">
                                 <ul class="zgcplb">
-                                    <li><a href="#" class="tjtu"><img src="/web/images/1.jpg" width="130" height="130"></a>
+                                    @foreach($data as $k => $v)
+                                    <li>
+                                        <a href="goodsDetails?id={{$v['id']}}" class="tjtu"><img src="{{$v['image']}}" width="130" height="130"></a>
                                         <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
+                                            <a href="#" class="tjm1">{{$v['name']}}</a>
                                             <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
+                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">{{$v['price']}}</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥{{$v['price_hua']}}</em>
                                             </div>
                                         </div>
                                         <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
+                                            <a href="#" class="tjycm">{{$v['goods_content']}}</a>
                                         </div>
                                         <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    <li><a href="#" class="tjtu"><img src="images/2.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
-                                            </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    <li><a href="#" class="tjtu"><img src="images/3.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
-                                            </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    <li><a href="#" class="tjtu"><img src="images/4.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
-                                            </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    <li><a href="#" class="tjtu"><img src="images/5.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
-                                            </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
+                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span>
+                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
                     </div>
-
                 </li>
+
                 <li>
                     <div class="panez1" style="display:block;">
                         <div class="qing bai">
                             <div class="lf zgk1">
                                 <ul class="zgcplb">
-                                    <li><a href="#" class="tjtu"><img src="images/1.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
+                                    @foreach($data as $k => $v)
+                                        <li><a href="#" class="tjtu"><img src="{{$v['image']}}" width="130" height="130"></a>
+                                            <div class="tjmk">
+                                                <a href="#" class="tjm1">{{$v['name']}}</a>
+                                                <div class="tjm2" style="color:#f10214">
+                                                    ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">{{$v['price']}}</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥{{$v['price_hua']}}</em>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    <li><a href="#" class="tjtu"><img src="images/2.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
+                                            <div class="tjyc">
+                                                <a href="#" class="tjycm">{{$v['goods_content']}}</a>
                                             </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    <li><a href="#" class="tjtu"><img src="images/3.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
-                                            </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    <li><a href="#" class="tjtu"><img src="images/4.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
-                                            </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    <li><a href="#" class="tjtu"><img src="images/5.jpg" width="130" height="130"></a>
-                                        <div class="tjmk">
-                                            <a href="#" class="tjm1">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-                                            <div class="tjm2" style="color:#f10214">
-                                                ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">89.00</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥99.00</em>
-                                            </div>
-                                        </div>
-                                        <div class="tjyc">
-                                            <a href="#" class="tjycm">沃盼福建红心柚子新鲜水果2只装重约2-3kg（2只装）</a>
-
-                                        </div>
-                                        <!--line-->
-                                        <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
+                                            <!--line-->
+                                            <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
@@ -496,20 +397,18 @@
         </div>
         <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}' style="width:216px; float:right; margin-top:10px; height:250px;">
             <ul class="am-slides">
-                <li>
-                    <img src="images/sban1.jpg" style="width:216px; margin-top:0; height:250px;">
-                </li>
-                <li>
-                    <img src="images/sban2.jpg" style="width:216px; margin-top:0; height:250px;">
-                </li>
-
+                @foreach($data as $k => $v)
+                    <li>
+                        <img src="{{$v['image']}}" style="width:216px; margin-top:0; height:250px;">
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>
 </div>
 
 <div style="width:1200px; margin:0 auto; overflow:hidden;">
-    <img src="images/bt.jpg" width="100%">
+    <img src="/web/images/bt.jpg" width="100%">
     <ul style="overflow:hidden;width:800px; float:left; margin-top:10px;" class="jp">
         <li class="entry_item entry_item_1">
             <a class="entry_lk J_log" href="#" target="_blank">
@@ -519,7 +418,7 @@
                         <p class="entry_info_desc">新品享免息~</p>
                     </div>
                 </div>
-                <img src="images/tu1.jpg" data-lazy-img="done" class="entry_img" style="width:390px; height:170px;">
+                <img src="/web/images/tu1.jpg" data-lazy-img="done" class="entry_img" style="width:390px; height:170px;">
             </a>
         </li>
         <li class="entry_item entry_item_1">
@@ -530,7 +429,7 @@
                         <p class="entry_info_desc">新品享免息~</p>
                     </div>
                 </div>
-                <img src="images/tu2.jpg" data-lazy-img="done" class="entry_img" style="width:390px; height:170px;">
+                <img src="/web/images/tu2.jpg" data-lazy-img="done" class="entry_img" style="width:390px; height:170px;">
             </a>
         </li>
 
@@ -542,7 +441,7 @@
                         <p class="entry_info_desc">新品享免息~</p>
                     </div>
                 </div>
-                <img src="images/tu3.jpg" data-lazy-img="done" class="entry_img" style="width:390px; height:170px;">
+                <img src="/web/images/tu3.jpg" data-lazy-img="done" class="entry_img" style="width:390px; height:170px;">
             </a>
         </li>
         <li class="entry_item entry_item_1">
@@ -553,7 +452,7 @@
                         <p class="entry_info_desc">新满199元减100元</p>
                     </div>
                 </div>
-                <img src="images/tu4.jpg" data-lazy-img="done" class="entry_img" style="width:390px; height:170px;">
+                <img src="/web/images/tu4.jpg" data-lazy-img="done" class="entry_img" style="width:390px; height:170px;">
             </a>
         </li>
 
@@ -564,22 +463,22 @@
         <ul class="am-slides" style="height: 350px;">
 
             <li style="height: 350px;">
-                <img src="images/d3.jpg" style="width:395px; height:350px; margin:0;">
+                <img src="/web/images/d3.jpg" style="width:395px; height:350px; margin:0;">
                 <div class="am-slider-desc">新品首发 新品享免息</div>
 
             </li>
             <li style="height: 350px;">
-                <img src="images/d4.jpg" style="width:395px; height:350px; margin:0;">
+                <img src="/web/images/d4.jpg" style="width:395px; height:350px; margin:0;">
                 <div class="am-slider-desc">新品首发 新品享免息</div>
 
             </li>
             <li style="height: 350px;">
-                <img src="images/d2.jpg" style="width:395px; height:350px; margin:0;">
+                <img src="/web/images/d2.jpg" style="width:395px; height:350px; margin:0;">
                 <div class="am-slider-desc">新品首发 新品享免息</div>
 
             </li>
             <li style="height: 350px;">
-                <img src="images/d1.jpg" style="width:395px; height:350px; margin:0;">
+                <img src="/web/images/d1.jpg" style="width:395px; height:350px; margin:0;">
                 <div class="am-slider-desc">新品首发 新品享免息</div>
 
             </li>
@@ -593,21 +492,21 @@
     <div class="con">
         <ul>
             <li>
-                <img src="images/sban5.jpg"/>
+                <img src="/web/images/sban5.jpg"/>
                 <div class="txt">
                     <h3></h3>
                     <p></p>
                 </div>
             </li>
             <li>
-                <img src="images/sban3.jpg"/>
+                <img src="/web/images/sban3.jpg"/>
                 <div class="txt">
                     <h3></h3>
                     <p></p>
                 </div>
             </li>
             <li>
-                <img src="images/sban4.jpg"/>
+                <img src="/web/images/sban4.jpg"/>
                 <div class="txt">
                     <h3></h3>
                     <p></p>
@@ -683,7 +582,7 @@
                                 人气热销 养生保健
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bj2.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bj2.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -693,7 +592,7 @@
                                 人气热销 养生保健
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bj3.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bj3.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
@@ -704,7 +603,7 @@
                                 人气热销 养生保健
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bj4.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bj4.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
@@ -715,7 +614,7 @@
                                 人气热销 养生保健
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bj5.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bj5.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
@@ -726,7 +625,7 @@
                                 人气热销 养生保健
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bj1.png" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bj1.png" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
@@ -737,7 +636,7 @@
                                 人气热销 养生保健
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bj2.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bj2.jpg" alt="">
                             </div>
                         </a>
                     </div>
@@ -756,7 +655,7 @@
                     <div class="tofu-col-con-items">
                         <a class="recSingleGoodsBox clearfix cube-acm-node has-log-mod" href="#" target="_blank">
                             <div class="recGoodsPicBox J_dynamic_imagebox fl J_loading_success" suffix-ratio="1:1">
-                                <img class="J_dynamic_img fill_img" src="images/bj6.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bj6.jpg" alt="">
                             </div>
                             <div class="recGoodsInfo yahei">
                                 <div class="goodsDesc">
@@ -809,7 +708,7 @@
                             冬季新品 不止7折
                         </div>
                         <div class="big-banner-img J_dynamic_imagebox J_loading_success">
-                            <img class="J_dynamic_img fill_img" src="images/nz1.png" alt="">
+                            <img class="J_dynamic_img fill_img" src="/web/images/nz1.png" alt="">
                         </div>
                     </a>
                 </div>
@@ -827,7 +726,7 @@
                                 搭配指南 美翻整个冬季
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/nz1.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/nz1.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
@@ -838,7 +737,7 @@
                                 抢！网红同款 库存有限
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/nz2.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/nz2.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -848,7 +747,7 @@
                                 低至49元 温柔整个冬天
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/nz3.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/nz3.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -858,7 +757,7 @@
                                 为减龄神器疯狂打call
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/nz4.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/nz4.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -868,7 +767,7 @@
                                 女神最爱 显瘦温暖两不误
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/nz5.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/nz5.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -878,7 +777,7 @@
                                 搭配神器 视觉甩肉5KG
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/nz6.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/nz6.jpg" alt="">
                             </div>
                         </a>
                     </div>
@@ -891,42 +790,42 @@
                     <div class="tofu-col-con-items">
                         <a rel="nofollow" target="_blank" href="#" class="tofu-pic-item fl cube-acm-node has-log-mod">
                             <div class="tofu-pic J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/pp1.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/pp1.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="tofu-pic-item fl cube-acm-node has-log-mod">
                             <div class="tofu-pic J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/pp2.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/pp2.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="tofu-pic-item fl cube-acm-node has-log-mod">
                             <div class="tofu-pic J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/pp3.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/pp3.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="tofu-pic-item fl cube-acm-node has-log-mod">
                             <div class="tofu-pic J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/pp4.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/pp4.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="tofu-pic-item fl cube-acm-node has-log-mod">
                             <div class="tofu-pic J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/pp5.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/pp5.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="tofu-pic-item fl cube-acm-node has-log-mod">
                             <div class="tofu-pic J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/pp6.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/pp6.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="tofu-pic-item fl cube-acm-node has-log-mod">
                             <div class="tofu-pic J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/pp7.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/pp7.jpg" alt="">
                             </div>
                         </a>
                         <a rel="nofollow" target="_blank" href="#" class="tofu-pic-item fl cube-acm-node has-log-mod">
                             <div class="tofu-pic J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/pp8.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/pp8.jpg" alt="">
                             </div>
                         </a>
                     </div>
@@ -968,7 +867,7 @@
                             新品3折起
                         </div>
                         <div class="big-banner-img J_dynamic_imagebox J_loading_success">
-                            <img class="J_dynamic_img fill_img" src="images/bb1.png" alt="">
+                            <img class="J_dynamic_img fill_img" src="/web/images/bb1.png" alt="">
                         </div>
                     </a>
                 </div>
@@ -986,7 +885,7 @@
                                 17新款热销中
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bb1.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bb1.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -996,7 +895,7 @@
                                 出游必备 百搭双肩包
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bb2.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bb2.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1006,7 +905,7 @@
                                 时髦好装 多彩手提包
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bb3.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bb3.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1016,7 +915,7 @@
                                 解放双手 尽在单肩包
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bb4.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bb4.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1026,7 +925,7 @@
                                 旅行好伴侣 品质拉杆箱
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bb5.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bb5.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1036,7 +935,7 @@
                                 买对钱包 财源广进
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bb6.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bb6.jpg" alt="">
                             </div>
                         </a>
                     </div>
@@ -1055,7 +954,7 @@
                     <div class="tofu-col-con-items">
                         <a class="recSingleGoodsBox clearfix cube-acm-node has-log-mod" href="#" target="_blank">
                             <div class="recGoodsPicBox J_dynamic_imagebox fl J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/bb7.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/bb7.jpg" alt="">
                             </div>
                             <div class="recGoodsInfo yahei">
                                 <div class="goodsDesc">
@@ -1107,7 +1006,7 @@
                             买1送1 大牌满减
                         </div>
                         <div class="big-banner-img J_dynamic_imagebox J_loading_success">
-                            <img class="J_dynamic_img fill_img" src="images/mz1.png" alt="">
+                            <img class="J_dynamic_img fill_img" src="/web/images/mz1.png" alt="">
                         </div>
                     </a>
                 </div>
@@ -1125,7 +1024,7 @@
                                 爆款抢的早 不怕售罄了
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/mz1.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/mz1.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1135,7 +1034,7 @@
                                 面膜敷的勤 小脸变水灵
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/mz2.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/mz2.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1145,7 +1044,7 @@
                                 套装选的牛 省钱你最六
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/mz3.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/mz3.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1155,7 +1054,7 @@
                                 底妆用的对  永远十八岁
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/mz4.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/mz4.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1165,7 +1064,7 @@
                                 口红选的好  男神跑不了
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/mz5.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/mz5.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1175,7 +1074,7 @@
                                 护理做的好  老公回家早
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/mz6.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/mz6.jpg" alt="">
                             </div>
                         </a>
                     </div>
@@ -1194,7 +1093,7 @@
                     <div class="tofu-col-con-items">
                         <a class="recSingleGoodsBox clearfix cube-acm-node has-log-mod" href="#" target="_blank">
                             <div class="recGoodsPicBox J_dynamic_imagebox fl J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/mz7.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/mz7.jpg" alt="">
                             </div>
                             <div class="recGoodsInfo yahei">
                                 <div class="goodsDesc">
@@ -1246,7 +1145,7 @@
                             只买性价比最高的
                         </div>
                         <div class="big-banner-img J_dynamic_imagebox J_loading_success">
-                            <img class="J_dynamic_img fill_img" src="images/jj1.png" alt="">
+                            <img class="J_dynamic_img fill_img" src="/web/images/jj1.png" alt="">
                         </div>
                     </a>
                 </div>
@@ -1264,7 +1163,7 @@
                                 床品特卖全场3折起
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/jj1.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/jj1.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1274,7 +1173,7 @@
                                 收纳神器必备 全场满减
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/jj2.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/jj2.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1284,7 +1183,7 @@
                                 吸睛手机壳全场9元起
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/jj3.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/jj3.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1294,7 +1193,7 @@
                                 家居生活用品
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/jj4.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/jj4.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1304,7 +1203,7 @@
                                 爱她，就送零食大礼包
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/jj5.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/jj5.jpg" alt="">
                             </div>
                         </a><a rel="nofollow" target="_blank" href="#" class="multi-pic-item-2 fl cube-acm-node has-log-mod">
                             <div class="top-title text-hide yahei col333" style="">
@@ -1314,7 +1213,7 @@
                                 由内而外美美美
                             </div>
                             <div class="pic-box J_dynamic_imagebox J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/jj6.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/jj6.jpg" alt="">
                             </div>
                         </a>
                     </div>
@@ -1333,7 +1232,7 @@
                     <div class="tofu-col-con-items">
                         <a class="recSingleGoodsBox clearfix cube-acm-node has-log-mod" href="#" target="_blank">
                             <div class="recGoodsPicBox J_dynamic_imagebox fl J_loading_success">
-                                <img class="J_dynamic_img fill_img" src="images/jj7.jpg" alt="">
+                                <img class="J_dynamic_img fill_img" src="/web/images/jj7.jpg" alt="">
                             </div>
                             <div class="recGoodsInfo yahei">
                                 <div class="goodsDesc">
@@ -1361,186 +1260,18 @@
         <img src="/web/images/bt2.jpg" width="100%" style="margin-bottom:10px;">
         <div class="juzhong">
             <div class="fllb">
+                <!--列表start -->
+                @foreach($data as $k => $v)
                 <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tu.jpg" width="215" height="215"></a>
+                    <a href="#" class="rxcptu"><img src="{{$v['image']}}" width="215" height="215"></a>
                     <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
                     <div class="rxcpjg">￥<span>36.00</span></div>
                     <div class="yinc">
                         <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
+                        <a href="#" class="ygm"><img src="/web/images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
                     </div>
                 </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt1.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt2.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt3.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt4.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt4.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt3.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt2.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt1.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tu.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tu.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt1.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt2.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt3.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt4.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt4.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt3.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt2.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tt1.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
-                <div class="rxk">
-                    <a href="#" class="rxcptu"><img src="images/tu.jpg" width="215" height="215"></a>
-                    <a href="#" class="rxcpm">上海绿源(SHLY) 节能灯 E27 灯泡 白炽灯色  螺旋形 螺旋形8W 色温6500K 白光</a>
-                    <div class="rxcpjg">￥<span>36.00</span></div>
-                    <div class="yinc">
-                        <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
-                    </div>
-                </div>
+                @endforeach
                 <!--列表end -->
             </div>
         </div>
@@ -1551,10 +1282,10 @@
     <table border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td>
-                <div class="sik" style=" border-left:none;"><img src="images/sik1.png" width="55" height="64"><div class="sikm">正品保证</div></div>
-                <div class="sik"><img src="images/sik2.png" width="55" height="64"><div class="sikm">100%实物拍摄</div></div>
-                <div class="sik"><img src="images/sik3.png" width="55" height="64"><div class="sikm">实体直营 质优价廉</div></div>
-                <div class="sik"><img src="images/sik4.png" width="55" height="64"><div class="sikm">每天上新</div></div>
+                <div class="sik" style=" border-left:none;"><img src="/web/images/sik1.png" width="55" height="64"><div class="sikm">正品保证</div></div>
+                <div class="sik"><img src="/web/images/sik2.png" width="55" height="64"><div class="sikm">100%实物拍摄</div></div>
+                <div class="sik"><img src="/web/images/sik3.png" width="55" height="64"><div class="sikm">实体直营 质优价廉</div></div>
+                <div class="sik"><img src="/web/images/sik4.png" width="55" height="64"><div class="sikm">每天上新</div></div>
             </td>
         </tr>
     </table>
@@ -1580,7 +1311,7 @@
             <a href="#" target="_blank">我的网店</a>
         </dd>
     </dl>
-    <div class="rf hobg"><img src="images/hot.png" width="303" height="107"></div>
+    <div class="rf hobg"><img src="/web/images/hot.png" width="303" height="107"></div>
 </div>
 <!--友情链接 -->
 <div class="qing juzhong youk">

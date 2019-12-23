@@ -1,9 +1,23 @@
 
 <!DOCTYPE html>
 <html class="x-admin-sm">
-@extends('admin.common.header')
-<script src="/admin/lib/layui/layui.js" charset="utf-8"></script>
-<script type="text/javascript" src="/admin/js/xadmin.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="/x-admin/css/font.css">
+    <link rel="stylesheet" href="/x-admin/css/xadmin.css">
+    <script src="/x-admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/x-admin/js/xadmin.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<script src="/x-admin/lib/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="/x-admin/js/xadmin.js"></script>
 <body>
 <div class="x-nav">
           <span class="layui-breadcrumb">
@@ -23,9 +37,9 @@
 
                 <div class="layui-card-header">
                     {{--                    <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>--}}
-                    <a title="添加" class="layui-btn" data-toggle="modal" data-target="#myModal" href="brand_add">添加</a>
+{{--                    <a title="添加" class="layui-btn" data-toggle="modal" data-target="#myModal" href="brand_add">添加</a>--}}
                     <a title="排序" class="layui-btn" data-toggle="modal" data-target="#myModal" href="order_list">排序</a>
-                    {{--                    <button class="layui-btn" onclick="xadmin.open('添加属性','http://www.larave.com/attr_value',600,400)"><i class="layui-icon"></i>属性管理</button>--}}
+                    <button class="layui-btn" onclick="xadmin.open('添加属性','brand_add',600,400)"><i class="layui-icon"></i>添加</button>
                     {{--                    <a title="修改" class="layui-btn" data-toggle="modal" data-target="#myModal" href="attr_value.blade.php"></a>--}}
 
                 </div>
@@ -35,9 +49,8 @@
                         <tr>
 
                             <th>ID</th>
-                            <th>属性展示名称</th>
-                            <th>属性所属分类</th>
-                            <th>前台是否展示该属性</th>
+                            <th>品牌展示名称</th>
+                            <th>前台是否展示</th>
                             <th>操作</th>
 
                         </tr>
@@ -49,22 +62,22 @@
 
                                 <td>{{$v['id']}}</td>
                                 <td>{{$v['name']}}</td>
-                                <td>{{$v['status']}}</td>
+
                                 <td class="td-status">
                                     <span class="layui-btn layui-btn-normal layui-btn-mini">{{$v['status']}}</span></td>
                                 <td class="td-manage">
                                     {{--                                    <a onclick="member_stop(this,'')" href="javascript:;"  title="启用">--}}
                                     {{--                                        <i class="layui-icon">&#xe601;</i>--}}
                                     {{--                                    </a>--}}
-                                    <a title="品牌编辑" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="brand_upd?id={{$v['id']}}">
-                                        <i class="layui-icon">&#xe631;</i>
-                                    </a>
+{{--                                    <a title="品牌编辑" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="brand_upd?id={{$v['id']}}">--}}
+{{--                                        <i class="layui-icon">&#xe631;</i>--}}
+{{--                                    </a>--}}
                                     <a title="排序" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" href="order_list?id={{$v['id']}}">
                                         <i class="layui-icon">&#xe638;</i>
                                     </a>
-                                    {{--                                <a onclick="xadmin.open('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">--}}
-                                    {{--                                    <i class="layui-icon">&#xe631;</i>--}}
-                                    {{--                                </a>--}}
+                                    <a onclick="xadmin.open('品牌编辑','brand_upd?id={{$v['id']}}',600,400)" title="品牌编辑" href="javascript:;">
+                                        <i class="layui-icon">&#xe631;</i>
+                                    </a>
                                     <a title="品牌删除" onclick="member_del(this,'{{$v['id']}}')" href="javascript:;">
                                         <i class="layui-icon">&#xe640;</i>
                                     </a>
@@ -91,7 +104,7 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="../../../jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
 <script>
     layui.use(['laydate','form'], function(){
         var laydate = layui.laydate;

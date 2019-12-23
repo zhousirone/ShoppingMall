@@ -69,7 +69,8 @@
 <div class="qing juzhong lobg" style="position: absolute;top: 50%;margin-top: -290px; left:50%; margin-left:-600px; overflow:inherit">
 
     <div class="log-rf" style="float:none; margin:0 auto; height:auto;">
-        <form action="register_add" method="post" enctype="multipart/form-data">
+        <form action="registDo" method="post" enctype="multipart/form-data">
+            @csrf
         <div class="logk zcok" style="padding-bottom:40px; margin-bottom:30px;">
             <div class="loto"><img src="/web/images/login-t.png" width="145" height="145" class="login-t"><img src="/web/images/login-bg.png" width="221" height="247" class="login-bg"></div>
             <div class="lo-dl">
@@ -107,10 +108,10 @@
 
             <div class="lo-dl">
                 <div class="lf">出生年月：</div>
-                <input type="datetime-local" placeholder="请输入出生年月" name="birthdate" id="birthdate">
+                <input type="date" placeholder="请输入出生年月" name="birthdate" id="birthdate">
             </div>
             <div>
-                <input type="button" value="注册" class="dlan">
+                <input type="submit" value="注册" class="dlan">
             </div>
             <div class="lo-zc">
                 已经注册账号？　　<a href="indexlogin" class="lo-zc1">立即登录</a>
@@ -123,35 +124,35 @@
 </body>
 </html>
 <script>
-    $(':button').click(function(){
-        var email=$('#email').val();
-        var name=$('#name').val();
-        var pwd=$('#pwd').val();
-        var nickname=$('#nickname').val();
-        var headimg=$('#headimg').val();
-        var birthdate=$('#birthdate').val();
-        var gender=$('#gender').val();
-        // alert(gender);
-       $.ajax({
-           url:'register_add',
-           dataType:'json',
-           data:{
-               name:name,
-               email:email,
-               pwd:pwd,
-               nickname:nickname,
-               headimg:headimg,
-               birthdate:birthdate,
-               gender:gender,
-           },
-           success:function(res){
-               // alert($data);
-               if(res.code == 0){
-                   alert(res.msg);
-               }else{
-                   alert(res.msg);
-               }
-           }
-       })
-    })
+    // $(':button').click(function(){
+    //     var email=$('#email').val();
+    //     var name=$('#name').val();
+    //     var pwd=$('#pwd').val();
+    //     var nickname=$('#nickname').val();
+    //     var headimg=$('#headimg').val();
+    //     var birthdate=$('#birthdate').val();
+    //     var gender=$('#gender').val();
+    //     // alert(gender);
+    //    $.ajax({
+    //        url:'register_add',
+    //        dataType:'json',
+    //        data:{
+    //            name:name,
+    //            email:email,
+    //            pwd:pwd,
+    //            nickname:nickname,
+    //            headimg:headimg,
+    //            birthdate:birthdate,
+    //            gender:gender,
+    //        },
+    //        success:function(res){
+    //            // alert($data);
+    //            if(res.code == 0){
+    //                alert(res.msg);
+    //            }else{
+    //                alert(res.msg);
+    //            }
+    //        }
+    //    })
+    // })
 </script>

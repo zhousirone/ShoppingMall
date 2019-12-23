@@ -27,8 +27,7 @@
                     <span class="x-red">*</span>角色名
                 </label>
                 <div class="layui-input-inline">
-                    <input type="text" id="name" name="name" required="" lay-verify="required"
-                           autocomplete="off" class="layui-input">
+                    <input type="text" id="name" name="name" required="" lay-verify="required" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item layui-form-text">
@@ -54,14 +53,14 @@
                     </tbody>
                 </table>
             </div>
-            <div class="layui-form-item layui-form-text">
-                <label for="desc" class="layui-form-label">
-                    描述
-                </label>
-                <div class="layui-input-block">
-                    <textarea placeholder="请输入内容" id="desc" name="desc" class="layui-textarea"></textarea>
-                </div>
-            </div>
+{{--            <div class="layui-form-item layui-form-text">--}}
+{{--                <label for="desc" class="layui-form-label">--}}
+{{--                    描述--}}
+{{--                </label>--}}
+{{--                <div class="layui-input-block">--}}
+{{--                    <textarea placeholder="请输入内容" id="desc" name="desc" class="layui-textarea"></textarea>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="layui-form-item">
                 <button class="layui-btn" lay-submit="" lay-filter="add">增加</button>
             </div>

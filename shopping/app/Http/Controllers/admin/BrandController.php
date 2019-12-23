@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Model\Brand;
 
 use Illuminate\Routing\Controller;
+
 class BrandController extends Controller
 {
     //
@@ -17,20 +18,27 @@ class BrandController extends Controller
     }
     public function add(Request $request)
     {
-        $data=$request->post();
-//        var_dump($data);die;
+        $name=$request->post('name');
+        $status=$request->post('status');
+//        var_dump($name);die;
 
-        $user=new Brand();
-        $user->name=$data['name'];
-        $res=$user->save();
-//        var_dump($res);die;
-//        if($res){
-//
-//        }
+        $brand=new Brand();
+        $brand->name=$name;
+        $brand->status=$status;
+        $res=$brand->save();
+        if($res){
+            $arr['code'] = 0;
+            $arr['msg'] = "添加成功";
+            echo json_encode($arr);
+        }else{
+            $arr['code'] = 1;
+            $arr['msg'] = "添加失败";
+            echo json_encode($arr);
+        }
+
     }
     public function list()
     {
-//        $data=Brand::all()->toArray();
         $data=Brand::orderBy('name','asc')->get()->toArray();
 
         return view('admin.brand.list',['data'=>$data]);
