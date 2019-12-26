@@ -160,4 +160,18 @@ Route::any( 'zhifu','index\Shopcar@zhifu');
 
 
 
+//个人中心
+Route::post( 'myUpdate','index\Personal@update');
+Route::get( 'myOrder','index\Personal@order');
+Route::get( 'myLocation','index\Personal@myLocation');
+Route::get( 'locationAdd','index\Personal@locationAdd');
+Route::post( 'locationAdd_do','index\Personal@locationAdd_do');
+Route::get( 'locationUpd','index\Personal@locationUpd');
+Route::post( 'locationUpdate','index\Personal@locationUpdate');
+Route::get( 'locationDel','index\Personal@locationDel');
+
+
+
+
+
 

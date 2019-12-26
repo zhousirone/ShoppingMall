@@ -24,8 +24,10 @@ class Login extends Controller
         }
         if($res){
             if($res['pwd']==$pwd){
+                date_default_timezone_set('PRC');
+                $res['time'] = date('Y-m-d H:i:s',time());
+//                $res['phone'] = date('Y-m-d H:i:s',time());
                 Session::put('user',$res);
-
                 $res['code'] = 0;
                 $res['msg'] = "登陆成功";
                 echo json_encode($res);
@@ -34,13 +36,11 @@ class Login extends Controller
                 $res['code'] = 1;
                 $res['msg'] = "密码错误";
                 echo json_encode($res);
-
             }
         }else{
             $res['code'] = 2;
             $res['msg'] = "证号不存在";
             echo json_encode($res);
-
         }
     }
 

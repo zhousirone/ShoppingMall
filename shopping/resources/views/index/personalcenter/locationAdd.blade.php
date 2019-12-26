@@ -1184,45 +1184,27 @@
         </div>
         <!--会员内容 -->
         <div class="qing juzhong" style="width:900px;">
-            <div style="width:900px; line-height:40px; background:#e01222; color:#FFF; font-size:16px; padding-left:15px;">个人资料</div>
+            <div style="width:900px; line-height:40px; background:#e01222; color:#FFF; font-size:16px; padding-left:15px;">添加地址</div>
             <div class="cenbg" style="    margin-bottom: 40px;">
-                <form id="infoform" action="myUpdate" method="post" enctype="multipart/form-data" >
+                <form id="infoform" action="locationAdd_do" method="post" enctype="multipart/form-data" >
                     @csrf
                     <div class="xinxi">
-                        <div class="qing"><div class="lf">当前头像：</div>
-                            <div class="touxk">
-                                <div class="toux">
-                                    <img id="showpicture" src="{{asset('files/'.$headimg)}}" width="150" height="150">
-                                </div>
-                                <div class="lf xzk">
-                                    <input type="file" id="headimgurl" name="headimgurl" accept="image/*">
-                                    <div class="lf">仅允许上传jpg,jpeg,png,gif</div>
-                                    <!--<a href="#">选择文件</a>
-                                    <div class="lf">未选择文件</div> -->
-                                </div>
-                            </div>
-                        </div>
                         <div class="qing">
-                            <div class="lf">手&nbsp;&nbsp;机&nbsp;号：</div>
-                            <input type="text" value="{{$phone}}" class="xie" name="phone" id="mobile" >
+                            <div class="lf">收货人：</div>
+                            <input type="text" value="" class="xie" name="name" required placeholder="收货人" id="mobile" >
                         </div>
-                        <div class="qing"><div class="lf">昵　　称：</div>
-                            <input type="text" value="{{$name}}" class="xie" name="username" id="username" >
+                        <div class="qing"><div class="lf">手机号：</div>
+                            <input type="text" value="" class="xie" name="phone" required placeholder="手机号" id="username" >
                         </div>
-                        <div class="qing"><div class="lf">性　　别：</div>
-                            <div class="sex">
-                                <input type="radio" name="sex" id="nan" value="1" class="xuz" ><label for="nan">男</label>
-                                <input type="radio" name="sex" id="nv" value="2" class="xuz" ><label for="nv">女</label>
-                                <input type="radio" name="sex" id="mi" value="0" class="xuz"  checked><label for="mi">保密</label>
-                            </div>
+                        <div class="qing"><div class="lf">省市区：</div>
+                            <input type="text" value="" class="xie" name="location" required placeholder="省市区" id="username" >
                         </div>
-                        <div class="qing"><div class="lf">密码修改：</div>
-                            <input type="password" placeholder="互联网账号存在被盗风险，建议您定期更改密码以保护账户安全。" class="xie2" name="password" id="password" > （不修改，请为空）
+                        <div class="qing"><div class="lf">详细地址：</div>
+                            <input type="text" placeholder="详细地址" class="xie2" required name="detailed" id="password" >
                         </div>
                         <input type="hidden" value="{{$id}}" name="id">
                         <div class="qing aniu">
-                            <input type="submit" value="保存" class="bao1">
-                            <a href="#" class="bao2">退出当前账户</a>
+                            <input type="submit" value="添加" class="bao1">
                         </div>
                     </div>
                 </form>

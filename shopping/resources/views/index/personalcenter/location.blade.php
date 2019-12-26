@@ -1184,48 +1184,48 @@
         </div>
         <!--会员内容 -->
         <div class="qing juzhong" style="width:900px;">
-            <div style="width:900px; line-height:40px; background:#e01222; color:#FFF; font-size:16px; padding-left:15px;">个人资料</div>
-            <div class="cenbg" style="    margin-bottom: 40px;">
-                <form id="infoform" action="myUpdate" method="post" enctype="multipart/form-data" >
-                    @csrf
-                    <div class="xinxi">
-                        <div class="qing"><div class="lf">当前头像：</div>
-                            <div class="touxk">
-                                <div class="toux">
-                                    <img id="showpicture" src="{{asset('files/'.$headimg)}}" width="150" height="150">
-                                </div>
-                                <div class="lf xzk">
-                                    <input type="file" id="headimgurl" name="headimgurl" accept="image/*">
-                                    <div class="lf">仅允许上传jpg,jpeg,png,gif</div>
-                                    <!--<a href="#">选择文件</a>
-                                    <div class="lf">未选择文件</div> -->
-                                </div>
+
+
+            <div style="width:900px; line-height:40px; background:#e01222; color:#FFF; font-size:16px; padding-left:15px;">收货地址</div>
+
+
+            <div class="qing juzhong" style="width:900px;">
+                <div class="cenbg" style="margin-bottom:40px;">
+                    <div class="addk">
+                        <a href="locationAdd?id={{$id}}" class="add">
+                            <div class=" add-tj"><img src="{{asset('web/images/dizhi_03.png')}}" width="39" height="39">添加新地址</div>
+                        </a>
+                        @foreach($data as $k => $v)
+                        <div class="address_li add" id="div_address_id_41">
+                            <div class="ad-m">{{$v->name}}</div>
+                            <div class="ad-js">
+                                {{$v->phone}}<br>
+                                {{$v->location}}<br>
+                                {{$v->detailed}}<br>
+                            </div>
+                            <div class="ad-bj">
+                                <a href="locationUpd?id={{$v->id}}">修改</a><a href="locationDel?id={{$v->id}}">删除</a>
                             </div>
                         </div>
-                        <div class="qing">
-                            <div class="lf">手&nbsp;&nbsp;机&nbsp;号：</div>
-                            <input type="text" value="{{$phone}}" class="xie" name="phone" id="mobile" >
-                        </div>
-                        <div class="qing"><div class="lf">昵　　称：</div>
-                            <input type="text" value="{{$name}}" class="xie" name="username" id="username" >
-                        </div>
-                        <div class="qing"><div class="lf">性　　别：</div>
-                            <div class="sex">
-                                <input type="radio" name="sex" id="nan" value="1" class="xuz" ><label for="nan">男</label>
-                                <input type="radio" name="sex" id="nv" value="2" class="xuz" ><label for="nv">女</label>
-                                <input type="radio" name="sex" id="mi" value="0" class="xuz"  checked><label for="mi">保密</label>
-                            </div>
-                        </div>
-                        <div class="qing"><div class="lf">密码修改：</div>
-                            <input type="password" placeholder="互联网账号存在被盗风险，建议您定期更改密码以保护账户安全。" class="xie2" name="password" id="password" > （不修改，请为空）
-                        </div>
-                        <input type="hidden" value="{{$id}}" name="id">
-                        <div class="qing aniu">
-                            <input type="submit" value="保存" class="bao1">
-                            <a href="#" class="bao2">退出当前账户</a>
-                        </div>
+                        @endforeach
                     </div>
-                </form>
+
+                    <!--页码 -->
+                    <div class="qing yema">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#" class="sye"></a>
+                                    <a href="#" class="yeen"><span>1</span><span>1</span></a>
+                                    <a href="#" class="xye"></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>

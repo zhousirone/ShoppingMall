@@ -1184,49 +1184,27 @@
         </div>
         <!--会员内容 -->
         <div class="qing juzhong" style="width:900px;">
-            <div style="width:900px; line-height:40px; background:#e01222; color:#FFF; font-size:16px; padding-left:15px;">个人资料</div>
-            <div class="cenbg" style="    margin-bottom: 40px;">
-                <form id="infoform" action="myUpdate" method="post" enctype="multipart/form-data" >
-                    @csrf
-                    <div class="xinxi">
-                        <div class="qing"><div class="lf">当前头像：</div>
-                            <div class="touxk">
-                                <div class="toux">
-                                    <img id="showpicture" src="{{asset('files/'.$headimg)}}" width="150" height="150">
-                                </div>
-                                <div class="lf xzk">
-                                    <input type="file" id="headimgurl" name="headimgurl" accept="image/*">
-                                    <div class="lf">仅允许上传jpg,jpeg,png,gif</div>
-                                    <!--<a href="#">选择文件</a>
-                                    <div class="lf">未选择文件</div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="qing">
-                            <div class="lf">手&nbsp;&nbsp;机&nbsp;号：</div>
-                            <input type="text" value="{{$phone}}" class="xie" name="phone" id="mobile" >
-                        </div>
-                        <div class="qing"><div class="lf">昵　　称：</div>
-                            <input type="text" value="{{$name}}" class="xie" name="username" id="username" >
-                        </div>
-                        <div class="qing"><div class="lf">性　　别：</div>
-                            <div class="sex">
-                                <input type="radio" name="sex" id="nan" value="1" class="xuz" ><label for="nan">男</label>
-                                <input type="radio" name="sex" id="nv" value="2" class="xuz" ><label for="nv">女</label>
-                                <input type="radio" name="sex" id="mi" value="0" class="xuz"  checked><label for="mi">保密</label>
-                            </div>
-                        </div>
-                        <div class="qing"><div class="lf">密码修改：</div>
-                            <input type="password" placeholder="互联网账号存在被盗风险，建议您定期更改密码以保护账户安全。" class="xie2" name="password" id="password" > （不修改，请为空）
-                        </div>
-                        <input type="hidden" value="{{$id}}" name="id">
-                        <div class="qing aniu">
-                            <input type="submit" value="保存" class="bao1">
-                            <a href="#" class="bao2">退出当前账户</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <div style="width:900px; line-height:40px; background:#e01222; color:#FFF; font-size:16px; padding-left:15px;">我的订单</div>
+            <table width="100%" border="1" style="border:1px solid #f1f1f1; background:#fff;">
+                <tr style="text-align:center; line-height:40px; background:#e01222; color:#FFF; font-size:16px;">
+                    <th scope="col" style="text-align:center;">商品</th>
+                    <th scope="col" style="text-align:center;">订单编号</th>
+                    <th scope="col" style="text-align:center;">支付方式</th>
+                    <th scope="col" style="text-align:center;">时间</th>
+                    <th scope="col" style="text-align:center;">收货状态</th>
+                    <th scope="col" style="text-align:center;">详情</th>
+                </tr>
+                @foreach($data as $k => $v)
+                <tr style="text-align:center; font-size:14px;">
+                    <td><img src="{{asset('web/images/tt4.jpg')}}" style="width:100px; display:block; margin:0 auto;"></td>
+                    <td>{{$v->order_number}}</td>
+                    <td>￥2008.00<br>@if($v->payment_status == 1)未支付@else 已支付 @endif</td>
+                    <td>{{$v->created_at}}</td>
+                    <td>等待收货</td>
+                    <td><a href="" style="color:#e01222;">查看</a></td>
+                </tr>
+                @endforeach
+            </table>
         </div>
     </div>
 

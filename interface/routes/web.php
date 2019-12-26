@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 Route::prefix('api')->group(function (){
     Route::get('login','Api\Login@login');
-   Route::get('list','Api\Goods@list');
+    Route::get('list','Api\Goods@list');
+    Route::any('details','Api\Goods@details');
 });
