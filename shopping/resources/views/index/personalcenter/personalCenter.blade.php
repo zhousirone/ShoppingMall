@@ -11,7 +11,7 @@
 
 
     <link href="/web/css/style.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="/web/js/-jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <link href="/web/css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
     <link href="/web/css/amazeui.min.css" rel="stylesheet" />
     <script src="/web/js/amazeui.min.js"></script>
@@ -63,10 +63,9 @@
         // -->
     </script>
 </head>
-
 <body>
-<script src="/web/js/jquery-3.1.0.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="/web/sxb.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <style>
     .one_qcode{
         position:absolute;
@@ -89,12 +88,12 @@
             <ul id="sddm">
                 <a href="#">Hi，请先登录</a>
                 <a href="#" style="color:#ec2832; padding-left:0;">注册</a>
-                <li style="padding-left:10px; background:url(images/wei.png) no-repeat left center; background-size:18px;">
+                <li style="padding-left:10px; background:url({{asset('web/images/wei.png')}}) no-repeat left center; background-size:18px;">
                     <a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">关注我们</a></a>
                     <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
                         <img src="/web/images/108430aeb.jpg" width="166" height="166"></div>
                 </li>
-                <li style="padding-left:10px; background:url(images/gwc.png) no-repeat left center; background-size:16px;">
+                <li style="padding-left:10px; background:url({{asset('web/images/gwc.png')}}) no-repeat left center; background-size:16px;">
                     <a href="#">购物车</a>
                     <span>|</span></a>
                 </li>
@@ -109,7 +108,7 @@
     <div class="juzhong">
         <div style="height:100px; background-color: #fff;width: 216px; float:left; position:absolute; top:31px;">
             <div>
-                <img src="images/jinyihe.png" style="height:100px; padding:0;margin: 5px auto;display: block;"></div>
+                <img src="{{asset('web/images/jinyihe.png')}}" style="height:100px; padding:0;margin: 5px auto;display: block;"></div>
         </div>
         <div class="rf">
             <form name="search" action="#" method="post" style="display:inline; float:left; width:500px;">
@@ -1193,6 +1192,7 @@
                             <div class="touxk">
                                 <div class="toux">
                                     <img id="showpicture" src="{{asset('files/'.$headimg)}}" width="150" height="150">
+
                                 </div>
                                 <div class="lf xzk">
                                     <input type="file" id="headimgurl" name="headimgurl" accept="image/*">

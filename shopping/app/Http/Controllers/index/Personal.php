@@ -20,37 +20,43 @@ class Personal extends Controller
     }
     public function personalCenter()
     {
+        $data = User::where('id','=',$this->data()['id'])->get()->toArray();
+
         return view('index.personalcenter.personalCenter',
           [
-            'id'=>$this->data()['id'],
-            'name'=>$this->data()['name'],
-            'phone'=>$this->data()['phone'],
-            'headimg' => $this->data()['headimg'],
+            'id'=>$data[0]['id'],
+            'name'=>$data[0]['name'],
+            'phone'=>$data[0]['phone'],
+            'headimg' => $data[0]['headimg'],
             'ip'=>$this->data()['ip'],
             'time'=>$this->data()['time']
            ]);
     }
     public function update(Request $request)
     {
+        $data = $request->post();
+
+        $users = new User();
+        $arr = $users->find($data['id']);
+        $arr->name = $data['username'];
+        if ($data['password'] == ''){
+            unset($data['password']);
+        }else{
+            $arr->pwd  = $data['password'];
+        }
+        $arr->phone  =$data['phone'];
         $file = $request->file('headimgurl');
-        $name = $file->getClientOriginalName();
-        if ($file->move(public_path().'/files/', $name)){
-            $data = $request->post();
-            $data['headimg'] = $name;
-            $users = new User();
-            $arr = $users->find($data['id']);
-            $arr->name = $data['username'];
-            if ($data['password'] == ''){
-                unset($data['password']);
-            }else{
-                $arr->pwd  = $data['password'];
+        if (!empty($file)){
+            $name = $file->getClientOriginalName();
+            if ($file->move(public_path().'/files/', $name)){
+//            $data['headimg'] = ;
+                $arr->headimg = $name;
             }
-            $arr->phone  =$data['phone'];
-            $arr->headimg = $data['headimg'];
-            $arr->sex = $data['sex'];
-            if ($arr->save()){
-                return redirect('personalCenter');
-            }
+        }
+
+        $arr->sex = $data['sex'];
+        if ($arr->save()){
+            return redirect('personalCenter');
         }
 
     }
