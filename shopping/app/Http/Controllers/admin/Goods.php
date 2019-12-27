@@ -32,6 +32,7 @@ class Goods extends Controller
         $file = $request->file("image")->store('public');
         $data['image'] = "/storage".substr($file,6);
 //        var_dump($img);
+        unset($data['_token']);
         $goods_id=Good::insert($data);
         if($goods_id){
             echo "<script>alert('添加成功');location.href='listGoods'</script>";

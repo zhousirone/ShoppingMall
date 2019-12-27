@@ -11,9 +11,26 @@
 
 
 
-    <link href="/web/css/style.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="/web/js/-jquery-1.8.3.min.js"></script>
-    <link href="/web/css/nav2.css" type="text/css" rel="stylesheet"><!--藏品分类 -->
+    <link href="/qweb/css/base.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" rev="stylesheet" href="/qweb/css/mobile.css" type="text/css" media="screen">
+    <link href="/qweb/css/user.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="stylesheet" href="/qweb/css/cart.css"/>
+    <script type="text/javascript" src="/qweb/js/cart.js"></script>
+    <script type="text/javascript" src="/qweb/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/qweb/js/hot-products.js"></script>
+
+    <script type="text/javascript" src="/qweb/js/DD_belatedPNG.js"></script>
+    <script>DD_belatedPNG.fix('*')</script>
+
+
+
+
+        <link href="/web/css/style.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="/web/js/-jquery-1.8.3.min.js"></script>
+        <link href="/web/css/nav2.css" type="text/css" rel="stylesheet">
+
     <link href="/web/css/amazeui.min.css" rel="stylesheet" />
     <script src="/web/js/amazeui.min.js"></script>
     <link href="/web/css/fanda.css" type="text/css" rel="stylesheet">
@@ -58,8 +75,7 @@
     </script>
 </head>
 <body>
-<script src="/web/js/jquery-3.1.0.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="/web/sxb.js"></script>
+
 <style>
     .one_qcode{
         position:absolute;
@@ -1161,41 +1177,138 @@
     </div>
 </div>
 <!--页面标题 -->
-<div class="qing juzhong" style="margin-bottom:40px;">
-    <div class="gwl">
-        <div class="gw-m">
-            <div class="gw-m1">商品名称</div>
-            <div class="gw-m2">单价</div>
-            <div class="gw-m3">数量</div>
-            <div class="gw-m4">小计</div>
-            <div class="gw-m5">操作</div>
-        </div>
+{{--<div class="qing juzhong" style="margin-bottom:40px;">--}}
+{{--    <div class="gwl">--}}
+{{--        <div class="gw-m">--}}
+{{--            <div class="gw-m1">商品名称</div>--}}
+{{--            <div class="gw-m2">单价</div>--}}
+{{--            <div class="gw-m3">数量</div>--}}
+{{--            <div class="gw-m4">小计</div>--}}
+{{--            <div class="gw-m5">操作</div>--}}
+{{--        </div>--}}
+{{--    @foreach($data as $k => $v)--}}
+{{--        <div class="gwlb" id="aaa">--}}
+{{--            <a href="#" class="gw-tu" style="background:url({{$v['image']}}) center center no-repeat;"></a>--}}
+{{--            <div class="gw-jk"><a href="#">{{$v['name']}}</a></div>--}}
+{{--            <div class="gw-jg">{{$v['price']}}</div>--}}
+{{--            <div class="gw-sl"><a href="javascript:del_num('119');" class="gw-sl1 lf">-</a><input type="text" name="order_num_119" id="order_num_119" value="{{$v['num']}}" onblur="change_num('119')"><a href="javascript:add_num('119');" class="gw-sl2 rf">+</a></div>--}}
+{{--            <div class="gw-jg" id="heji_119">998</div>--}}
+{{--            <a href="javascript:del_cart('119');" class="shanc">×</a>--}}
+{{--        </div>--}}
+{{--    @endforeach--}}
 
-        <div class="gwlb">
-            <a href="#" class="gw-tu" style="background:url(/web/images/484069aec.jpg) center center no-repeat;"></a>
-            <div class="gw-jk"><a href="#">孙曰盛</a></div>
-            <div class="gw-jg">998.00元</div>
-            <div class="gw-sl"><a href="javascript:del_num('119');" class="gw-sl1 lf">-</a><input type="text" name="order_num_119" id="order_num_119" value="1" onblur="change_num('119')"><a href="javascript:add_num('119');" class="gw-sl2 rf">+</a></div>
-            <div class="gw-jg" id="heji_119">998</div>
-            <a href="javascript:del_cart('119');" class="shanc">×</a>
-        </div>
+{{--    </div>--}}
+{{--    <div class="gwzj">--}}
+{{--        <div class="lf chjx"><a href="#">继续购物</a>　　|　　共<span id="zongshuliang">{{$count}}</span>件商品</div>--}}
+{{--        <div class="rf">--}}
+{{--            <div class="lf chhj">合计（现金+优惠券+代金券）：<span id="zongjiage">998</span>元</div>--}}
+{{--            <a href="check" class="jie"><span>去结算</span><span>去结算</span></a>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 
+<div class="catbox">
+    <div class="title"><p>我的购物车<span>在线支付全场满¥150免运费</span></p></div>
+    <form action="">
+    <table id="cartTable"  border="0" cellpadding="0" cellspacing="0">
+        <thead>
+        <tr style="background-image:none;">
+            <th style="padding-left:10px;"><label><input class="check-all check" type="checkbox"/><p>全选</p></label></th>
+            <th>商品</th>
+            <th style="text-align:center">单价</th>
+            <th style="text-align:center">数量</th>
+            <th style="text-align:center">小计</th>
+            <th style="text-align:center">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($data as $k => $v)
+        <tr >
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><a href="#"><img src="{{$v['image']}}" width="100" height="100"/><span>{{$v['name']}}</span></a></td>
+            <td class="price">{{$v['price']}}元</td>
+            <td class="count"><div style="height: 30px;width: 200px;"><div class="reduce" style="float: left;margin-right: 12px;width: 45px;">-</div><input style="float: left;height: 30px;" name="shuliang" class="count-input" type="text" value="{{$v['num']}}"/><div class="add" style="float: left;width: 20px;height: 30px;line-height: 1px;">+</div></div></td>
+            <td class="subtotal" name="xiaoji">{{$v['price_hua']}}</td>
+            <td class="operation"><a href="delCart?id={{$v['id']}}" class="delete">删除</a></td>
+            <input type="hidden" name="id" value="{{$v['id']}}">
+        </tr>
+        @endforeach
+        </tbody>
+    </table>
 
+    <div class="foot" id="foot">
+        <label class="fl select-all"><input type="checkbox" class="check-all check"/>&nbsp;&nbsp;全选</label>
+        <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+        <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+        <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件 </div>
+        <p>还需 100 元在线支付免运费</p>
     </div>
-    <div class="gwzj">
-        <div class="lf chjx"><a href="#">继续购物</a>　　|　　共<span id="zongshuliang">1</span>件商品</div>
-        <div class="rf">
-            <div class="lf chhj">合计（现金+优惠券+代金券）：<span id="zongjiage">998</span>元</div>
-            <a href="check" class="jie"><span>去结算</span><span>去结算</span></a>
-        </div>
+
+    <div class="box-ft" style="margin-top:1px;">
+        <a  id="check" class="next">结账</a>
+        <a href="marketdisplay" class="modify">继续购物</a>
     </div>
+    </form>
 </div>
+
+
+
+
+
 <!--会员内容 -->
 
 </div>
 
-
 <div class="qing banq">所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任 。</div>
 <div class="qing banq" style="margin-bottom:20px;">鲁ICP备15028488号Copyright 中意商城2017，All Rights Reserved</div>
 </body>
+
 </html>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script >
+   $('#check').click(function () {
+       // var num = $('.xiaoji').val();
+       var shuliang = document.getElementsByName('shuliang');
+       var id = document.getElementsByName('id');
+       var xiaoji=document.getElementsByName('xiaoji');
+
+
+
+       var zongjia = $('#priceTotal').html();
+       var str='';
+       var str2 ='';
+       var str3 = '';
+       for (i=0;i<shuliang.length;i++) {
+               str  += ','+shuliang[i].value;
+               str2 += ','+id[i].value;
+               str3 += ','+xiaoji[i].innerText;
+       }
+       str=str.substr(1);
+       str2=str2.substr(1);
+       str3=str3.substr(1);
+
+       $.ajax({
+           url:'aaa',
+           type:'post',
+           dataType:"json",
+           data:{
+               shuliang:str,
+               shangpinid:str2,
+               xiaoji:str3,
+               zongjia:zongjia,
+               _token:'{{csrf_token()}}'
+           },
+           success:function (e){
+               if(e.code==1){
+                   console.log(e.msg);
+                   location.href="check";
+               }
+           }
+       })
+
+   })
+
+</script>
+
+

@@ -98,8 +98,7 @@ Route::any( 'brand_update','admin\BrandController@s');
 /*Route::any('index/login','index\Login@index');
 Route::any('index/regist','index\Login@regist');
 
-Route::any('goods_add', 'admin\GoodsController@goods_list');//列表
-Route::any('attr_add', 'admin\GoodsController@attr_add');
+
 Route::any('add_list', 'admin\GoodsController@add_list');
 Route::any('classification', 'admin\GoodsController@classification');
 Route::any('status_upd', 'admin\GoodsController@status_upd');
@@ -121,13 +120,7 @@ Route::post('add_list', 'admin\GoodsController@add_list');//商品属性管理�
 Route::get('classification', 'admin\GoodsController@classification');//分类
 Route::any('status_upd', 'admin\GoodsController@status_upd');
 Route::any('del', 'admin\GoodsController@del');//删除
-Route::any('attr_value', 'admin\AttributeValue@attr_value');//属性值列表
-Route::any('attr_upd', 'admin\AttributeValue@attr_upd');//属性值修改
-Route::any('upd', 'admin\AttributeValue@upd');//编辑要修改属性值
-Route::any( 'value_add','admin\AttributeValue@value_add');//修改完跳转
-Route::any( 'value_list','admin\AttributeValue@value_list');//属性值添加
-Route::any( 'update_id','admin\GoodsController@update_id');//分配找到下级  any代表展示全部
-Route::any( 'value_upd','admin\AttributeValue@value_upd');//属性值删除
+
 //
 //Route::get( 'attribute_class','admin\GoodsManage@attribute_class');//属性分类管理展示表单  添加商品列表
 //Route::post( 'list_class','admin\GoodsManage@list_class');//属性分类管理展示
@@ -144,6 +137,17 @@ Route::any( 'manage_class','admin\GoodsManage@manage_class');//
 
 */
 
+
+Route::any('goods_add', 'admin\GoodsController@goods_list');//列表
+Route::any('attr_add', 'admin\GoodsController@attr_add');
+Route::any('attr_value', 'admin\AttributeValue@attr_value');//属性值列表
+Route::any('attr_upd', 'admin\AttributeValue@attr_upd');//属性值修改
+Route::any('upd', 'admin\AttributeValue@upd');//编辑要修改属性值
+Route::any( 'value_add','admin\AttributeValue@value_add');//修改完跳转
+Route::any( 'value_list','admin\AttributeValue@value_list');//属性值添加
+Route::any( 'update_id','admin\GoodsController@update_id');//分配找到下级  any代表展示全部
+Route::any( 'value_upd','admin\AttributeValue@value_upd');//属性值删除
+
 //前台
 Route::any( 'indexlogin','index\login@login');//登录列表
 Route::any( 'loginDo','index\login@loginDo');//登录方法
@@ -152,12 +156,11 @@ Route::any( 'registDo','index\login@registDo');//注册方法
 
 Route::any( 'marketdisplay','index\market@marketdisplay');//商场展示
 Route::any( 'goodsDetails','index\market@goodsDetails');
-Route::any( 'shopCar','index\Shopcar@shopCar');
-Route::any( 'check','index\Shopcar@check');
+Route::any( 'shopCar','index\Shopcars@shopCar');
+Route::any( 'check','index\Shopcars@check');
 Route::any( 'personalCenter','index\Personal@personalCenter');
-Route::any( 'zhifu','index\Shopcar@zhifu');
+Route::any( 'zhifu','index\Shopcars@zhifu');
+Route::any( 'addShopCar','index\Shopcars@addShopCar');
+Route::any( 'delCart','index\Shopcars@delCart');
 
-
-
-
-
+Route::any( 'aaa','index\Shopcars@aaa');

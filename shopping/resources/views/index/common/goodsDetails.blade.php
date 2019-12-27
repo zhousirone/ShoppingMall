@@ -88,7 +88,7 @@
                         <img src="images/108430aeb.jpg" width="166" height="166"></div>
                 </li>
                 <li style="padding-left:10px; background:url(images/gwc.png) no-repeat left center; background-size:16px;">
-                    <a href="#">购物车</a>
+                    <a href="shopCar">购物车</a>
                     <span>|</span></a>
                 </li>
                 <a href="#">我的个人中心</a>
@@ -1162,77 +1162,82 @@
 </div>
 <!--页面标题 -->
 <div class="qing juzhong prbg">
-    <div class=" lf pro" style="width:410px;margin-left:20px;margin-right:30px;overflow: initial;">
-        <!--演示内容开始-->
-        <div id="tsShopContainer">
-            <div id="tsImgS"><a href="" title="Images" class="MagicZoom" id="MagicZoom"><img height="100%"  width="auto" src="{{$data['image']}}" /></a></div>
-            <div id="tsPicContainer">
-                <div id="tsImgSArrL" onclick="tsScrollArrLeft()"></div>
-                <div id="tsImgSCon">
-                    <ul>
-                        <li onclick="showPic(0)" rel="MagicZoom" class="tsSelectImg"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
-                        <li onclick="showPic(1)" rel="MagicZoom"><img height="42" width="42" src="/web/images/kefu.png" tsImgS="images/tt2.jpg" /></li>
-                        <li onclick="showPic(2)" rel="MagicZoom"><img height="42" width="42" src="/web/images/kefu.png" tsImgS="{{$data['image']}}" /></li>
-                        <li onclick="showPic(3)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
-                        <li onclick="showPic(4)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
-                        <li onclick="showPic(1)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
-                        <li onclick="showPic(2)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
-                        <li onclick="showPic(3)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
-                    </ul>
+    <form action="addShopCar" method="post">
+        @csrf
+        <input type="hidden" value="{{$data['id']}}" name="id">
+        <div class=" lf pro" style="width:410px;margin-left:20px;margin-right:30px;overflow: initial;">
+            <!--演示内容开始-->
+            <div id="tsShopContainer">
+                <div id="tsImgS"><a href="" title="Images" class="MagicZoom" id="MagicZoom"><img height="100%" name="image"  width="auto" src="{{$data['image']}}" /><input
+                                type="hidden" name="image" value="{{$data['image']}}"></a></div>
+                <div id="tsPicContainer">
+                    <div id="tsImgSArrL" onclick="tsScrollArrLeft()"></div>
+                    <div id="tsImgSCon">
+                        <ul>
+                            <li onclick="showPic(0)" rel="MagicZoom" class="tsSelectImg"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
+                            <li onclick="showPic(1)" rel="MagicZoom"><img height="42" width="42" src="/web/images/kefu.png" tsImgS="images/tt2.jpg" /></li>
+                            <li onclick="showPic(2)" rel="MagicZoom"><img height="42" width="42" src="/web/images/kefu.png" tsImgS="{{$data['image']}}" /></li>
+                            <li onclick="showPic(3)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
+                            <li onclick="showPic(4)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
+                            <li onclick="showPic(1)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
+                            <li onclick="showPic(2)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
+                            <li onclick="showPic(3)" rel="MagicZoom"><img height="42" width="42" src="{{$data['image']}}" tsImgS="{{$data['image']}}" /></li>
+                        </ul>
+                    </div>
+                    <div id="tsImgSArrR" onclick="tsScrollArrRight()"></div>
                 </div>
-                <div id="tsImgSArrR" onclick="tsScrollArrRight()"></div>
+                <img class="MagicZoomLoading" width="16" height="16" src="/web/images/loading.gif" alt="Loading..." />
             </div>
-            <img class="MagicZoomLoading" width="16" height="16" src="/web/images/loading.gif" alt="Loading..." />
+            <script src="js/MagicZoom.js" type="text/javascript"></script>
+            <script src="js/ShopShow.js"></script>
+            <!--演示内容结束-->
         </div>
-        <script src="js/MagicZoom.js" type="text/javascript"></script>
-        <script src="js/ShopShow.js"></script>
-        <!--演示内容结束-->
-    </div>
-    <style>
-        .guige{ width:100%; overflow:hidden; margin-bottom:10px;}
-        .guige a{ float:left; width:80px; line-height:30px; border:1px solid #ccc; color:#555; margin:0 5px 5px 0px; text-align:center;}
-        .guige a:hover{border:1px solid #e01222; color:#e01222;}
-    </style>
-    <div class="lf pryo">
-        <div class="pr-ti">{{$data['name']}}</div>
-        <div class="pr-jgk">
-            <div class="pr-jti">
-                <b>价格：</b>￥{{$data['price']}}        <strong>已售0件</strong>
+        <style>
+            .guige{ width:100%; overflow:hidden; margin-bottom:10px;}
+            .guige a{ float:left; width:80px; line-height:30px; border:1px solid #ccc; color:#555; margin:0 5px 5px 0px; text-align:center;}
+            .guige a:hover{border:1px solid #e01222; color:#e01222;}
+        </style>
+        <div class="lf pryo">
+            <div class="pr-ti"><input  name="name" value="{{$data['name']}}"></div>
+            <div class="pr-jgk">
+                <div class="pr-jti">
+                    <b>价格：</b>￥ <input  name="price" value="{{$data['price']}}">      <strong>已售0件</strong>
+                </div>
+                <div class="pr-jck">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tbody><tr>
+                            <td width="120"><div class="pr-jc"><div class="cuk">现</div><div class="pr-jcf"><span>现金</span>元</div></div></td>
+                            <td width="140"><div class="pr-jc"><div class="cuk">优</div><div class="pr-jcf">优惠券<span>10%</span>比例</div></div></td>
+                            <td><div class="pr-jc"><div class="cuk">代</div><div class="pr-jcf">代金券<span>1000.00</span>元</div></div></td>
+                        </tr>
+                        </tbody></table>
+                </div>
             </div>
-            <div class="pr-jck">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                    <tbody><tr>
-                        <td width="120"><div class="pr-jc"><div class="cuk">现</div><div class="pr-jcf"><span>现金</span>元</div></div></td>
-                        <td width="140"><div class="pr-jc"><div class="cuk">优</div><div class="pr-jcf">优惠券<span>10%</span>比例</div></div></td>
-                        <td><div class="pr-jc"><div class="cuk">代</div><div class="pr-jcf">代金券<span>1000.00</span>元</div></div></td>
-                    </tr>
-                    </tbody></table>
+            <div class="qing">
+                <div class="guige"><span class="lf sul">规　　格：</span><a href="">3克</a><a href="">5克</a><a href="">10克</a><a href="">15克</a></div>
+                <span class="lf sul">数　　量：</span><div class="lf"><div class="gw-sl0"><a href="#" class="gw-sl1 lf">-</a><input name="num" id="order_num" value="1"><a href="#" class="gw-sl2 rf">+</a></div></div>
+            </div>
+            <div class="pr-jia">
+{{--                <a href="shopCar?id={{$data['id']}}" class="jiaj">--}}
+{{--                    <span>加入购物车</span>--}}
+{{--                    <span>加入购物车</span>--}}
+{{--                </a>--}}
+                <input type="submit" class="jiaj" value="加入购物车" >
+                <!--<a href="#" class="jias jiasnn"><img src="images/xing2.png" width="45" height="41" class="lf">收藏</a> -->
+                <a href="#" class="jias"><img src="/web/images/kefu.png" width="45" height="41" class="lf" data-bd-imgshare-binded="1">客服</a>
             </div>
         </div>
-        <div class="qing">
-            <div class="guige"><span class="lf sul">规　　格：</span><a href="">3克</a><a href="">5克</a><a href="">10克</a><a href="">15克</a></div>
-            <span class="lf sul">数　　量：</span><div class="lf"><div class="gw-sl0"><a href="#" class="gw-sl1 lf">-</a><input name="shuliang" id="order_num" value="1"><a href="#" class="gw-sl2 rf">+</a></div></div>
+        <div class="baidushare">
+            <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1510793623007">
+                <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                <a href="#" class="bds_more" data-cmd="more" title="更多分享方式"></a>
+            </div>
         </div>
-        <div class="pr-jia">
-            <a href="shopCar" class="jiaj">
-                <span>加入购物车</span>
-                <span>加入购物车</span>
-            </a>
-            <!--<a href="#" class="jias jiasnn"><img src="images/xing2.png" width="45" height="41" class="lf">收藏</a> -->
-            <a href="#" class="jias"><img src="/web/images/kefu.png" width="45" height="41" class="lf" data-bd-imgshare-binded="1">客服</a>
-        </div>
-    </div>
-    <div class="baidushare">
-        <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1510793623007">
-            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-            <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-            <a href="#" class="bds_more" data-cmd="more" title="更多分享方式"></a>
-        </div>
-    </div>
-
+    </form>
 </div>
 <!--会员内容 -->
 <div class="qing juzhong">
@@ -1254,7 +1259,7 @@
         <div class="qing">
             <dl class="dhlb">
                 <dd>
-                    <a href="product-view.php?id=932" class="jftu"><img src="images/1078341009.jpg" width="184" height="184" data-bd-imgshare-binded="1"></a>
+                    <a href="product-view.php?id=932" class="jftu"><img src="/web/images/1078341009.jpg" width="184" height="184" data-bd-imgshare-binded="1"></a>
                     <div class="qing jfm">
                         <a href="product-view.php?id=932">2017-1 丁酉年(鸡赠送版)</a>
                     </div>
@@ -1264,7 +1269,7 @@
                     </div>
                 </dd>
                 <dd>
-                    <a href="product-view.php?id=931" class="jftu"><img src="images/3361002146.jpg" width="184" height="184" data-bd-imgshare-binded="1"></a>
+                    <a href="product-view.php?id=931" class="jftu"><img src="/web/images/3361002146.jpg" width="184" height="184" data-bd-imgshare-binded="1"></a>
                     <div class="qing jfm">
                         <a href="product-view.php?id=931">2016-1 丙申年猴（猴赠送版）</a>
                     </div>

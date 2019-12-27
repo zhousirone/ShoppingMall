@@ -154,7 +154,7 @@
 
                                     <div class="ejlei2">
                                         @foreach($vv['son'] as $kkk=>$vvv)
-                                        <a href="#" class="cate_detail_con_lk" target="_blank">{{$vvv['attribute_name']}}</a>
+                                        <a href="" class="cate_detail_con_lk" target="_blank">{{$vvv['attribute_name']}}</a>
                                         @endforeach
                                     </div>
 
@@ -340,7 +340,7 @@
     <div class="panesz1" style=" background:#fff;overflow: hidden;">
         <div data-am-widget="slider" class="am-slider am-slider-b1" data-am-slider='{&quot;controlNav&quot;:false}' >
             <ul class="am-slides">
-
+                @foreach($data as $k => $v)
                 <li>
                     <div class="panez1" style="display:block;">
                         <div class="qing bai">
@@ -367,32 +367,7 @@
                         </div>
                     </div>
                 </li>
-
-                <li>
-                    <div class="panez1" style="display:block;">
-                        <div class="qing bai">
-                            <div class="lf zgk1">
-                                <ul class="zgcplb">
-                                    @foreach($data as $k => $v)
-                                        <li><a href="#" class="tjtu"><img src="{{$v['image']}}" width="130" height="130"></a>
-                                            <div class="tjmk">
-                                                <a href="#" class="tjm1">{{$v['name']}}</a>
-                                                <div class="tjm2" style="color:#f10214">
-                                                    ¥<span style="color:#f10214; font-size:18px; font-weight:bold;">{{$v['price']}}</span><em style="margin-left:10px; font-style:normal; color:#999; text-decoration: line-through">¥{{$v['price_hua']}}</em>
-                                                </div>
-                                            </div>
-                                            <div class="tjyc">
-                                                <a href="#" class="tjycm">{{$v['goods_content']}}</a>
-                                            </div>
-                                            <!--line-->
-                                            <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span></li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </li>
+                @endforeach
             </ul>
         </div>
         <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}' style="width:216px; float:right; margin-top:10px; height:250px;">
@@ -406,6 +381,43 @@
         </div>
     </div>
 </div>
+
+<div class="qing tjk3">
+    <div class="flf1 juzhong">
+        <div class="lazyData clearfix cateTitleBar yahei" data-ptp="_keyword_32495" data-source-type="" data-source-key="32495" data-manual="true">
+            <div class="sideIcon" style="background-color: #7CACEF;"></div>
+            <div class="cateTitleName col333">
+                全部商品
+            </div>
+            <div class="cateLinkBox col666">
+                热门搜索：<a class="topLink cube-acm-node col666 has-log-mod" href="#" target="_blank">健康监测</a> |
+                <a class="topLink cube-acm-node col666 has-log-mod" href="#" target="_blank">呼吸制氧</a> |
+                <a class="topLink cube-acm-node col666 has-log-mod" href="#" target="_blank">养生理疗</a> |
+                <a class="topLink cube-acm-node col666 has-log-mod" href="#" target="_blank">康复辅助</a>
+            </div>
+            <a class="checkMore col666" href="#" target="_blank">查看全部<span class="checkMoreArchor"></span></a>
+        </div>
+{{--        <img src="/web/images/bt2.jpg" width="100%" style="margin-bottom:10px;">--}}
+        <div class="juzhong">
+            <div class="fllb">
+                <!--列表start -->
+                @foreach($data as $k => $v)
+                    <div class="rxk">
+                        <a href="#" class="rxcptu"><img src="{{$v['image']}}" width="215" height="215"></a>
+                        <a href="#" class="rxcpm">{{$v['name']}}</a>
+                        <div class="rxcpjg">￥<span>{{$v['price']}}</span></div>
+                        <div class="yinc">
+                            <div class="yjg">￥<span>{{$v['price']}}</span></div>
+                            <a href="addShopCar?id={{$v['id']}}" class="ygm"><img src="/web/images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
+                        </div>
+                    </div>
+            @endforeach
+            <!--列表end -->
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div style="width:1200px; margin:0 auto; overflow:hidden;">
     <img src="/web/images/bt.jpg" width="100%">
@@ -529,19 +541,7 @@
 
 <div class="module_row module_row_736727 MOD_ID_260932 has-log-mod"  style="width:1200px; margin:0 auto;">
     <div class="mod_row MCUBE_MOD_ID_260932 J_mod_row_show">
-        <div class="lazyData clearfix cateTitleBar yahei" data-ptp="_keyword_32495" data-source-type="" data-source-key="32495" data-manual="true">
-            <div class="sideIcon" style="background-color: #7CACEF;"></div>
-            <div class="cateTitleName col333">
-                医疗保健
-            </div>
-            <div class="cateLinkBox col666">
-                热门搜索：<a class="topLink cube-acm-node col666 has-log-mod" href="#" target="_blank">健康监测</a> |
-                <a class="topLink cube-acm-node col666 has-log-mod" href="#" target="_blank">呼吸制氧</a> |
-                <a class="topLink cube-acm-node col666 has-log-mod" href="#" target="_blank">养生理疗</a> |
-                <a class="topLink cube-acm-node col666 has-log-mod" href="#" target="_blank">康复辅助</a>
-            </div>
-            <a class="checkMore col666" href="#" target="_blank">查看全部<span class="checkMoreArchor"></span></a>
-        </div>
+
         <div class="floor-con clearfix " data-module-title="男友">
             <!--左边大图-->
             <div class="big-banner-con fl" style="background: #cee2fe; ">
@@ -1268,7 +1268,7 @@
                     <div class="rxcpjg">￥<span>36.00</span></div>
                     <div class="yinc">
                         <div class="yjg">￥<span>36.00</span></div>
-                        <a href="#" class="ygm"><img src="/web/images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
+                        <a href="addShopCar?id={{$v['id']}}" class="ygm"><img src="/web/images/che1.png" height="40" class="lf"><div class="lf">购物车</div></a>
                     </div>
                 </div>
                 @endforeach
