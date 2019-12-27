@@ -159,8 +159,30 @@ Route::any( 'goodsDetails','index\market@goodsDetails');
 Route::any( 'shopCar','index\Shopcars@shopCar');
 Route::any( 'check','index\Shopcars@check');
 Route::any( 'personalCenter','index\Personal@personalCenter');
+<<<<<<< HEAD
 Route::any( 'zhifu','index\Shopcars@zhifu');
 Route::any( 'addShopCar','index\Shopcars@addShopCar');
 Route::any( 'delCart','index\Shopcars@delCart');
+=======
+Route::any( 'zhifu','index\Shopcar@zhifu');
+
+
+
+
+//个人中心
+Route::post( 'myUpdate','index\Personal@update');
+Route::get( 'myOrder','index\Personal@order');
+Route::get( 'myLocation','index\Personal@myLocation');
+Route::get( 'locationAdd','index\Personal@locationAdd');
+Route::post( 'locationAdd_do','index\Personal@locationAdd_do');
+Route::get( 'locationUpd','index\Personal@locationUpd');
+Route::post( 'locationUpdate','index\Personal@locationUpdate');
+Route::get( 'locationDel','index\Personal@locationDel');
+
+
+
+
+
+>>>>>>> 91551f750af6668d9b1ab4b27d0bfd04a520a963
 
 Route::any( 'aaa','index\Shopcars@aaa');

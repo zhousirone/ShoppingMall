@@ -94,10 +94,9 @@
 
 </body>
 </html>
-
-
 <script>
     $('.dlan').click(function(){
+        alert(11)
         var name = $('#name').val();
         var pwd = $('#pwd').val();
         // console.log(name);
